@@ -1,11 +1,11 @@
 #include <iostream>
-#include "menu.cpp"
+#include "Menu.cpp"
 
 using namespace std;
 
 int main()
 {
-    Menu menu;
-    menu.imprimirMenu();
+    Menus menu;
+    menu.Menu_Principal();
     return 0;
 }
