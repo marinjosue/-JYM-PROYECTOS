@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
-#include "Menu.h"
+#include "menu.h"
+#include "Movimientos.cpp"
 
 
 using namespace std;
@@ -89,7 +90,7 @@ void Menus::Menu_Principal() {
 
 void Menus::Menu_Credito() {
      bool aux = true;
-    // Movimiento mov;
+     Movimiento mov;
     const char *titulo="\t\tDESEA CREAR UN CREDITO:";
     const char *opciones[] = {"\t\tSI", "\t\tNO"};
     int numeroOpciones = 2;
@@ -99,7 +100,8 @@ void Menus::Menu_Credito() {
      switch (selec) {
                    case 1:
                         system("cls");
-                       // mov.crear_Credito();
+                        mov.crear_Credito();
+                        Menu_Principal();
                         system("pause");
                         break;
                     case 2:

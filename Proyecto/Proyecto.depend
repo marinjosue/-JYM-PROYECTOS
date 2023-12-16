@@ -1,22 +1,33 @@
 # depslib dependency file v1.0
-1702726667 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\main.cpp
+1702728699 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\main.cpp
 	<iostream>
 	"Menu.cpp"
 
-1702728367 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
+1702729899 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
-	"Menu.h"
+	"menu.h"
+	"Movimientos.cpp"
 
-1702727575 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
+1702729541 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
 	"validaciones.h"
 
-1702728601 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
+1701833488 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
 	<iostream>
 	<stdlib.h>
 	<conio.h>
 	<stdio.h>
 	<string.h>
 	<cstring>
+
+1702729801 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702730149 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"menu.h"
+	<iostream>
+	<string>
 
