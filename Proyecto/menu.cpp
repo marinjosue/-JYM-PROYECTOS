@@ -25,7 +25,7 @@ void Menu::submenu1() {
 void Menu::submenu2() {
     // Lógica para el Submenú 2
     printf("\nMenu 2");
-    printf("\n);
+    printf("\n");
     system("pause");
 }
 

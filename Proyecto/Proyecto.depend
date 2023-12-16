@@ -1,10 +1,9 @@
 # depslib dependency file v1.0
-1702705649 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\main.cpp
-	<stdio.h>
-	<conio.h>
+1702707827 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
 	"menu.cpp"
 
-1702706272 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
+1702707841 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>

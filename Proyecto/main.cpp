@@ -1,9 +1,11 @@
 #include <iostream>
+#include "menu.cpp"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    Menu menu;
+    menu.imprimirMenu();
     return 0;
 }
