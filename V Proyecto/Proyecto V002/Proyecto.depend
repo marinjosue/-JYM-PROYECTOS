@@ -1,0 +1,169 @@
+# depslib dependency file v1.0
+1702799760 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702801074 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+
+1702800934 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
+	"validaciones.h"
+
+1702800533 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702799760 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702800725 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"Calendario.h"
+	"menu.h"
+	<iostream>
+	<string>
+
+1702798053 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.h
+	"validaciones.h"
+
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"menu.h"
+	<iostream>
+	<string>
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702798053 D
+
+1702799760 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702799760 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.h
+	<string>
+
+1702799760 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702799760 o.h"
+
+1702800309 source:c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\menu.h
+	"validaciones.h"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702800735 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"menu.h"
+	<iostream>
+	<string>
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702800309 99bd444e4821fe7901e2f24d1356b589e1d39
+
+1702799760 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702799760 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\calendario.h
+	<string>
+
+1702799760 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702802830 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+	"Amortizacion.h"
+
+1702800934 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\menu.h
+	"validaciones.h"
+
+1702800533 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702804126 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\movimientos.cpp
+	"Movimientos.h"
+	"Calendario.h"
+	"menu.h"
+	"Amortizacion.h"
+	<iostream>
+	<string>
+
+1702799760 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702803477 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\amortizacion.h
+
+1702803473 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\amortizacion.cpp
+	"Amortizacion.h"
+	<iostream>
+	<iomanip>
+
+1702801896 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v001\amortizacion.cpp
+	"Amortizacion.h"
+	<iostream>
+	<iomanip>
+
