@@ -207,3 +207,43 @@
 
 1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v002\amortizacion.h
 
+1702842496 source:c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+	"Amortizacion.h"
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\menu.h
+	"validaciones.h"
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\movimientos.cpp
+	"Movimientos.h"
+	"Calendario.h"
+	"menu.h"
+	"Amortizacion.h"
+	<iostream>
+	<string>
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\calendario.h
+	<string>
+
+1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\amortizacion.h
+
