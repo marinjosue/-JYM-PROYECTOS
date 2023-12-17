@@ -3,17 +3,17 @@
 	<iostream>
 	"Menu.cpp"
 
-1702797211 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
+1702729899 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
 	"menu.h"
 	"Movimientos.cpp"
 
-1702783469 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
+1702729541 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
 	"validaciones.h"
 
-1702793564 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
+1701833488 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -21,109 +21,31 @@
 	<string.h>
 	<cstring>
 
-1702780000 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
+1702729801 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
 	"menu.h"
 	"validaciones.h"
 
-1702796118 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
+1702730149 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
 	"Movimientos.h"
 	"menu.h"
-	"Calendario.h"
 	<iostream>
-	<string>
-
-1702776501 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
-	<stdio.h>
-	"Calendario.h"
-
-1702768979 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.h
-	<string>
-
-1702776501 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
-	<stdio.h>
-	"Calendario.h"
-
-1702788684 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\imagen.cpp
-	"Bibliotecas/EasyBMP.cpp"
-	"Imagen.h"
-	<conio.h>
-	<iostream>
-
-1702789883 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp.cpp
-	"EasyBMP.h"
-
-1702789421 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp.h
-	<iostream>
-	<cmath>
-	<cctype>
-	<cstring>
-	<stdio.h>
-	<cstdio>
-	"EasyBMP_DataStructures.h"
-	"EasyBMP_BMP.h"
-	"EasyBMP_VariousBMPutilities.h"
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp_datastructures.h
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp_bmp.h
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp_variousbmputilities.h
-
-1702788684 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\imagen.h
-	<string>
-	<windows.h>
-
-1702788684 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\imagen.cpp
-	"Bibliotecas/EasyBMP.cpp"
-	"Imagen.h"
-	<conio.h>
-	<iostream>
-
-1702789883 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\bibliotecas\easybmp.cpp
-	"EasyBMP.h"
-
-1702785205 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp.cpp
-	"EasyBMP.h"
-	"EasyBMP_DataStructures.h"
-	"EasyBMP_BMP.h"
-	"EasyBMP_VariousBMPutilities.h"
-
-1702785206 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp.h
-	<iostream>
-	<cmath>
-	<cctype>
-	<cstring>
-	<stdio.h>
-	<cstdio>
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp_datastructures.h
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp_bmp.h
-
-1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp_variousbmputilities.h
-
-1702798053 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\calendario.cpp
-	<stdio.h>
-	"Calendario.h"
-
-1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\calendario.h
 	<string>
 
 1702798053 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\main.cpp
 	<iostream>
 	"Menu.cpp"
 
-1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.cpp
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
 	"menu.h"
 	"Movimientos.cpp"
 
-1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.h
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.h
 	"validaciones.h"
 
-1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\validaciones.h
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\validaciones.h
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -131,10 +53,9 @@
 	<string.h>
 	<cstring>
 
-1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.cpp
+1702799136 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.cpp
 	"Movimientos.h"
 	"menu.h"
-	"Calendario.h"
 	<iostream>
 	<string>
 

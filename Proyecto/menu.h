@@ -10,7 +10,6 @@ public:
     void menuSeleccion(const char* titulo,const char *opciones[], int numeroOpciones, int &selec);
     void Menu_Principal();
     void Menu_Credito();
-    void Menu_Extras();
 };
 
 #endif // MENU_H

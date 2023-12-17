@@ -32,18 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Calendario.cpp" />
-		<Unit filename="Calendario.h" />
 		<Unit filename="Movimientos.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="Movimientos.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="NodoAmortizacion.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="NodoAmortizacion.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
