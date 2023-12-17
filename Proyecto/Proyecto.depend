@@ -63,3 +63,35 @@
 	"menu.h"
 	"validaciones.h"
 
+1702800309 source:c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\menu.h
+	"validaciones.h"
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702800735 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"menu.h"
+	<iostream>
+	<string>
+
+1702800309 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+

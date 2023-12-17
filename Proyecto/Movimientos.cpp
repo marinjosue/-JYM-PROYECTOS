@@ -21,6 +21,7 @@ void Movimiento::crear_Credito (){
         if (amount >= 1000 && amount <= 100000.0) {
             validate = false;
         } else {
+            printf("hola");
             validate = true;
         }
     }
