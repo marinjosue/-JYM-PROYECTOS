@@ -44,9 +44,9 @@ void Movimiento::crear_Credito (){
     while (validate) {
             printf("\nIngrese la fecha de primer pago en formato (dd-mm-AAAA): \n");
 
-            dia= ingresar_enteros("dia:");
+            dia= ingresar_diaMes("dia:");
             printf("\n");
-            mes= ingresar_enteros("mes:" );
+            mes= ingresar_diaMes("mes:" );
             printf("\n");
             anio =ingresar_anio("anio:\n");
             printf("\n");
@@ -71,9 +71,9 @@ void Movimiento::crear_Credito (){
 
 
      // AQUI LLAMAR A LA FUNCION DE LA AMORTIAZCION
-       // amortizacion loan;
+       // Amortizacion loan;
 
-     //  loan = Doubt( cantidad, dato, mes_tiempo, "FRANCESA", interes);
+     //  loan = Amortizacion( cantidad, dato(dia,mes,anio), mes_tiempo, "FRANCESA", interes);
 
     cout << "\n\tSE HA AGREGADO EL CRÉDITO CON ÉXITO" << endl;
     system("pause");

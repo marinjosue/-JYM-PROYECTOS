@@ -40,6 +40,12 @@
 		<Unit filename="Movimientos.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="NodoAmortizacion.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="NodoAmortizacion.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp">
 			<Option target="&lt;{~None~}&gt;" />

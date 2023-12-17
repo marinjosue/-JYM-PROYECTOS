@@ -13,6 +13,7 @@ int borrar(char* datos, int& i);
 float ingresar_reales(const char* msj);
 std::string ingresar_alfabetico(const char* msj);
 int ingresar_anio(const char* msj);
+int ingresar_diaMes(const char* msj) ;
 
 int ingresar_enteros(const char* msj) {
     char* datos = new char[10];
@@ -36,7 +37,27 @@ int ingresar_enteros(const char* msj) {
     datos[i] = '\0';
     return atoi(datos);
 }
+int ingresar_diaMes(const char* msj) {
+    char* datos = new char[10];
+    char c;
+    int i = 0;
 
+    printf("%s", msj);
+    printf("\ ");
+    while ((c = getch()) != 13 && i < 2) {
+        if ((c >= '0' && c <= '9')|| c == 8) {
+            if(c == 8){
+                i = borrar(datos,i);
+            }else{
+                printf("%c", c);
+                datos[i++] = c;
+            }
+
+        }
+    }
+    datos[i] = '\0';
+    return atoi(datos);
+}
 float ingresar_reales(const char* msj) {
     char* datos = new char[12];
     char c;

@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "menu.h"
 #include "Movimientos.cpp"
+#include "Imagen.cpp"
 
 
 using namespace std;
@@ -67,8 +68,8 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
 void Menus::Menu_Principal() {
     bool aux = true;
     const char *titulo ="\t\tTABLA DE AMORTIZACION";
-    const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tMOSTRAR TABLA DE AMORTIZACION", "\t\tGENERAR PDF", "\t\tSALIR"};
-    int numeroOpciones = 4;
+    const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tMOSTRAR TABLA DE AMORTIZACION", "\t\tBACKUP", "\t\tEXTRAS","\t\tSALIR"};
+    int numeroOpciones = 5;
     int selec = 1;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
@@ -79,6 +80,21 @@ void Menus::Menu_Principal() {
                         system("pause");
                         break;
                     case 2:
+                        system("cls");
+                        submenu2();  // Llamada al Submenú 2
+                        system("pause");
+                        break;
+                    case 3:
+                        system("cls");
+                        submenu2();  // Llamada al Submenú 2
+                        system("pause");
+                        break;
+                    case 4:
+                        system("cls");
+                        submenu2();  // Llamada al Submenú 2
+                        system("pause");
+                        break;
+                    case 5:
                         system("cls");
                         submenu2();  // Llamada al Submenú 2
                         system("pause");
@@ -114,6 +130,32 @@ void Menus::Menu_Credito() {
 
 }
 
+void Menus::Menu_Extras() {
+     bool aux = true;
+
+    const char *titulo="\t\tMENU EXTRAS:";
+    const char *opciones[] = {"\t\tAYUDA", "\t\tIMAGEN"};
+    int numeroOpciones = 2;
+    int selec = 1;
+    do{
+    menuSeleccion(titulo,opciones, numeroOpciones, selec);
+     switch (selec) {
+                   case 1:
+                        system("cls");
+                        Menu_Principal();
+                        system("pause");
+                        break;
+                    case 2:
+                        system("cls");
+                        Imagen img("foto.bmp");
+                        img.imprimirImagenEnConsola();
+                        Menu_Principal();
+                        system("pause");
+                        break;
+        }
+    } while (aux);
+
+}
 void Menus::submenu2() {
     // Lógica para el Submenú 2
     printf("\nMenu 2");
