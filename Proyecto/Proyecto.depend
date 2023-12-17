@@ -3,13 +3,12 @@
 	<iostream>
 	"Menu.cpp"
 
-1702783711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
+1702797211 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
 	"menu.h"
 	"Movimientos.cpp"
-	"Imagen.cpp"
 
 1702783469 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
 	"validaciones.h"
@@ -26,7 +25,7 @@
 	"menu.h"
 	"validaciones.h"
 
-1702794739 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
+1702796118 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
 	"Movimientos.h"
 	"menu.h"
 	"Calendario.h"

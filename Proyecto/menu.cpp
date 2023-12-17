@@ -3,8 +3,6 @@
 #include <windows.h>
 #include "menu.h"
 #include "Movimientos.cpp"
-#include "Imagen.cpp"
-
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -146,9 +144,7 @@ void Menus::Menu_Extras() {
                         system("pause");
                         break;
                     case 2:
-                        system("cls");
-                        Imagen img("foto.bmp");
-                        img.imprimirImagenEnConsola();
+
                         Menu_Principal();
                         system("pause");
                         break;

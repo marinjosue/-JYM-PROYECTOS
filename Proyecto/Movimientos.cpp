@@ -17,20 +17,24 @@ void Movimiento::crear_Credito (){
     bool validate = true;
     while (validate) {
         printf("\n\tSISTEMA DE AMORTIGUACION FRANCES");
+
         cantidad = ingresar_reales("\nIngrese monto de credito a solicitar: ");
         validate = cantidad;
         if (cantidad >= 1000 && cantidad <= 100000.0) {
+            system("cls");
             validate = false;
         } else {
-            validate = true;
+           validate = true;
+
         }
+
     }
 
     validate = true;
     while (validate) {
         mes_tiempo = ingresar_enteros("\nIngrese numero de meses a pagar: ");
         validate = mes_tiempo;
-        if (mes_tiempo >= 3 && mes_tiempo <= 240) {
+        if (mes_tiempo >= 3 && mes_tiempo <= 500) {
             validate = false;
         } else {
             validate = true;
@@ -71,7 +75,7 @@ void Movimiento::crear_Credito (){
 
 
      // AQUI LLAMAR A LA FUNCION DE LA AMORTIAZCION
-       // Amortizacion loan;
+       // Amortizacion ;
 
      //  loan = Amortizacion( cantidad, dato(dia,mes,anio), mes_tiempo, "FRANCESA", interes);
 
