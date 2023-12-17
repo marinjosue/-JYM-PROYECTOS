@@ -10,10 +10,10 @@
 	"menu.h"
 	"Movimientos.cpp"
 
-1702729541 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
+1702766892 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\menu.h
 	"validaciones.h"
 
-1701833488 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
+1702766526 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\validaciones.h
 	<iostream>
 	<stdlib.h>
 	<conio.h>
@@ -21,13 +21,25 @@
 	<string.h>
 	<cstring>
 
-1702729801 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
+1702780000 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.h
 	"menu.h"
 	"validaciones.h"
 
-1702730149 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
+1702780539 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\movimientos.cpp
 	"Movimientos.h"
 	"menu.h"
+	"Calendario.h"
 	<iostream>
 	<string>
+
+1702776501 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702768979 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.h
+	<string>
+
+1702776501 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
 

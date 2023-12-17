@@ -12,6 +12,7 @@ int ingresar_enteros(const char* msj);
 int borrar(char* datos, int& i);
 float ingresar_reales(const char* msj);
 std::string ingresar_alfabetico(const char* msj);
+int ingresar_anio(const char* msj);
 
 int ingresar_enteros(const char* msj) {
     char* datos = new char[10];
@@ -95,6 +96,27 @@ std::string ingresar_alfabetico(const char* msj) {
     return std::string(datos);
 }
 
+int ingresar_anio(const char* msj) {
+    char* datos = new char[10];
+    char c;
+    int i = 0;
+
+    printf("%s", msj);
+    printf(" \ ");
+    while ((c = getch()) != 13 && i < 4) {
+        if ((c >= '0' && c <= '9')|| c == 8) {
+            if(c == 8){
+                i = borrar(datos,i);
+            }else{
+                printf("%c", c);
+                datos[i++] = c;
+            }
+
+        }
+    }
+    datos[i] = '\0';
+    return atoi(datos);
+}
 
 int borrar(char* datos, int& i) {
     if (i > 0) {
@@ -105,4 +127,5 @@ int borrar(char* datos, int& i) {
     }
     return 0;
 }
+
 #endif // VALIDACIONES_H_INCLUDED
