@@ -102,3 +102,43 @@
 
 1702781270 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\proyecto\easybmp_variousbmputilities.h
 
+1702798053 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\calendario.h
+	<string>
+
+1702798053 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\menu.h
+	"validaciones.h"
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.cpp
+	"Movimientos.h"
+	"menu.h"
+	"Calendario.h"
+	<iostream>
+	<string>
+
+1702798053 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\proyecto\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
