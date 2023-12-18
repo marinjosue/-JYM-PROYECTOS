@@ -85,7 +85,7 @@ void Menus::Menu_Principal() {
                         break;
                     case 3:
                         system("cls");
-                        submenu2();  // Llamada al Submen� 2
+                        system("start \"\" .\\Doxygen_Documentacion\\html\\index.html");
                         system("pause");
                         break;
                     case 4:
