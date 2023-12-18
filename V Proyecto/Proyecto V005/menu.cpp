@@ -87,20 +87,20 @@ void Menus::Menu_Principal() {
                         break;
                     case 3:
                         system("cls");
-                        submenu2();  // Llamada al Submenú 2
+                        submenu2();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
                     case 4:
                         system("cls");
-                        Menu_Extras();  // Llamada al Submenú 2
+                        Menu_Extras();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
                     case 5:
                         system("cls");
-                        submenu2();  // Llamada al Submenú 2
+                        submenu2();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
-                    // Puedes agregar más casos para otras opciones
+                    // Puedes agregar mï¿½s casos para otras opciones
                 }
         } while (aux);
 }
@@ -165,7 +165,7 @@ void Menus::Menu_Extras() {
 
 
 void Menus::submenu2() {
-    // Lógica para el Submenú 2
+    // Lï¿½gica para el Submenï¿½ 2
     printf("\nMenu 2");
     printf("\n");
     system("pause");

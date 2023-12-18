@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
-#include "menu.h"
-#include "Movimientos.h" // Incluye la clase Movimiento
+#include "menu.h" // Incluye la clase Movimiento
+#include "Amortizacion.h"
+#include "validaciones.h"
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -69,7 +70,6 @@ void Menus::Menu_Principal() {
     const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tMOSTRAR TABLA DE AMORTIZACION", "\t\tAYUDA", "\t\tEXTRAS","\t\tSALIR"};
     int numeroOpciones = 5;
     int selec = 1;
-    Amortizacion prestamo;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
      switch (selec) {
@@ -103,9 +103,24 @@ void Menus::Menu_Principal() {
         } while (aux);
 }
 
+void ingresar_datos_credito(){
+    system("cls");
+    Fecha sacado;
+    double monto, tasa_interes;
+    int ncuotas;
+
+    monto = ingresar_reales("Ingrese el monto del credito");
+    ncuotas = ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
+    tasa_interes = ingresar_reales("\nIngrese la tasa de interes del credito");
+
+    Credito credito(ncuotas, monto, sacado, tasa_interes);
+    Amortizacion tabla(credito);
+    printf("\n");
+    tabla.imprimir();
+}
+
 void Menus::Menu_Credito() {
-     bool aux = true;
-     Movimiento mov;
+    bool aux = true;
     const char *titulo="\t\tDESEA CREAR UN CREDITO:";
     const char *opciones[] = {"\t\tSI", "\t\tNO"};
     int numeroOpciones = 2;
@@ -115,7 +130,7 @@ void Menus::Menu_Credito() {
      switch (selec) {
                    case 1:
                         system("cls");
-                        mov.crear_Credito();
+                        ingresar_datos_credito();
                         Menu_Principal();
                         system("pause");
                         break;
@@ -129,9 +144,8 @@ void Menus::Menu_Credito() {
 
 }
 
-
 void Menus::Menu_Extras() {
-     bool aux = true;
+    bool aux = true;
 
     const char *titulo="\t\tMENU EXTRAS:";
     const char *opciones[] = {"\t\tAYUDA", "\t\tIMAGEN","\t\tSALIR"};

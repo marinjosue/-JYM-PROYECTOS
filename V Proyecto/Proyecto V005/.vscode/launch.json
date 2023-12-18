@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Usuario/OneDrive/Escritorio/ESPE/3-4 level/Estructura de Datos/-JYM-PROYECTO-ESTRUCTURA/Proyecto",
-      "program": "c:/Users/Usuario/OneDrive/Escritorio/ESPE/3-4 level/Estructura de Datos/-JYM-PROYECTO-ESTRUCTURA/Proyecto/build/Debug/outDebug",
+      "cwd": "c:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-JYM-PROYECTO-ESTRUCTURA/V Proyecto/Proyecto V005",
+      "program": "c:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-JYM-PROYECTO-ESTRUCTURA/V Proyecto/Proyecto V005/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
