@@ -1,0 +1,267 @@
+# depslib dependency file v1.0
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702897183 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"validaciones.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\menu.h
+	"validaciones.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\listadoble.h
+	"Nodo.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\nodo.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\credito.h
+	"Fecha.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\fecha.h
+	<iostream>
+	"Nodo.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\imagen.h
+	<string>
+	<windows.h>
+
+1702897372 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\calculoscredito.h
+	"ListaDoble.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\listadoble.cpp
+	"ListaDoble.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\nodo.cpp
+	"Nodo.h"
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\bibliotecas\easybmp_datastructures.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\bibliotecas\easybmp_bmp.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\bibliotecas\easybmp_variousbmputilities.h
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1702896810 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\credito.cpp
+	"Credito.h"
+
+1702883114 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1702886561 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\listadoble.cpp
+	"ListaDoble.h"
+
+1702893967 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<chrono>
+
+1702893966 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v005\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1702897372 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\listadoble.h
+	"Nodo.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\nodo.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\credito.h
+	"Fecha.h"
+
+1702899209 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\fecha.h
+	<iostream>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\calculoscredito.h
+	"ListaDoble.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\listadoble.cpp
+	"ListaDoble.h"
+
+1702893966 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\nodo.cpp
+	"Nodo.h"
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\bibliotecas\easybmp_datastructures.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\bibliotecas\easybmp_bmp.h
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\bibliotecas\easybmp_variousbmputilities.h
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1702896810 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\credito.cpp
+	"Credito.h"
+
+1702893967 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<chrono>
+
+1702899263 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1702886561 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\imagen.h
+	<string>
+	<windows.h>
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\listadoble.cpp
+	"ListaDoble.h"
+
+1702880658 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702899447 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"validaciones.h"
+	"Fecha.h"
+
+1702880658 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\menu.h
+	"validaciones.h"
+
+1702898046 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702898065 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\proyecto\proyecto v090\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
