@@ -1,12 +1,10 @@
-/***********************************************************************
- * UFA - ESPE
- *Module:  Amortizacion.cpp
- * Author:  Ronny Ibarra-Jose Imbaquinga
- * Modified: sábado, 5 de noviembre de 2022 10:24:22
- * Purpose: Implementation of the class Amortizacion
- *Level: level three
- *NRC:799
- ***********************************************************************/
+/*************************
+ UFA - ESPE
+ * Module:  CalculosCredito.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Implementacion de clase Amortizacion
+ *************************/
 
 #if !defined(__Amortizacion_Amortizacion_h)
 #define __Amortizacion_Amortizacion_h
@@ -35,6 +33,7 @@ public:
         void set_pagos_capital(ListaDoble<double>* nuevo_pagos_capital);
         void set_valor_cuotas(ListaDoble<double>* nuevo_valor_cuotas);
         void set_fechas_pago(ListaDoble<Fecha>* nuevo_fechas_pago);
+        void guardarTabla(const std::string& nombreArchivo);
     private:
         Credito credito;
         ListaDoble<int>* cuotas_ord;

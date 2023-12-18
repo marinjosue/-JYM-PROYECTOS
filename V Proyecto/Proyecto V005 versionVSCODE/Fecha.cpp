@@ -1,8 +1,8 @@
-/***********************************************************************
+/*************************
  UFA - ESPE
- * Module:  Fecha.cpp
- * Author:  Joan Cobe�a, Edison Verdesoto
- * Modified: jueves, 7 de diciembre de 2023 01:11:27 p. m.
+ * Module:  CalculosCredito.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
  * Purpose: Implementacion de clase Fecha
  ***********************************************************************/
 
@@ -116,9 +116,19 @@ void Fecha::set_segundos(int nuevo_segundos){
 }
 
 std::string Fecha::to_string(){
-    std::string sfecha = "XD";
+    auto t = std::time(nullptr);
+    std::tm tm_fecha = {};
+    tm_fecha.tm_mday = dia;
+    tm_fecha.tm_mon = mes;
+    tm_fecha.tm_year = anuario;
 
-    return sfecha;
+    std::mktime(&tm_fecha);
+
+    std::ostringstream oss;
+    oss << std::put_time(&tm_fecha, "%Y-%m-%d");
+    auto str = oss.str();
+
+    return oss.str();
 }
 
 void Fecha::imprimir(){
@@ -195,131 +205,3 @@ bool Fecha::es_finde(){
 
     return (dia_semana == 0 || dia_semana == 6);
 }
-
-/*
-bool operator<(Fecha fecha1, Fecha fecha2){
-    bool menor;
-    if(fecha1.get_anuario()<fecha2.get_anuario()){
-        menor = true;
-    }
-    else if(fecha1.get_anuario() == fecha2.get_anuario()){
-        if(fecha1.get_mes()<fecha2.get_mes()){
-            menor = true;
-        }
-        else if(fecha1.get_mes() == fecha2.get_mes()){
-            if(fecha1.get_dia()<fecha2.get_dia()){
-                menor = true;
-            }
-            else if(fecha1.get_dia() == fecha2.get_dia()){
-                if(fecha1.get_dia()<fecha2.get_dia()){
-                    menor = true;
-                }
-                else if(fecha1.get_dia() == fecha2.get_dia()){
-                    if(fecha1.get_hora()<fecha2.get_hora()){
-                        menor = true;
-                    }
-                    else if(fecha1.get_hora() == fecha2.get_hora()){
-                        if(fecha1.get_minutos()<fecha2.get_minutos()){
-                            menor = true;
-                        }
-                        else if(fecha1.get_minutos() == fecha2.get_minutos()){
-                            if(fecha1.get_segundos()<fecha2.get_segundos()){
-                                menor = true;
-                            }
-                            else if(fecha1.get_segundos() == fecha2.get_segundos()){
-                                menor = false;
-                            }
-                            else{
-                                menor = false;
-                            }
-                        }
-                        else{
-                            menor = false;
-                        }
-                    }
-                    else{
-                        menor = false;
-                    }
-                }
-                else{
-                    menor = false;
-                }
-            }
-            else{
-                menor = false;
-            }
-        }
-        else{
-            menor = false;
-        }
-    }
-    else{
-        menor = false;
-    }
-
-    return menor;
-}
-
-bool operator>(Fecha fecha1, Fecha fecha2){
-    bool mayor;
-    if(fecha1.get_anuario()>fecha2.get_anuario()){
-        mayor = true;
-    }
-    else if(fecha1.get_anuario() == fecha2.get_anuario()){
-        if(fecha1.get_mes()>fecha2.get_mes()){
-            mayor = true;
-        }
-        else if(fecha1.get_mes() == fecha2.get_mes()){
-            if(fecha1.get_dia()>fecha2.get_dia()){
-                mayor = true;
-            }
-            else if(fecha1.get_dia() == fecha2.get_dia()){
-                if(fecha1.get_dia()>fecha2.get_dia()){
-                    mayor = true;
-                }
-                else if(fecha1.get_dia() == fecha2.get_dia()){
-                    if(fecha1.get_hora()>fecha2.get_hora()){
-                        mayor = true;
-                    }
-                    else if(fecha1.get_hora() == fecha2.get_hora()){
-                        if(fecha1.get_minutos()>fecha2.get_minutos()){
-                            mayor = true;
-                        }
-                        else if(fecha1.get_minutos() == fecha2.get_minutos()){
-                            if(fecha1.get_segundos()>fecha2.get_segundos()){
-                                mayor = true;
-                            }
-                            else if(fecha1.get_segundos() == fecha2.get_segundos()){
-                                mayor = false;
-                            }
-                            else{
-                                mayor = false;
-                            }
-                        }
-                        else{
-                            mayor = false;
-                        }
-                    }
-                    else{
-                        mayor = false;
-                    }
-                }
-                else{
-                    mayor = false;
-                }
-            }
-            else{
-                mayor = false;
-            }
-        }
-        else{
-            mayor = false;
-        }
-    }
-    else{
-        mayor = false;
-    }
-
-    return mayor;
-}
-*/

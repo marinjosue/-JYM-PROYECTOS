@@ -1,8 +1,8 @@
-/***********************************************************************
+/*************************
  UFA - ESPE
- * Module:  ListaDoble.cpp
- * Author:  Joan Cobeña, Edison Verdesoto
- * Modified: jueves, 7 de diciembre de 2023 01:11:27 p. m.
+ * Module:  CalculosCredito.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
  * Purpose: Implementacion de clase ListaDoble
  ***********************************************************************/
 

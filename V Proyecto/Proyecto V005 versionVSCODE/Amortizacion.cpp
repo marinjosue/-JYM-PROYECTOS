@@ -1,10 +1,18 @@
-
+/*************************
+ UFA - ESPE
+ * Module:  CalculosCredito.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Implementacion de clase Amortizacion
+ *************************/
 #include <iostream>
+#include <fstream>
 #include "Amortizacion.h"
 #include "CalculosCredito.h"
 #include "Fecha.h"
 #include "ListaDoble.cpp"
 #include "Nodo.cpp"
+#include <iomanip>
 
 Amortizacion::Amortizacion(Credito credito_usar){
     credito = credito_usar;
@@ -70,13 +78,13 @@ void Amortizacion::imprimir(){
     Nodo<double>* valor_cuota = valor_cuotas->get_cabeza();
     Nodo<Fecha>* aux_fecha_pagar = fechas_pago->get_cabeza();
     Fecha fecha_pagar;
-    std::cout<<"No. Cuota|Valor Cuota|Pago al capital|Intereses|Saldo capital|Fecha de pago";
+    std::cout << "N        VALOR CUOTA           CAPITAL     INTERES       TOTAL RESULTANTE         FECHA" << std::endl;
     printf("\n");
-    while(n_mostrados < n_mostrar){
+    while (n_mostrados < n_mostrar) {
         fecha_pagar = aux_fecha_pagar->get_valor();
-        std::cout<<ord->get_valor()<<"\t|\t"<<valor_cuota->get_valor();
-        std::cout<<"\t|\t"<<capital_pag->get_valor()<<"\t|\t"<<interes->get_valor();
-        std::cout<<"\t|\t"<<saldo_cap->get_valor()<<"\t|\t";
+        std::cout << ord->get_valor() << "\t|\t" << static_cast<int>(valor_cuota->get_valor() * 100) / 100.0;
+        std::cout << "\t|\t" << static_cast<int>(capital_pag->get_valor() * 100) / 100.0 << "\t|\t" << static_cast<int>(interes->get_valor() * 100) / 100.0;
+        std::cout << "\t|\t" << static_cast<int>(saldo_cap->get_valor() * 100) / 100.0 << "\t|\t";
         fecha_pagar.imprimir();
         printf("\n");
 
@@ -86,7 +94,50 @@ void Amortizacion::imprimir(){
         capital_pag = capital_pag->get_siguiente();
         valor_cuota = valor_cuota->get_siguiente();
         aux_fecha_pagar = aux_fecha_pagar->get_siguiente();
+        n_mostrados++;
     }
+}
+
+void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
+    std::ofstream archivo(nombreArchivo);
+
+    if (!archivo.is_open()) {
+        std::cerr << "Error al abrir el archivo: " << nombreArchivo << std::endl;
+        return;
+    }
+
+    int n_mostrados = 0;
+    int n_mostrar = credito.get_n_cuotas_pagar();
+    Nodo<int>* ord = cuotas_ord->get_cabeza();
+    Nodo<double>* saldo_cap = saldos_capital->get_cabeza();
+    Nodo<double>* interes = intereses->get_cabeza();
+    Nodo<double>* capital_pag = pagos_capital->get_cabeza();
+    Nodo<double>* valor_cuota = valor_cuotas->get_cabeza();
+    Nodo<Fecha>* aux_fecha_pagar = fechas_pago->get_cabeza();
+    Fecha fecha_pagar;
+
+
+    archivo << "N        VALOR CUOTA           CAPITAL     INTERES       TOTAL RESULTANTE               FECHA\n";
+
+    while (n_mostrados < n_mostrar) {
+        fecha_pagar = aux_fecha_pagar->get_valor();
+        archivo << ord->get_valor() << "\t|\t" << std::fixed << std::setprecision(2) << valor_cuota->get_valor();
+        archivo << "\t|\t" << std::fixed << std::setprecision(2) << capital_pag->get_valor() << "\t|\t" << std::fixed << std::setprecision(2) << interes->get_valor();
+        archivo << "\t|\t" << std::fixed << std::setprecision(2) << saldo_cap->get_valor() << "\t|\t";
+        archivo << "1" << "\n";  // Suponiendo que el método imprimir() devuelve un string o un tipo que se pueda imprimir
+        //archivo << fecha_pagar.imprimir() << "\n";
+
+        ord = ord->get_siguiente();
+        saldo_cap = saldo_cap->get_siguiente();
+        interes = interes->get_siguiente();
+        capital_pag = capital_pag->get_siguiente();
+        valor_cuota = valor_cuota->get_siguiente();
+        aux_fecha_pagar = aux_fecha_pagar->get_siguiente();
+
+        n_mostrados++;
+    }
+
+    archivo.close();
 }
 
 Credito Amortizacion::get_credito(){

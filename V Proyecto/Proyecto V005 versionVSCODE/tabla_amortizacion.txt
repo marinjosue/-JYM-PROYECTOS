@@ -1,0 +1,4 @@
+N        VALOR CUOTA           CAPITAL     INTERES       TOTAL RESULTANTE               FECHA
+1	|	41.00	|	39.50	|	1.50	|	120.00	|	1
+2	|	41.00	|	40.00	|	1.01	|	80.50	|	1
+3	|	41.00	|	40.50	|	0.51	|	40.50	|	1

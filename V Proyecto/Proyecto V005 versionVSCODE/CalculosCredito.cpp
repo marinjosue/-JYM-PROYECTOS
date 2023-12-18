@@ -1,10 +1,10 @@
-/***********************************************************************
+/*************************
  UFA - ESPE
  * Module:  CalculosCredito.cpp
- * Author:  Joan Cobeña, Edison Verdesoto
- * Modified: jueves, 7 de diciembre de 2023
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
  * Purpose: Implementacion de clase CalculosCredito
- ***********************************************************************/
+ *************************/
 
 #include "CalculosCredito.h"
 #include "ListaDoble.cpp"

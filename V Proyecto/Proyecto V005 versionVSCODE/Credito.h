@@ -1,10 +1,10 @@
-/***********************************************************************
+/*************************
  UFA - ESPE
- * Module:  Credito.h
- * Author:  Joan Cobe�a, Edison Verdesoto
- * Modified: jueves, 7 de diciembre de 2023
- * Purpose: Declaracion de clase Credito
- ***********************************************************************/
+ * Module:  CalculosCredito.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Implementacion de clase CalculosCredito
+ *************************/
 
 #ifndef CREDITO_H_INCLUDED
 #define CREDITO_H_INCLUDED

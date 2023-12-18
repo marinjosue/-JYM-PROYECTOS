@@ -106,21 +106,55 @@ void Menus::Menu_Principal() {
 void ingresar_datos_credito(){
     system("cls");
     Fecha sacado;
-    double monto, tasa_interes;
-    int ncuotas;
+    double monto=0, tasa_interes=0;
+    int ncuotas=0;
 
-    monto = ingresar_reales("Ingrese el monto del credito");
-    ncuotas = ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
-    tasa_interes = ingresar_reales("\nIngrese la tasa de interes del credito");
+    while(monto<=0 || monto > 99999999.99){
+        monto = ingresar_reales("\nIngrese el monto del credito");
 
+        if(monto<=0 || monto > 99999999.99){
+            printf("El monto debe ser mayor a 0 y menor a 100M");
+        }else{
+            printf("                                                           ");
+        }
+    }
+    while(ncuotas<=0 || ncuotas > 500){
+        
+        ncuotas = ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
+
+        if(ncuotas<=0 || ncuotas > 500){
+            printf("El numero de cuotas debe ser mayor a 0 y menor a 500");
+        }else{
+            printf("                                                           ");
+        }
+    }
+    while(tasa_interes<=0 || tasa_interes>99.99){
+        tasa_interes = ingresar_reales("\nIngrese la tasa de interes del credito");
+
+        if(tasa_interes<=0 || tasa_interes>99.99){
+            printf("La tasa de interes debe ser mayor a 0 y menor a 100%");
+        }else{
+            printf("                                                           ");
+        }
+    }
     Credito credito(ncuotas, monto, sacado, tasa_interes);
     Amortizacion tabla(credito);
     printf("\n");
     tabla.imprimir();
+
+    // Guardar la tabla en un archivo (puedes cambiar el nombre de archivo según tus necesidades)
+    printf("\nTABLA GUARDADA CORRECTAMENTE");
+    tabla.guardarTabla("tabla_amortizacion.txt");
+
+    printf("\n");
+    // Pausa para mostrar el mensaje y esperar la acción del usuario
+    system("pause");
 }
+
 
 void Menus::Menu_Credito() {
     bool aux = true;
+    Menus menu;
     const char *titulo="\t\tDESEA CREAR UN CREDITO:";
     const char *opciones[] = {"\t\tSI", "\t\tNO"};
     int numeroOpciones = 2;
@@ -131,8 +165,7 @@ void Menus::Menu_Credito() {
                    case 1:
                         system("cls");
                         ingresar_datos_credito();
-                        Menu_Principal();
-                        system("pause");
+                        menu.Menu_Credito();
                         break;
                     case 2:
                         system("cls");
