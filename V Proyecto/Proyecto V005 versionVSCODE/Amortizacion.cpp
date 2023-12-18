@@ -13,6 +13,7 @@
 #include "ListaDoble.cpp"
 #include "Nodo.cpp"
 #include <iomanip>
+#include <ctime> // Necesario para obtener la fecha y hora actuales
 
 Amortizacion::Amortizacion(Credito credito_usar){
     credito = credito_usar;
@@ -78,7 +79,7 @@ void Amortizacion::imprimir(){
     Nodo<double>* valor_cuota = valor_cuotas->get_cabeza();
     Nodo<Fecha>* aux_fecha_pagar = fechas_pago->get_cabeza();
     Fecha fecha_pagar;
-    std::cout << "N        VALOR CUOTA           CAPITAL     INTERES       TOTAL RESULTANTE         FECHA" << std::endl;
+    std::cout << "N        VALOR CUOTA           CAPITAL     INTERES          SALDO             FECHA" << std::endl;
     printf("\n");
     while (n_mostrados < n_mostrar) {
         fecha_pagar = aux_fecha_pagar->get_valor();
@@ -98,6 +99,19 @@ void Amortizacion::imprimir(){
     }
 }
 
+std::string obtenerFechaHoraActual() {
+    time_t tiempoActual = time(nullptr);
+    tm* tmActual = localtime(&tiempoActual);
+
+    std::string fechaHora = std::to_string(tmActual->tm_mday) + "/" +
+                            std::to_string(tmActual->tm_mon + 1) + "/" +
+                            std::to_string(tmActual->tm_year + 1900) + " a las " +
+                            std::to_string(tmActual->tm_hour) + ":" +
+                            std::to_string(tmActual->tm_min) + ":" +
+                            std::to_string(tmActual->tm_sec);
+    return fechaHora;
+}
+
 void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
     std::ofstream archivo(nombreArchivo);
 
@@ -105,6 +119,12 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
         std::cerr << "Error al abrir el archivo: " << nombreArchivo << std::endl;
         return;
     }
+
+    // Obtener la fecha y hora actual utilizando la nueva función
+    std::string fechaHoraGeneracion = obtenerFechaHoraActual();
+
+    // Imprimir la fecha y hora de generación de la tabla
+    archivo << "Tabla generada el " << fechaHoraGeneracion << "\n\n";
 
     int n_mostrados = 0;
     int n_mostrar = credito.get_n_cuotas_pagar();
@@ -117,14 +137,14 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
     Fecha fecha_pagar;
 
 
-    archivo << "N        VALOR CUOTA           CAPITAL     INTERES       TOTAL RESULTANTE               FECHA\n";
+    archivo << "N    VALOR CUOTA   CAPITAL     INTERES      SALDO      FECHA\n";
 
     while (n_mostrados < n_mostrar) {
         fecha_pagar = aux_fecha_pagar->get_valor();
         archivo << ord->get_valor() << "\t|\t" << std::fixed << std::setprecision(2) << valor_cuota->get_valor();
         archivo << "\t|\t" << std::fixed << std::setprecision(2) << capital_pag->get_valor() << "\t|\t" << std::fixed << std::setprecision(2) << interes->get_valor();
         archivo << "\t|\t" << std::fixed << std::setprecision(2) << saldo_cap->get_valor() << "\t|\t";
-        archivo << "1" << "\n";  // Suponiendo que el método imprimir() devuelve un string o un tipo que se pueda imprimir
+        archivo << fecha_pagar.to_string() << "\n";  // Suponiendo que el método imprimir() devuelve un string o un tipo que se pueda imprimir
         //archivo << fecha_pagar.imprimir() << "\n";
 
         ord = ord->get_siguiente();
