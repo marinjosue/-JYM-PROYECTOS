@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
-#include "menu.h"
-#include "Movimientos.cpp"
+#include "menu.h" // Incluye la clase Movimiento
 #include "Amortizacion.h"
+#include "validaciones.h"
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -70,7 +70,6 @@ void Menus::Menu_Principal() {
     const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tMOSTRAR TABLA DE AMORTIZACION", "\t\tAYUDA", "\t\tEXTRAS","\t\tSALIR"};
     int numeroOpciones = 5;
     int selec = 1;
-    Amortizacion prestamo;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
      switch (selec) {
@@ -86,27 +85,76 @@ void Menus::Menu_Principal() {
                         break;
                     case 3:
                         system("cls");
-                        submenu2();  // Llamada al Submenú 2
+                        submenu2();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
                     case 4:
                         system("cls");
-                        Menu_Extras();  // Llamada al Submenú 2
+                        Menu_Extras();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
                     case 5:
                         system("cls");
-                        submenu2();  // Llamada al Submenú 2
+                        submenu2();  // Llamada al Submenï¿½ 2
                         system("pause");
                         break;
-                    // Puedes agregar más casos para otras opciones
+                    // Puedes agregar mï¿½s casos para otras opciones
                 }
         } while (aux);
 }
 
+void ingresar_datos_credito(){
+    system("cls");
+    Fecha sacado;
+    double monto=0, tasa_interes=0;
+    int ncuotas=0;
+
+    while(monto<=0 || monto > 99999999.99){
+        monto = ingresar_reales("\nIngrese el monto del credito");
+
+        if(monto<=0 || monto > 99999999.99){
+            printf("El monto debe ser mayor a 0 y menor a 100M");
+        }else{
+            printf("                                                           ");
+        }
+    }
+    while(ncuotas<=0 || ncuotas > 500){
+        
+        ncuotas = ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
+
+        if(ncuotas<=0 || ncuotas > 500){
+            printf("El numero de cuotas debe ser mayor a 0 y menor a 500");
+        }else{
+            printf("                                                           ");
+        }
+    }
+    while(tasa_interes<=0 || tasa_interes>99.99){
+        tasa_interes = ingresar_reales("\nIngrese la tasa de interes del credito");
+
+        if(tasa_interes<=0 || tasa_interes>99.99){
+            printf("La tasa de interes debe ser mayor a 0 y menor a 100%");
+        }else{
+            printf("                                                           ");
+        }
+    }
+    Credito credito(ncuotas, monto, sacado, tasa_interes);
+    Amortizacion tabla(credito);
+    printf("\n");
+    tabla.imprimir();
+
+    // Guardar la tabla en un archivo (puedes cambiar el nombre de archivo segÃºn tus necesidades)
+    printf("\nTABLA GUARDADA CORRECTAMENTE");
+    tabla.guardarTabla("tabla_amortizacion.txt");
+
+    printf("\n");
+    // Pausa para mostrar el mensaje y esperar la acciÃ³n del usuario
+    system("pause");
+}
+
+
 void Menus::Menu_Credito() {
-     bool aux = true;
-     Movimiento mov;
+    bool aux = true;
+    Menus menu;
     const char *titulo="\t\tDESEA CREAR UN CREDITO:";
     const char *opciones[] = {"\t\tSI", "\t\tNO"};
     int numeroOpciones = 2;
@@ -116,9 +164,8 @@ void Menus::Menu_Credito() {
      switch (selec) {
                    case 1:
                         system("cls");
-                        mov.crear_Credito();
-                        Menu_Principal();
-                        system("pause");
+                        ingresar_datos_credito();
+                        menu.Menu_Credito();
                         break;
                     case 2:
                         system("cls");
@@ -130,9 +177,8 @@ void Menus::Menu_Credito() {
 
 }
 
-
 void Menus::Menu_Extras() {
-     bool aux = true;
+    bool aux = true;
 
     const char *titulo="\t\tMENU EXTRAS:";
     const char *opciones[] = {"\t\tAYUDA", "\t\tIMAGEN","\t\tSALIR"};
@@ -162,7 +208,7 @@ void Menus::Menu_Extras() {
 }
 
 void Menus::submenu2() {
-    // Lógica para el Submenú 2
+    // Lï¿½gica para el Submenï¿½ 2
     printf("\nMenu 2");
     printf("\n");
     system("pause");

@@ -127,3 +127,84 @@
 	"menu.h"
 	"validaciones.h"
 
+1702853377 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\amortizacion.cpp
+	"Amortizacion.h"
+	"Nodo.h"
+	<iostream>
+	<iomanip>
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\amortizacion.h
+	"Nodo.h"
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\nodo.h
+	<string>
+
+1702853377 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\calendario.cpp
+	<stdio.h>
+	"Calendario.h"
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\calendario.h
+	<string>
+
+1702884344 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\cuenta.cpp
+
+1702853377 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1702856535 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+	"Amortizacion.h"
+	"Imagen.h"
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\menu.h
+	"validaciones.h"
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\movimientos.cpp
+	"Movimientos.h"
+	"Calendario.h"
+	"menu.h"
+	"Amortizacion.h"
+	<iostream>
+	<string>
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\movimientos.h
+	"menu.h"
+	"validaciones.h"
+
+1702853377 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\imagen.h
+	<string>
+	<windows.h>
+
+1702856535 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Movimientos.cpp"
+	"Amortizacion.h"
+	"Imagen.h"
+
+1702853377 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\movimientos.cpp
+	"Movimientos.h"
+	"Calendario.h"
+	"menu.h"
+	"Amortizacion.h"
+	<iostream>
+	<string>
+
+1702853736 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v005\nodo.cpp
+	"Nodo.h"
+

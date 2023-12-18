@@ -247,3 +247,112 @@
 
 1702842496 c:\users\dell\desktop\proyecto estructuras\-jym-proyecto-estructura\v proyecto\proyecto v003\amortizacion.h
 
+1702882870 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1702881218 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1702879486 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\listadoble.h
+	"Nodo.h"
+
+1702879449 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\nodo.h
+
+1702879464 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\credito.h
+	"Fecha.h"
+
+1702879483 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\fecha.h
+	<iostream>
+	"Nodo.h"
+
+1702879451 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\calculoscredito.h
+	"ListaDoble.h"
+
+1702879485 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\listadoble.cpp
+	"ListaDoble.h"
+
+1702879448 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\nodo.cpp
+	"Nodo.h"
+
+1702879450 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1702879457 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\credito.cpp
+	"Credito.h"
+
+1702881566 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1702879485 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\listadoble.cpp
+	"ListaDoble.h"
+
+1702870573 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\main.cpp
+	<iostream>
+	"menu.h"
+	"Amortizacion.h"
+
+1702846120 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\menu.h
+
+1702879448 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\nodo.cpp
+	"Nodo.h"
+
+1702885265 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\extra.cpp
+	"Extra.h"
+	<iostream>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<chrono>
+	"validaciones.h"
+
+1702883319 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\extra.h
+	<string>
+
+1702842000 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1702883319 source:c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1702883319 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1702883319 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\bibliotecas\easybmp_datastructures.h
+
+1702883319 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\bibliotecas\easybmp_bmp.h
+
+1702883319 c:\users\yeshu\dropbox\datastructure\firstpartial\proyect\-jym-proyecto-estructura\v proyecto\proyecto v003\bibliotecas\easybmp_variousbmputilities.h
+

@@ -5,10 +5,11 @@
  * Modified: jueves, 7 de diciembre de 2023
  * Purpose: Implementacion de clase Fecha
  ***********************************************************************/
-#include "Bibliotecas/EasyBMP.h"
 #include "Imagen.h"
+#include "../Proyecto V005 versionVSCODE/Bibliotecas/EasyBMP.h"
 #include <conio.h>
 #include <iostream>
+
 Imagen::Imagen(std::string archivo) {
     this->archivo = archivo;
 }

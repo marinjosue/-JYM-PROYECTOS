@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "validaciones.h"
+
 class Menus {
 public:
     void gotoxy(int x, int y);

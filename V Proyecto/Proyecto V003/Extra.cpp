@@ -6,7 +6,7 @@
  * Purpose: Implementation of the class Nodo
  ***********************************************************************/
 
-#include "extras.h"
+#include "Extra.h"
 #include <iostream>
 #include <fstream>
 #include <ctime>

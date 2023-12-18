@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Menu.cpp"
+#include "menu.h"
+#include "Amortizacion.h" // Incluye la clase Amortizacion
 
 using namespace std;
 

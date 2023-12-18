@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
-#include "menu.h"
-#include "Imagen.h"
+#include "menu.h" // Incluye la clase Movimiento
 #include "Amortizacion.h"
 #include "validaciones.h"
 
@@ -68,7 +67,7 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
 void Menus::Menu_Principal() {
     bool aux = true;
     const char *titulo ="\t\tTABLA DE AMORTIZACION";
-    const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tFECHAS", "\t\tBACKUP", "\t\tEXTRAS","\t\tSALIR"};
+    const char *opciones[] = {"\t\tCREAR CREDITO", "\t\tMOSTRAR TABLA DE AMORTIZACION", "\t\tAYUDA", "\t\tEXTRAS","\t\tSALIR"};
     int numeroOpciones = 5;
     int selec = 1;
     do{
@@ -81,25 +80,25 @@ void Menus::Menu_Principal() {
                         break;
                     case 2:
                         system("cls");
-                        //
+                        //                        prestamo.generarTablaAmortizacion(months);
                         system("pause");
                         break;
                     case 3:
                         system("cls");
-                        submenu2();
+                        submenu2();  // Llamada al Submen� 2
                         system("pause");
                         break;
                     case 4:
                         system("cls");
-                        Menu_Extras();
+                        Menu_Extras();  // Llamada al Submen� 2
                         system("pause");
                         break;
                     case 5:
                         system("cls");
-                        submenu2();
+                        submenu2();  // Llamada al Submen� 2
                         system("pause");
                         break;
-
+                    // Puedes agregar m�s casos para otras opciones
                 }
         } while (aux);
 }
@@ -120,7 +119,7 @@ void ingresar_datos_credito(){
         }
     }
     while(ncuotas<=0 || ncuotas > 500){
-
+        
         ncuotas = ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
 
         if(ncuotas<=0 || ncuotas > 500){
@@ -142,10 +141,13 @@ void ingresar_datos_credito(){
     Amortizacion tabla(credito);
     printf("\n");
     tabla.imprimir();
+
+    // Guardar la tabla en un archivo (puedes cambiar el nombre de archivo según tus necesidades)
     printf("\nTABLA GUARDADA CORRECTAMENTE");
     tabla.guardarTabla("tabla_amortizacion.txt");
 
     printf("\n");
+    // Pausa para mostrar el mensaje y esperar la acción del usuario
     system("pause");
 }
 
@@ -175,36 +177,34 @@ void Menus::Menu_Credito() {
 
 }
 
-
 void Menus::Menu_Extras() {
     bool aux = true;
-    Imagen img("foto.bmp");
-    const char *titulo = "\t\tMENU EXTRAS:";
-    const char *opciones[] = { "\t\tSALIR","\t\tAYUDA", "\t\tIMAGEN"};
+
+    const char *titulo="\t\tMENU EXTRAS:";
+    const char *opciones[] = {"\t\tAYUDA", "\t\tIMAGEN","\t\tSALIR"};
     int numeroOpciones = 3;
     int selec = 1;
-    do {
-        menuSeleccion(titulo, opciones, numeroOpciones, selec);
-        switch (selec) {
-            case 1:
-                system("cls");
-                Menu_Principal();
-                system("pause");
-                break;
+    do{
+    menuSeleccion(titulo,opciones, numeroOpciones, selec);
+     switch (selec) {
+                   case 1:
+                        system("cls");
+                        Menu_Principal();
+                        system("pause");
+                        break;
+                    case 2:
 
-            case 2:
-                system("cls");
-                Menu_Principal();
-                system("pause");
-                break;
-            case 3:
-                const int nuevaAnchura = 300;
-                const int nuevaAltura = 300;
-                img.imprimirImagenEnConsola();
-                system("pause");
-                break;
+                        Menu_Principal();
+                        system("pause");
+                        break;
+                    case 3:
+
+                        Menu_Principal();
+                        system("pause");
+                        break;
         }
     } while (aux);
+
 }
 
 void Menus::submenu2() {
