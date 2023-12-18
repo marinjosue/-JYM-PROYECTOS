@@ -124,8 +124,8 @@ void Menus::Menu_Principal() {
                         break;
                     case 5:
                         system("cls");
-                        submenu2();
-                        system("pause");
+                        std::cout << "Gracias por usar el programa. Hasta luego!\n";
+                        aux = false;
                         break;
                 }
         } while (aux);
@@ -239,9 +239,3 @@ void Menus::Menu_Extras() {
     } while (aux);
 }
 
-void Menus::submenu2() {
-    // L�gica para el Submen� 2
-    printf("\nMenu 2");
-    printf("\n");
-    system("pause");
-}
