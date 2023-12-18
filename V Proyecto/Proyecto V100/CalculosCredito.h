@@ -1,9 +1,9 @@
 /*************************
  UFA - ESPE
- * Module:  CalculosCredito.cpp
+ * Module:  CalculosCredito.h
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: domingo, 17 de diciembre de 2023
- * Purpose: Implementacion de clase CalculosCredito
+ * Purpose: Implementacion del encabezado CalculosCredito
  *************************/
 
 #ifndef CALCULOSCREDITO_H_INCLUDED

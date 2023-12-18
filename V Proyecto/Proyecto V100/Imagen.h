@@ -1,12 +1,10 @@
-//*****************//
-//***Universidad de Las Fuerzas Armadas ESPE***//
-//Estudiante: Karla Ansatuña
-//Materia: Estructura de Datos
-//NRC:9671
-//Descripcion del codigo:
-// Funcion que retorna un booleano si es que el numero es palindromo
-//Es decir que se lee igual al reves y al derecho
-//*****************//
+/*************************
+        UFA - ESPE
+ * Module:  Imagen.h
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Declaracion de Encabezado Imagen
+ ***********************************************************************/
 #ifndef IMAGEN_H
 #define IMAGEN_H
 #include <string>

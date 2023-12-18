@@ -1,9 +1,9 @@
 /*************************
  UFA - ESPE
- * Module:  CalculosCredito.cpp
+ * Module:  Amortizacion.h
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: domingo, 17 de diciembre de 2023
- * Purpose: Implementacion de clase Amortizacion
+ * Purpose: Implementacion del encabezado Amortizacion
  *************************/
 
 #if !defined(__Amortizacion_Amortizacion_h)

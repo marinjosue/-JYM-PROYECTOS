@@ -1,3 +1,10 @@
+/*************************
+ UFA - ESPE
+ * Module:  Validacoines.h
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Declaracion del encabezado validaciones
+ ***********************************************************************/
 #ifndef VALIDACIONES_H_INCLUDED
 #define VALIDACIONES_H_INCLUDED
 

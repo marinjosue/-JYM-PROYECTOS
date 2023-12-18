@@ -1,9 +1,9 @@
 /***********************************************************************
  UFA - ESPE
- * Module:  CalculosCredito.cpp
+ * Module:  Extra.cpp
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: domingo, 17 de diciembre de 2023
- * Purpose: Implementation of the class Nodo
+ * Purpose: Implementation of the class Extra
  ***********************************************************************/
 
 #include "Extra.h"

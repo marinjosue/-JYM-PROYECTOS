@@ -1,9 +1,9 @@
 /***********************************************************************
  UFA - ESPE
- * Module:  CalculosCredito.cpp
+ * Module:  Imagen.cpp
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: jueves, 7 de diciembre de 2023
- * Purpose: Implementacion de clase Fecha
+ * Purpose: Implementacion de clase Imagen
  ***********************************************************************/
 #include "Bibliotecas/EasyBMP.h"
 #include "Imagen.h"

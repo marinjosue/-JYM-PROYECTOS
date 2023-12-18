@@ -1,3 +1,10 @@
+/*************************
+    UFA - ESPE
+ * Module:  Menus.h
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Declaracion del encabezado Menus
+ ***********************************************************************/
 #ifndef MENU_H
 #define MENU_H
 

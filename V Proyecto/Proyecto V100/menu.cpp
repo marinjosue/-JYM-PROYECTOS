@@ -1,3 +1,10 @@
+/*************************
+            UFA - ESPE
+ * Module:  menu.cpp
+ * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
+ * Modified: domingo, 17 de diciembre de 2023
+ * Purpose: Implementacion de clase menu
+ ***********************************************************************/
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>

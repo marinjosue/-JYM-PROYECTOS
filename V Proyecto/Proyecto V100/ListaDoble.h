@@ -1,9 +1,9 @@
 /*************************
  UFA - ESPE
- * Module:  CalculosCredito.cpp
+ * Module:  ListaDoble.h
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: domingo, 17 de diciembre de 2023
- * Purpose: Declaracion de clase ListaDoble
+ * Purpose: Declaracion del encabezado ListaDoble
  ***********************************************************************/
 #ifndef LISTADOBLE_H_INCLUDED
 #define LISTADOBLE_H_INCLUDED
