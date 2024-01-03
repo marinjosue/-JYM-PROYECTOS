@@ -206,7 +206,6 @@ void Menus::Menu_Extras() {
     bool aux = true;
     Imagen img("foto.bmp");
     std::string archivoOriginal = "tabla_amortizacion.txt";
-    std::string archivoBackup = "backup/2023-12-18_05-11-30.txt";
     const char *titulo = "\t\tMENU EXTRAS:";
     const char *opciones[] = { "\t\tSALIR","\t\RESTAURAR BACKUP","\t\tAYUDA", "\t\tIMAGEN"};
     int numeroOpciones = 4;
@@ -219,17 +218,24 @@ void Menus::Menu_Extras() {
                 Menu_Principal();
                 system("pause");
                 break;
-            case 2:
-                system("cls");
-                restaurarDesdeBackup(archivoOriginal, archivoBackup);;
+          case 2:
+           system("cls");
+            {
+                std::cout << "Ingrese el nombre del archivo a restaurar: " << std::endl;
+                std::string archivoRespaldo;
+                std::cin >> archivoRespaldo;
+                listarRespaldos(archivoRespaldo);
+                restaurarRespaldo(archivoOriginal, archivoRespaldo);
+
                 system("pause");
-                break;
+            }
+            break;
              case 3:
                 system("cls");
                 system("start \"\" .\\Doxygen_Documentacion\\html\\index.html");
                 system("pause");
                 break;
-            case 4:
+             case 4:
                 const int nuevaAnchura = 300;
                 const int nuevaAltura = 300;
                 img.imprimirImagenEnConsola();

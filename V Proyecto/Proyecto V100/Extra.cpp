@@ -16,8 +16,9 @@
 #include <cstring>
 #include <sstream>
 #include <string>
+#include <regex>
 #include <chrono>
-
+#include <vector>
 
 void createBackupFolder(const std::string& folderName) {
     if (mkdir(folderName.c_str()) == 0) {
@@ -95,4 +96,67 @@ void restaurarDesdeBackup(const std::string& archivoOriginal, const std::string&
     // Cerrar los archivos
     archivoOriginalStream.close();
     archivoBackupStream.close();
+}
+
+
+std::vector<std::string> listarRespaldos(const std::string& nombreArchivo) {
+    std::vector<std::string> respaldos;
+    std::string carpetaRespaldos = "backup";
+    std::regex formato("\\d{4}-\\d{2}-\\d{2}-\\d{2}-\\d{2}-\\d{2}-" + nombreArchivo);
+
+    DIR* dir;
+    struct dirent* ent;
+
+    if ((dir = opendir(carpetaRespaldos.c_str())) != nullptr) {
+        while ((ent = readdir(dir)) != nullptr) {
+            std::string filename = ent->d_name;
+            if (std::regex_search(filename, formato)) {
+                respaldos.push_back(filename);
+            }
+        }
+        closedir(dir);
+    } else {
+        std::cerr << "No se pudo abrir la carpeta '" << carpetaRespaldos << "'" << std::endl;
+    }
+
+    return respaldos;
+}
+
+
+void restaurarRespaldo(const std::string& nombreArchivo, const std::string& archivoRespaldo) {
+    std::string carpetaRespaldos = "backup/";
+    std::string rutaArchivoOriginal = nombreArchivo;
+
+    std::string rutaRespaldo = carpetaRespaldos + archivoRespaldo + ".txt";
+
+    std::ifstream respaldo(rutaRespaldo);
+    std::ofstream archivoOriginal(rutaArchivoOriginal);
+
+    if (!respaldo.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo de respaldo '" << rutaRespaldo << "'" << std::endl;
+        return;
+    }
+
+    if (!archivoOriginal.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo original '" << rutaArchivoOriginal << "'" << std::endl;
+        respaldo.close();
+        return;
+    }
+
+    archivoOriginal << respaldo.rdbuf(); // Copiar contenido del respaldo al archivo original
+    respaldo.close();
+    archivoOriginal.close();
+
+    std::cout << "El respaldo '" << archivoRespaldo << "' ha sido restaurado correctamente en '" << nombreArchivo << "'." << std::endl;
+}
+void imprimirRespaldos(const std::vector<std::string>& respaldos) {
+    if (respaldos.empty()) {
+        std::cout << "No hay respaldos disponibles." << std::endl;
+    } else {
+        std::cout << "Respaldos disponibles:" << std::endl;
+
+        for (const std::string& respaldo : respaldos) {
+            std::cout << respaldo << std::endl;
+        }
+    }
 }

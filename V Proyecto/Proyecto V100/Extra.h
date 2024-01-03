@@ -21,7 +21,10 @@ std::string leerArchivoComoString(const std::string& nombreArchivo);
 void imprimirContenidoArchivo(const std::string& nombreArchivo);
 void restaurarDesdeBackup(const std::string& archivoOriginal, const std::string& archivoBackup);
 void imprimirContenidoArchivo(const std::string& nombreArchivo);
-
-
+//void listarRespaldos(const std::string& nombreArchivo);
+void restaurarRespaldo(const std::string& nombreArchivo, const std::string& archivoRespaldo);
+//void listarRespaldos(const std::string& nombreArchivo);
+std::vector<std::string> listarRespaldos(const std::string& nombreArchivo);
+void imprimirRespaldos(const std::vector<std::string>& respaldos);
 
 #endif // EXTRAS_H
