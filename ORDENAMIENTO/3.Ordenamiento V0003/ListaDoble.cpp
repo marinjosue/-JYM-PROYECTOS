@@ -30,8 +30,7 @@ bool ListaDoble<T>::esta_vacia(){
 
 template <typename T>
 void ListaDoble<T>::insertarAlInicio(Persona& persona) {
-
-    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona), siguiente, anterior);
+    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona.getNombre(), persona.getApellido(), persona.getCedula(), persona.getId()), siguiente, anterior);
 
     if (esta_vacia()) {
         cabeza = nuevo_nodo;
@@ -42,6 +41,7 @@ void ListaDoble<T>::insertarAlInicio(Persona& persona) {
         aux->set_anterior(cabeza);
     }
 }
+
 
 template <typename T>
 void ListaDoble<T>::insertarAlFinal(Persona& persona) {
@@ -59,7 +59,7 @@ void ListaDoble<T>::insertarAlFinal(Persona& persona) {
 
 template <typename T>
 void ListaDoble<T>::mostrarLista() {
-     Nodo<T>* actual = cabeza;
+    Nodo<T>* actual = cabeza;
 
     cout << "Cedula    Nombre    Apellido   ID" << endl;
     cout << "===========================================================================" << endl;
@@ -67,8 +67,8 @@ void ListaDoble<T>::mostrarLista() {
     try {
         while (actual != nullptr) {
             Persona* persona_actual = actual->get_valor();
-            cout << persona_actual-> getCedula() << "    "
-                << persona_actual->getNombre()<< "    "
+            cout << persona_actual->getCedula() << "    "
+                << persona_actual->getNombre() << "    "
                 << persona_actual->getApellido() << "    "
                 << persona_actual->getId() << endl;
 
@@ -80,10 +80,11 @@ void ListaDoble<T>::mostrarLista() {
 
     cout << "===========================================================================" << endl;
 }
+
 template <typename T>
 void ListaDoble<T>::eliminarAlInicio() {
     if (esta_vacia()) {
-        // La lista está vacía, no hay nada que eliminar.
+        // La lista estï¿½ vacï¿½a, no hay nada que eliminar.
         return;
     }
 
@@ -105,7 +106,7 @@ void ListaDoble<T>::eliminarAlInicio() {
 template <typename T>
 void ListaDoble<T>::eliminarAlFinal() {
     if (esta_vacia()) {
-        // La lista está vacía, no hay nada que eliminar.
+        // La lista estï¿½ vacï¿½a, no hay nada que eliminar.
         return;
     }
 
