@@ -72,6 +72,7 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
         }
     } while (aux);
 }
+
 void Menus::Menu_Principal() {
 
     Persona gestorPersonas;
