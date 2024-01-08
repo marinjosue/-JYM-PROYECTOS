@@ -9,7 +9,6 @@
 #define LISTADOBLE_H_INCLUDED
 
 #include "Nodo.cpp"
-#include <string>
 #include "Persona.h"
 
 template <typename T>
@@ -20,19 +19,17 @@ public:
     bool esta_vacia();
     void insertarAlInicio(Persona& persona);
     void insertarAlFinal(Persona& persona);
-    void eliminarPersona(Persona* persona);
     void eliminarAlInicio();
     void eliminarAlFinal();
     void mostrarLista();
+    bool buscarCedulaExistente(const std::string& newCedula);
 
-    std::string generarNuevoId();
 protected:
 private:
     Nodo<T>* cabeza;
     Nodo<T>* cola;
     Nodo<T>* siguiente;
     Nodo<T>* anterior;
-    int contador;
 };
 
 #endif // LISTADOBLE_H_INCLUDED

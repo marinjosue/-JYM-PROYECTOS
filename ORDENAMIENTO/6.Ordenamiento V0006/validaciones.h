@@ -1,12 +1,13 @@
 /***********************************************************************
  * Module:  Validaciones.h
- * Author:  Josue Marin
+ * Author:  Chiliquinga Yeshua, Josue Marin, Salcedo Micaela
  * Modified: viernes, 1 de diciembre de 2023 12:05:38 a. m.
  * Purpose: Declaration of the class validaciones
  ***********************************************************************/
 
 #ifndef VALIDACIONES_H_INCLUDED
 #define VALIDACIONES_H_INCLUDED
+
 using namespace std;
 #include <iostream>
 #include <stdlib.h>
@@ -19,42 +20,17 @@ using namespace std;
 #include <cstdlib>
 #include <vector>
 #include <fstream>
-std::string mayusculas_primeras(const std::string& cadena);
-std::string ingresar_cadena_con_espacio(const char* msj);
 int ingresar_enteros(const char* msj);
-int ingresar_enterosC(const char* msj);
 int borrar(char* datos, int& i);
 float ingresar_reales(const char* msj);
 std::string ingresar_alfabetico(const char* msj);
 std::string ingresar_cedula(const char* msj);
- bool validarCedula(std::string cedula);
-  std::string ingresar_numeros_como_string(const char* msj);
+std::string ingresar_numeros_como_string(const char* msj);
+bool validarCedula(std::string cedula);
+std::string mayusculas_primeras(const std::string& cadena);
+std::string ingresar_cadena_con_espacio(const char* msj);
 
 
- std::string ingresar_numeros_como_string(const char* msj) {
-   string datos = "";
-  char c;
-
-  printf("%s", msj);
-  printf("\n");
-
-  while ((c = getch()) != 13 && datos.length() < 10) {
-    if ((c >= '0' && c <= '9') || c == 8) {
-      if (c == 8) {
-        // Borrar último caracter si la entrada es retroceso
-        if (!datos.empty()) {
-          datos.pop_back();
-          cout << "\b \b";  // Mover el cursor y borrar visualmente
-        }
-      } else {
-        cout << c;  // Mostrar el caracter ingresado
-        datos += c;  // Añadir al string
-      }
-    }
-  }
-
-  return datos;
-}
 int ingresar_enteros(const char* msj) {
     char* datos = new char[10];
     char c;
@@ -63,29 +39,7 @@ int ingresar_enteros(const char* msj) {
     printf("%s", msj);
     printf("\n");
 
-    while ((c = getch()) != 13 && i < 10) {
-        if ((c >= '0' && c <= '9')|| c == 8) {
-            if(c == 8){
-                i = borrar(datos,i);
-            }else{
-                printf("%c", c);
-                datos[i++] = c;
-            }
-
-        }
-    }
-    datos[i] = '\0';
-    return atoi(datos);
-}
-int ingresar_enterosC(const char* msj) {
-    char* datos = new char[10];
-    char c;
-    int i = 0;
-
-    printf("%s", msj);
-    printf("\n");
-
-    while ((c = getch()) != 13 && i < 10) {
+    while ((c = getch()) != 13 && i < 9) {
         if ((c >= '0' && c <= '9')|| c == 8) {
             if(c == 8){
                 i = borrar(datos,i);
@@ -160,39 +114,20 @@ std::string ingresar_alfabetico(const char* msj) {
 }
 
 
-std::string ingresar_cedula(const char* msj) {
-    const int maxDigitos = 10;
-    char* dato = new char[maxDigitos + 1]; // +1 para el carácter nulo '\0'
-    int i = 0;
-    char c;
 
-    std::cout << msj << std::endl;
+std::string ingresar_id(const char* msj, int& contador) {
+    std::string prefijo = "L00";
+    std::string contadorStr = std::to_string(contador);
 
-    while ((c = _getch()) != 13 && i < maxDigitos) {
-        if (c >= '0' && c <= '9') {
-            dato[i++] = c;
-            std::cout << c;
-        } else if (c == 8 && i != 0) {
-            dato[--i] = 0;
-
-            std::cout << "\b \b"; // Retrocede el cursor y borra el último carácter
-        }
+    while (contadorStr.length() < 4) {
+        contadorStr = "0" + contadorStr;
     }
 
-    dato[i] = '\0';
+    std::string id = prefijo + contadorStr;
 
-    // Validar cédula (por ejemplo, asumiendo una cédula de 10 dígitos numéricos)
-    if (strlen(dato) != 10) {
-        std::cout << "\nError: La cedula debe tener 10 caracteres." << std::endl;
-        delete[] dato; // Liberar memoria antes de salir
-        return ingresar_cedula(msj); // Vuelve a llamar a la función para ingresar nuevamente
-    }
+    std::cout << msj << id << std::endl;
 
-    std::cout << std::endl;
-
-    std::string resultado(dato);
-    delete[] dato; // Liberar memoria antes de salir
-    return resultado;
+    return id;
 }
 
 
@@ -227,26 +162,51 @@ int borrar(char* datos, int& i) {
         return lectura;
     }
 
+ std::string ingresar_numeros_como_string(const char* msj) {
+   string datos = "";
+  char c;
+
+  printf("%s", msj);
+  printf("\n");
+
+  while ((c = getch()) != 13 && datos.length() < 10) {
+    if ((c >= '0' && c <= '9') || c == 8) {
+      if (c == 8) {
+        // Borrar Ãºltimo caracter si la entrada es retroceso
+        if (!datos.empty()) {
+          datos.pop_back();
+          cout << "\b \b";  // Mover el cursor y borrar visualmente
+        }
+      } else {
+        cout << c;  // Mostrar el caracter ingresado
+        datos += c;  // AÃ±adir al string
+      }
+    }
+  }
+
+  return datos;
+}
+
 bool validarCedula(std::string cedula) {
-    // Verificar que tenga 10 dígitos
+    // Verificar que tenga 10 dÃ­gitos
     if (cedula.length() != 10) {
         return false;
     }
-    // Verificar que los primeros dos dígitos sean válidos
+    // Verificar que los primeros dos dÃ­gitos sean vÃ¡lidos
     if (cedula[0] < '0' || cedula[0] > '9' || cedula[1] < '0' || cedula[1] > '9') {
         return false;
     }
-    // Verificar que los dígitos intermedios sean válidos
+    // Verificar que los dÃ­gitos intermedios sean vÃ¡lidos
     for (int i = 2; i < 8; i++) {
         if (cedula[i] < '0' || cedula[i] > '9') {
             return false;
         }
     }
-    // Verificar que el último dígito sea válido
+    // Verificar que el Ãºltimo dÃ­gito sea vÃ¡lido
     if (cedula[9] < '0' || cedula[9] > '9') {
         return false;
     }
-    // Verificar el dígito verificador
+    // Verificar el dÃ­gito verificador
     int suma = 0;
     for (int i = 0; i < 9; i++) {
         int digito = cedula[i] - '0';
@@ -278,7 +238,7 @@ std::string ingresar_alfabetico_con_un_espacio(const char* msj) {
     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == 32 || c == 8) {
       if (c == 8) {
         i = borrar(datos, i);
-        espacio_ingresado = false; // Reiniciar la bandera si se borra un carácter
+        espacio_ingresado = false; // Reiniciar la bandera si se borra un carÃ¡cter
       } else if (c == 32 && !espacio_ingresado) {
         printf("%c", c);
         datos[i++] = c;

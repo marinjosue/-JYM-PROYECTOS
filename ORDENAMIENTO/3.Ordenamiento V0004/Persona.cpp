@@ -155,18 +155,16 @@ Persona::Persona(std::string Nombre, std::string Apellido, std::string Cedula, s
  * @brief Ingresa una nueva persona y la guarda en un archivo de texto.
  */
  Persona Persona::ingresarPersona() {
-   
+
     std::string newCedula, newNombre, newApellido, newId;
 
     newCedula = ingresar_cedula("\nIngrese el numero de cedula: ");
 
     std::cout << "Ingrese el nombre: ";
     std::cin >> newNombre;
-
     std::cout << "Ingrese el apellido: ";
     std::cin >> newApellido;
-
-    newId = ingresar_id("\nSu ID es: ", contadorId);
+    newId = ingresar_id("Su ID es: ", contadorId);
     contadorId++;
 
     // Crear y retornar un objeto Persona con los valores ingresados

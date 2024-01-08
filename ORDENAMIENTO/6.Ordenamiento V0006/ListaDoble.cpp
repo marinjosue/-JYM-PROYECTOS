@@ -30,22 +30,21 @@ bool ListaDoble<T>::esta_vacia(){
 
 template <typename T>
 void ListaDoble<T>::insertarAlInicio(Persona& persona) {
-
-    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona), siguiente, anterior);
+    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona.getNombre(), persona.getApellido(), persona.getCedula(), persona.getId()), nullptr, nullptr);
 
     if (esta_vacia()) {
         cabeza = nuevo_nodo;
+        cola = nuevo_nodo;
     } else {
-        Nodo<T>* aux = cabeza;
+        nuevo_nodo->set_siguiente(cabeza);
+        cabeza->set_anterior(nuevo_nodo);
         cabeza = nuevo_nodo;
-        cabeza->set_siguiente(aux);
-        aux->set_anterior(cabeza);
     }
 }
 
 template <typename T>
 void ListaDoble<T>::insertarAlFinal(Persona& persona) {
-    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona), nullptr, nullptr);
+    Nodo<T>* nuevo_nodo = new Nodo<T>(new Persona(persona.getNombre(), persona.getApellido(), persona.getCedula(), persona.getId()), nullptr, nullptr);
 
     if (esta_vacia()) {
         cabeza = nuevo_nodo;
@@ -57,9 +56,10 @@ void ListaDoble<T>::insertarAlFinal(Persona& persona) {
     }
 }
 
+
 template <typename T>
 void ListaDoble<T>::mostrarLista() {
-     Nodo<T>* actual = cabeza;
+    Nodo<T>* actual = cabeza;
 
     cout << "Cedula    Nombre    Apellido   ID" << endl;
     cout << "===========================================================================" << endl;
@@ -67,8 +67,8 @@ void ListaDoble<T>::mostrarLista() {
     try {
         while (actual != nullptr) {
             Persona* persona_actual = actual->get_valor();
-            cout << persona_actual-> getCedula() << "    "
-                << persona_actual->getNombre()<< "    "
+            cout << persona_actual->getCedula() << "    "
+                << persona_actual->getNombre() << "    "
                 << persona_actual->getApellido() << "    "
                 << persona_actual->getId() << endl;
 
@@ -80,10 +80,11 @@ void ListaDoble<T>::mostrarLista() {
 
     cout << "===========================================================================" << endl;
 }
+
 template <typename T>
 void ListaDoble<T>::eliminarAlInicio() {
     if (esta_vacia()) {
-        // La lista est· vacÌa, no hay nada que eliminar.
+        // La lista est√° vac√≠a, no hay nada que eliminar.
         return;
     }
 
@@ -98,14 +99,21 @@ void ListaDoble<T>::eliminarAlInicio() {
         cola = nullptr;
     }
 
-    delete nodo_a_eliminar->get_valor();
+    // Obtener la persona asociada al nodo
+    Persona* persona_a_eliminar = nodo_a_eliminar->get_valor();
+    // Actualizar el contadorId si es necesario
+    if (std::stoi(persona_a_eliminar->getId().substr(1)) == Persona::contadorId) {
+        Persona::contadorId--;
+    }
+
+    delete persona_a_eliminar;
     delete nodo_a_eliminar;
 }
 
 template <typename T>
 void ListaDoble<T>::eliminarAlFinal() {
     if (esta_vacia()) {
-        // La lista est· vacÌa, no hay nada que eliminar.
+        // La lista est√° vac√≠a, no hay nada que eliminar.
         return;
     }
 
@@ -120,30 +128,38 @@ void ListaDoble<T>::eliminarAlFinal() {
         cola = nullptr;
     }
 
-    delete nodo_a_eliminar->get_valor();
+    // Obtener la persona asociada al nodo
+    Persona* persona_a_eliminar = nodo_a_eliminar->get_valor();
+    // Actualizar el contadorId si es necesario
+    if (std::stoi(persona_a_eliminar->getId().substr(1)) == Persona::contadorId) {
+        Persona::contadorId--;
+    }
+
+    delete persona_a_eliminar;
     delete nodo_a_eliminar;
 }
 
+
 template <typename T>
-bool ListaDoble<T>::buscar(std::string valor_buscado) {
-    Nodo<T>* actual = cabeza;
+bool ListaDoble<T>::buscarCedulaExistente(const std::string& newCedula) {
+    Nodo<T>* nodo_actual = cabeza;
 
-  int posicion = 1;
-  bool nodoEncontrado = false;
-  while (actual != nullptr) {
-    Persona* persona_actual = actual->get_valor();
-    if (persona_actual->getCedula() == valor_buscado) {
-      nodoEncontrado = true;
-      break;
+    bool encontrado = false;
+    int posicion = 1;
+
+    while (nodo_actual != nullptr) {
+        Persona* persona_actual = nodo_actual->get_valor();
+
+        if (persona_actual->getCedula() == newCedula) {
+            encontrado = true;
+            break; // Una vez encontrada la c√©dula, no es necesario seguir buscando
+        }
+
+        nodo_actual = nodo_actual->get_siguiente();
+        posicion++;
     }
-    actual = actual->get_siguiente();
-    posicion++;
-  }
 
-  if (nodoEncontrado) {
-    std::cout << "El valor " << valor_buscado << " fue encontrado en la posiciÛn " << posicion << std::endl;
-    return true;
-  } else {
-    return false;
-  }
+    return encontrado;
 }
+
+

@@ -72,6 +72,7 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
         }
     } while (aux);
 }
+
 void Menus::Menu_Principal() {
 
     Persona gestorPersonas;
@@ -135,34 +136,4 @@ void Menus::Menu_Principal() {
         } while (aux);
 }
 
-Persona Persona::ingresarPersona() {
-   ListaDoble <Persona*> lista;
-    std::string newCedula, newNombre, newApellido, newId;
-
-    // Input and validation for Cédula
-    do {
-        newCedula = ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
-
-        if (validarCedula(newCedula)) {
-            // Check if the Cédula already exists in the ListaDoble
-            if (lista.buscarCedulaExistente(newCedula)) {
-                cout << "\nLa cedula ingresada ya existe. Vuelva a intentarlo." << endl;
-            } else {
-                break; // Cédula is valid and not duplicate
-            }
-        } else {
-            cout << "\nLa cedula ingresada es invalida. Vuelva a intentarlo." << endl;
-        }
-    } while (true);
-
-    // Input for Nombre and Apellido
-    newNombre = mayusculas_primeras(ingresar_alfabetico_con_un_espacio("\nIngrese el nombre: "));
-    newApellido = mayusculas_primeras(ingresar_alfabetico_con_un_espacio("\nIngrese el apellido: "));
-
-    // Automatically generate the ID using the member function of ListaDoble
-newId = Persona::generarSiguienteId();
-  std::cout << "\nSu id unico es: "<< newId << std::endl;
-    // Crear y retornar un objeto Persona con los valores ingresados
-    return Persona(newNombre, newApellido, newCedula, newId);
-}
 

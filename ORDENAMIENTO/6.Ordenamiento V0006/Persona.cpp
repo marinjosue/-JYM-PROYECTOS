@@ -10,10 +10,11 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <iomanip>
 #include "validaciones.h"
-#include "ListaDoble.h"
-#include "Nodo.h"
+#include "ListaDoble.cpp"
 
+int Persona::contadorId = 0;
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -141,45 +142,81 @@ void Persona::setId(std::string newId)
 // Return:
 ////////////////////////////////////////////////////////////////////////
 
-Persona::Persona(std::string Nombre, std::string Apellido, std::string Cedula, std::string Id)
-{
-
-    this->Nombre = Nombre;
-    this->Apellido = Apellido;
-    this->Cedula = Cedula;
-    this->Id = Id;
+// Implementación de los constructores modificados
+Persona::Persona(std::string Nombre, std::string Apellido, std::string Cedula)
+    : Nombre(Nombre), Apellido(Apellido), Cedula(Cedula) {
+    this->id = generarSiguienteId();
 }
 
+Persona::Persona(std::string Nombre, std::string Apellido, std::string Cedula, std::string Id)
+    : Nombre(Nombre), Apellido(Apellido), Cedula(Cedula), Id(Id) {
+    // Actualizar el contadorId si es necesario
+    int idValor = std::stoi(Id.substr(1));
+    if (idValor > contadorId) {
+        contadorId = idValor;
+    }
+}
+
+std::string Persona::generarSiguienteId() {
+    // Formatear el ID según la lógica deseada (por ejemplo, L000000)
+    std::ostringstream oss;
+    oss << "L" << std::setfill('0') << std::setw(6) << ++contadorId;
+    return oss.str();
+}
 
 /**
  * @brief Ingresa una nueva persona y la guarda en un archivo de texto.
  */
- Persona Persona::ingresarPersona() {
- std::string newCedula, newNombre, newApellido, newId;
-  do {
-    newCedula = ingresar_numeros_como_string("cedula");
 
-    if (validarCedula(newCedula)) {
-      break;
-    } else {
-      cout << "La c�dula ingresada es inv�lida. Vuelva a intentarlo." << endl;
-    }
-  } while (true);
-    //newNombre= ingresar_alfabetico_con_un_espacio("Nombre: ");
-    newNombre= mayusculas_primeras(ingresar_alfabetico_con_un_espacio("Nombres: "));
-    newApellido= mayusculas_primeras(ingresar_alfabetico_con_un_espacio("Apellidos: "));
+Persona Persona::ingresarPersona() {
+    ListaDoble<Persona*> lista;
+    std::string newCedula, newNombre, newApellido, newId;
 
+    // Input and validation for Cédula
+    do {
+        newCedula = ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
-    std::cout << "Su ID es: ";
-    std::cin >> newId;
+        if (validarCedula(newCedula)) {
 
+            if (lista.buscarCedulaExistente(newCedula)) {
+                cout << "\nLa cedula ingresada ya existe. Vuelva a intentarlo." << endl;
+            } else {
+                break; // Cédula is valid and not duplicate
+            }
+        } else {
+            cout << "\nLa cedula ingresada es invalida. Vuelva a intentarlo." << endl;
+        }
+    } while (true);
+
+    // Input and validation for Nombre
+    do {
+        newNombre = mayusculas_primeras(ingresar_alfabetico_con_un_espacio("\nIngrese el nombre: "));
+        if (newNombre.empty()) {
+            cout << "\nEl nombre no puede estar vacio. Vuelva a intentarlo." << endl;
+        } else {
+            break; // Nombre is not empty
+        }
+    } while (true);
+
+    // Input and validation for Apellido
+    do {
+        newApellido = mayusculas_primeras(ingresar_alfabetico_con_un_espacio("\nIngrese el apellido: "));
+        if (newApellido.empty()) {
+            cout << "\nEl apellido no puede estar vacio. Vuelva a intentarlo." << endl;
+        } else {
+            break; // Apellido is not empty
+        }
+    } while (true);
+
+    // Automatically generate the ID using the member function of ListaDoble
+    newId = Persona::generarSiguienteId();
+    std::cout << "\nSu id unico es: " << newId << std::endl;
 
     // Crear y retornar un objeto Persona con los valores ingresados
-    return Persona(newCedula, newNombre, newApellido, newId);
-
-
-
+    return Persona(newNombre, newApellido, newCedula, newId);
 }
+
+
 
 // datos= cedula + " "+ nombre+" " + apellido+" " + "\n";
 
