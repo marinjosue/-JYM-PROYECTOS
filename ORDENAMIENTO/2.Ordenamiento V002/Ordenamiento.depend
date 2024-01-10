@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1704601867 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.h"
+
+1704609524 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\nodo.h
+	"Persona.h"
+
+1704601667 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\menu.h
+
+1704609595 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\listadoble.h
+	"Nodo.cpp"
+	"Persona.h"
+
+1704614555 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\persona.h
+	<string>
+
+1704256711 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1704613952 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.h"
+
+1704614815 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1704614522 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	"validaciones.h"
+	"ListaDoble.cpp"
+
+1704613461 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	<iostream>
+
+1704613128 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\gestorpersonas.cpp
+	"GestorPersonas.h"
+	"validaciones.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1704609267 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\gestorpersonas.h
+	"ListaDoble.cpp"
+	"Persona.h"
+
+1704613461 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	<iostream>
+
+1704256711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1704613855 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\gestorpersonas.cpp
+

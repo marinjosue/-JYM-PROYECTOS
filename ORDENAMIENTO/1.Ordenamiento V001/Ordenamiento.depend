@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1704601867 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.h"
+
+1704256711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\nodo.h
+
+1704601667 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\menu.h
+
+1704604711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1704604936 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\persona.h
+	<string>
+
+1704256711 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1704605098 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"validaciones.h"
+
+1704601677 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+
+1704604082 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\persona.cpp
+	"Persona.h"
+
+1704605026 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\programas\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+
