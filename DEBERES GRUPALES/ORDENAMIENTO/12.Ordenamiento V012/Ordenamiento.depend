@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1704859573 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+
+1704859213 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\listadoble.h
+	"Nodo.cpp"
+	"Persona.h"
+
+1704684194 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.cpp
+	"Nodo.h"
+
+1704684194 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.h
+	"Persona.h"
+
+1704859308 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\persona.h
+	<string>
+
+1704684194 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.cpp
+	"Nodo.h"
+
+1704859245 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.cpp"
+
+1704689611 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1704858040 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1704858040 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1704859573 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+
+1704859402 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+

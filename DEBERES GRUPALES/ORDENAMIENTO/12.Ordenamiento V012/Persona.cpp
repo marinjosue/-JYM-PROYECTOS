@@ -12,7 +12,7 @@
 #include <vector>
 #include <iomanip>
 #include "validaciones.h"
-#include "ListaDoble.h"
+#include "ListaDoble.cpp"
 
 int Persona::contadorId = 0;
 
@@ -223,20 +223,3 @@ Persona Persona::ingresarPersona(ListaDoble<Persona*>& listaPersonas) {
 }
 
 
-
-// datos= cedula + " "+ nombre+" " + apellido+" " + "\n";
-
-
-
-/*
- std::ofstream archivo("personas.txt", std::ios::app);
-    if (archivo.is_open()) {
-        archivo << cedula << " ";
-        archivo << nombre << " ";
-        archivo << apellido << " ";
-        archivo << id << "\n";
-        archivo.close();
-        std::cout << "Persona registrada exitosamente en el archivo personas.txt\n";
-    } else {
-        std::cerr << "No se pudo abrir el archivo personas.txt para escribir\n";
-    }*/

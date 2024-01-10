@@ -10,9 +10,10 @@
 
 #include "Nodo.cpp"
 
+#include "Persona.h"
 
 
-class Persona;
+
 
 template <typename T>
 class ListaDoble
@@ -36,22 +37,5 @@ private:
     Nodo<T>* anterior;
 };
 
-template <typename T>
-bool ListaDoble<T>::buscarCedulaExistente(const std::string& cedula) const  {
-    Nodo<T>* nodo_actual = cabeza;
-
-    while (nodo_actual != nullptr) {
-        Persona* persona_actual = nodo_actual->get_valor();
-
-        if (persona_actual->getCedula() == cedula) {
-            return false;
-        }
-
-        nodo_actual = nodo_actual->get_siguiente();
-    }
-
-
-    return true;
-}
 
 #endif // LISTADOBLE_H_INCLUDED

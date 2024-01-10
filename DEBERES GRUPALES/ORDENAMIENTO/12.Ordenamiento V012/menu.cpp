@@ -78,7 +78,8 @@ void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
 
     const char *titulo ="\t\tREGISTRO DE PERSONAS";
     const char *opciones[] =
-    {"\t\t[1]Insertar datos a la lista por la cabeza",
+    {
+    "\t\t [1]Insertar datos a la lista por la cabeza",
     "\t\t [2]Insertar datos a la lista por la cola",
     "\t\t [3]Imprimir datos de la lista",
     "\t\t [4]Eliminar dato de la lista por la cola",

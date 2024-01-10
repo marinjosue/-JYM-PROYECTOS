@@ -142,6 +142,24 @@ void ListaDoble<T>::eliminarAlFinal() {
     delete nodo_a_eliminar;
 }
 template <typename T>
+bool ListaDoble<T>::buscarCedulaExistente(const std::string& cedula) const  {
+    Nodo<T>* nodo_actual = cabeza;
+
+    while (nodo_actual != nullptr) {
+        Persona* persona_actual = nodo_actual->get_valor();
+
+        if (persona_actual->getCedula() == cedula) {
+            return false;
+        }
+
+        nodo_actual = nodo_actual->get_siguiente();
+    }
+
+
+    return true;
+}
+
+template <typename T>
 void ListaDoble<T>::orden_seleccion(bool (*criterio)(T, T)) {
     Nodo<T>* actual = cabeza;
 
