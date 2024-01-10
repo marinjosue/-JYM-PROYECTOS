@@ -8,14 +8,13 @@
 #include <iostream>
 #include "Nodo.h"
 #include "menu.h"
-#include "ListaDoble.h"
+#include "ListaDoble.cpp"
 
- ListaDoble<Persona*> listaPersonas;
 
 int main()
 {
-
+    ListaDoble<Persona*> listaPersonas;
     Menus menu;
-    menu.Menu_Principal();
+    menu.Menu_Principal(listaPersonas);
     return 0;
 }

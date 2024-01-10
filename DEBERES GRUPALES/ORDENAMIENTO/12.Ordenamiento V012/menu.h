@@ -16,7 +16,7 @@ public:
     void gotoxy(int x, int y);
     void color(int foreground, int background);
     void menuSeleccion(const char* titulo,const char *opciones[], int numeroOpciones, int &selec);
-    void Menu_Principal();
+    void Menu_Principal(ListaDoble<Persona*> listaPersonas);
     void Menu_Ordenar(ListaDoble<Persona*> &listaPersonas);
 
 

@@ -73,8 +73,7 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
     } while (aux);
 }
 
-void Menus::Menu_Principal() {
-    ListaDoble<Persona*> listaPersonas;
+void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
     bool aux = true;
 
     const char *titulo ="\t\tREGISTRO DE PERSONAS";
@@ -209,7 +208,7 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
 
                     case 4:
                         system("cls");
-                        Menu_Principal();
+                        Menu_Principal(listaPersonas);
                         break;
                 }
         } while (aux);
