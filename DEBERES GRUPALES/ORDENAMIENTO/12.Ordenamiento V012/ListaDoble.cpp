@@ -119,9 +119,7 @@ void ListaDoble<T>::eliminarAlFinal() {
         // La lista est� vac�a, no hay nada que eliminar.
         return;
     }
-
     Nodo<T>* nodo_a_eliminar = cola;
-
     if (cola->get_anterior() != nullptr) {
         cola = cola->get_anterior();
         cola->set_siguiente(nullptr);
@@ -130,14 +128,12 @@ void ListaDoble<T>::eliminarAlFinal() {
         cabeza = nullptr;
         cola = nullptr;
     }
-
     // Obtener la persona asociada al nodo
     Persona* persona_a_eliminar = nodo_a_eliminar->get_valor();
     // Actualizar el contadorId si es necesario
     if (std::stoi(persona_a_eliminar->getId().substr(1)) == Persona::contadorId) {
         Persona::contadorId--;
     }
-
     delete persona_a_eliminar;
     delete nodo_a_eliminar;
 }

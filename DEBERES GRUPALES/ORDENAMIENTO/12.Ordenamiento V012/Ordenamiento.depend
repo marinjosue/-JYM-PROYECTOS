@@ -11,7 +11,7 @@
 1704684194 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.cpp
 	"Nodo.h"
 
-1704684194 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.h
+1704987424 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.h
 	"Persona.h"
 
 1704859308 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\persona.h
@@ -20,7 +20,7 @@
 1704684194 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\nodo.cpp
 	"Nodo.h"
 
-1704859245 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\persona.cpp
+1704859594 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\persona.cpp
 	"Persona.h"
 	<iostream>
 	<fstream>
@@ -53,7 +53,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1704859573 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\listadoble.cpp
+1704955119 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\-jym-proyecto-estructura\deberes grupales\ordenamiento\12.ordenamiento v012\listadoble.cpp
 	"ListaDoble.h"
 	"Persona.h"
 	<iostream>
