@@ -1,0 +1,371 @@
+# depslib dependency file v1.0
+1704256710 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1705019700 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1704987424 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\nodo.h
+	"Persona.h"
+
+1705028141 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\persona.h
+	<string>
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\credito.h
+	"Fecha.h"
+
+1704256711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\fecha.h
+	<iostream>
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\calculoscredito.h
+	"ListaDoble.h"
+
+1705019700 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1704256711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1705019589 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1704256710 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\bibliotecas\easybmp_datastructures.h
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\bibliotecas\easybmp_bmp.h
+
+1704256710 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\bibliotecas\easybmp_variousbmputilities.h
+
+1704256710 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1704256710 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\credito.cpp
+	"Credito.h"
+
+1704256711 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1704256711 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1704256711 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1704256711 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\imagen.h
+	<string>
+	<windows.h>
+
+1705019700 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1705018200 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1705018528 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1705028785 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+
+1705028279 c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705019589 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1705028785 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+	<fstream>
+
+1705028279 source:c:\users\usuario\onedrive\escritorio\espe\3-4 level\estructura de datos\finalproject\1.ordenamiento\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\nodo.h
+	"Persona.h"
+
+1705030162 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\persona.h
+	<string>
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\credito.h
+	"Fecha.h"
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\fecha.h
+	<iostream>
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\calculoscredito.h
+	"ListaDoble.h"
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1705029434 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\bibliotecas\easybmp_datastructures.h
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\bibliotecas\easybmp_bmp.h
+
+1705029435 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\bibliotecas\easybmp_variousbmputilities.h
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\credito.cpp
+	"Credito.h"
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1705029433 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\imagen.h
+	<string>
+	<windows.h>
+
+1705029433 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1705029434 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1705034781 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1705033891 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+
+1705029434 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705029434 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\nodo.cpp
+	"Nodo.h"
+
+1705029434 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705032601 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\1.ordenamiento\1.ordenamiento\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+	<fstream>
+

@@ -183,3 +183,96 @@
 	<vector>
 	<fstream>
 
+1705025705 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\nodo.h
+	"Persona.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\persona.h
+	<string>
+
+1705025705 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	"Nodo.h"
+
+1705025705 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\fecha.h
+	<iostream>
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\imagen.h
+	<string>
+	<windows.h>
+
+1705025704 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1705025705 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\credito.h
+	"Fecha.h"
+
+1705025705 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\nodo.cpp
+	"Nodo.h"
+
+1705025705 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v100\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
