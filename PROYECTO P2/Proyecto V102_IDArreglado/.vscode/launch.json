@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/GitRepos/Proyecto_JYM/Proyecto V101",
-      "program": "c:/GitRepos/Proyecto_JYM/Proyecto V101/build/Debug/outDebug",
+      "cwd": "c:/Users/yeshu/Dropbox/DataStructure/SecondPartial/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V102_IDArreglado",
+      "program": "c:/Users/yeshu/Dropbox/DataStructure/SecondPartial/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V102_IDArreglado/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
