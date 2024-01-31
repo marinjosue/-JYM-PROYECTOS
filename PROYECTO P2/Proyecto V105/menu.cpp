@@ -83,6 +83,9 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
 }
 
 void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
+    std::string nombreArchivo2 = "Personas.txt";
+    std::string ultimoIdUtilizado = Persona::obtenerUltimoIdUtilizado(nombreArchivo2);
+    std::cout << "Ultimo ID utilizado: " << ultimoIdUtilizado << std::endl;
      validaciones valida;
      Fecha f;
     int anioActual = f.obtenerAnioActual();
@@ -143,9 +146,6 @@ void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
 
 validaciones valida;
  Persona persona;
-    std::string nombreArchivo2 = "Personas.txt";
-    std::string ultimoIdUtilizado = Persona::obtenerUltimoIdUtilizado(nombreArchivo2);
-    std::cout << "Ultimo ID utilizado: " << ultimoIdUtilizado << std::endl;
     bool aux = true;
     Menus menu;
     const char *titulo = "\t\tDESEA REGISTRAR UNA PERSONA:";

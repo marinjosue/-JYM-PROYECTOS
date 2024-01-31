@@ -43,6 +43,7 @@ public:
    bool  verificarCedula(const std::string& cedula);
    std::string generarSiguienteId(const std::string& ultimoIdUtilizado);
    static std::string obtenerUltimoIdUtilizado(const std::string& nombreArchivo2);
+   static bool esNumero(const std::string& str);
 
 
 protected:

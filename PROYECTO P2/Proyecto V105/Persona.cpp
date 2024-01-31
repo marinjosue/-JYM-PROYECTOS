@@ -32,8 +32,6 @@ std::string Persona::generarSiguienteId(const std::string& ultimoIdUtilizado) {
     return oss.str();
 }
 
-
-
 std::string Persona::obtenerUltimoIdUtilizado(const std::string& nombreArchivo2) {
     std::ifstream archivo(nombreArchivo2);
     std::string linea;
@@ -41,18 +39,17 @@ std::string Persona::obtenerUltimoIdUtilizado(const std::string& nombreArchivo2)
 
     if (archivo.is_open()) {
         while (getline(archivo, linea)) {
-            std::istringstream ss(linea);
-            std::string cedula, nombre, apellido, id;
+            // Buscar el último espacio en blanco que precede al ID
+            size_t pos = linea.find_last_of(' ');
 
-            // Leer los datos de la línea
-            ss >> cedula >> nombre >> apellido >> id;
+            if (pos != std::string::npos) {
+                // Extraer el ID desde la posición encontrada hasta el final de la línea
+                std::string id = linea.substr(pos + 1);
 
-            // Comparar las longitudes de las cadenas de ID
-            if (id.length() > ultimoId.length()) {
-                ultimoId = id;
-            } else if (id.length() == ultimoId.length() && id > ultimoId) {
-                // Si tienen la misma longitud, comparar las cadenas directamente
-                ultimoId = id;
+                // Actualizar el último ID si el ID actual es mayor
+                if (id > ultimoId) {
+                    ultimoId = id;
+                }
             }
         }
         archivo.close();
@@ -60,6 +57,7 @@ std::string Persona::obtenerUltimoIdUtilizado(const std::string& nombreArchivo2)
 
     return ultimoId;
 }
+
 
 int Persona::contadorId = 0;
 
