@@ -1,0 +1,73 @@
+\doxysection{Lista\+Doble.\+cpp}
+\hypertarget{_lista_doble_8cpp_source}{}\label{_lista_doble_8cpp_source}\index{C:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-\/JYM-\/PROYECTO-\/ESTRUCTURA/V Proyecto/Proyecto V005 versionVSCODE/ListaDoble.cpp@{C:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-\/JYM-\/PROYECTO-\/ESTRUCTURA/V Proyecto/Proyecto V005 versionVSCODE/ListaDoble.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ UFA\ -\/\ ESPE}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Module:\ \ CalculosCredito.cpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Author:\ \ Chiliquinga\ Yeshua,\ Marin\ Alquinga,Salcedo\ Micaela}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Modified:\ domingo,\ 17\ de\ diciembre\ de\ 2023}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Purpose:\ Implementacion\ de\ clase\ ListaDoble}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ ***********************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ListaDoble.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00012\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::ListaDoble}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \_cabeza)\{}
+\DoxyCodeLine{00013\ \ \ \ \ cabeza\ =\ \_cabeza;}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00017\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::ListaDoble}}()\{}
+\DoxyCodeLine{00018\ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::get\_cabeza}}()\{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ cabeza;}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::set\_cabeza}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nueva\_cabeza)\{}
+\DoxyCodeLine{00028\ \ \ \ \ cabeza\ =\ nueva\_cabeza;}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::get\_cola}}()\{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ cola;}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::set\_cola}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nueva\_cola)\{}
+\DoxyCodeLine{00038\ \ \ \ \ cola\ =\ nueva\_cola;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::insertar\_cola}}(T\ valor)\{}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nuevo\_nodo;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}(esta\_vacia())\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ nuevo\_nodo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}(valor,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cabeza\ =\ \mbox{\hyperlink{class_nodo}{nuevo\_nodo}};}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nodo}{nuevo\_nodo}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}(valor,\ \textcolor{keyword}{nullptr},\ cola);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ cola-\/>set\_siguiente(\mbox{\hyperlink{class_nodo}{nuevo\_nodo}});}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ cola\ =\ \mbox{\hyperlink{class_nodo}{nuevo\_nodo}};}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::imprimir}}()\{}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \mbox{\hyperlink{class_nodo}{aux}}\ =\ cabeza;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_nodo}{aux}}!=\textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nodo}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)n\ \%f"{}},\ \mbox{\hyperlink{class_nodo}{aux}}-\/>get\_valor());}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nodo}{aux}}\ =\ \mbox{\hyperlink{class_nodo}{aux}}-\/>get\_siguiente();}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::esta\_vacia}}()\{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{return}\ (cabeza\ ==\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00067\ \}}
+
+\end{DoxyCode}
