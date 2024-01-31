@@ -754,3 +754,208 @@
 1706688900 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\cuenta.h
 	"Persona.h"
 
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\nodo.h
+	"Persona.h"
+
+1706690932 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\persona.h
+	<string>
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\credito.h
+	"Fecha.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\fecha.h
+	<iostream>
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\calculoscredito.h
+	"ListaDoble.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\nodo.cpp
+	"Nodo.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\bibliotecas\easybmp_datastructures.h
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\bibliotecas\easybmp_bmp.h
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\bibliotecas\easybmp_variousbmputilities.h
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\credito.cpp
+	"Credito.h"
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\imagen.h
+	<string>
+	<windows.h>
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706689204 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706691035 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"Cuenta.cpp"
+	<iomanip>
+
+1706693170 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\cuenta.cpp
+	"Cuenta.h"
+	"validaciones.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+
+1706690961 c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\cuenta.h
+	"Persona.h"
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\nodo.cpp
+	"Nodo.h"
+
+1706690911 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706689204 source:c:\users\yeshu\dropbox\datastructure\secondpartial\-jym-proyecto-estructura\proyecto p2\proyecto v106\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+

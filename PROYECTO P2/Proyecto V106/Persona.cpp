@@ -15,6 +15,34 @@
 #include "ListaDoble.h"
 using namespace std;
 
+Persona Persona::cargarDesdeArchivo(const std::string& nombreArchivo, const std::string& cedulaBuscar) const {
+    std::ifstream archivo(nombreArchivo);
+
+    std::string cedula, nombre, apellido,id;
+    Persona personaEncontrada;
+
+    if (archivo.is_open()) {
+        while (archivo >> cedula >> nombre >> apellido >> id) {
+            if (cedula == cedulaBuscar) {
+                // Encontramos la persona con la cédula deseada
+                personaEncontrada.setCedula(cedula);
+                personaEncontrada.setNombre(nombre);
+                personaEncontrada.setApellido(apellido);
+                personaEncontrada.setId(id);
+
+                std::cout << "Persona encontrada en el archivo.\n";
+                archivo.close();
+                return personaEncontrada;
+            }
+        }
+        std::cerr << "No se encontró la persona con la cédula " << cedulaBuscar << " en el archivo.\n";
+        archivo.close();
+    } else {
+        std::cerr << "No se pudo abrir el archivo " << nombreArchivo << " para leer.\n";
+    }
+    return personaEncontrada;
+}
+
 std::string Persona::generarSiguienteId(const std::string& ultimoIdUtilizado) {
     // Extraer el último número del ID utilizado
     std::string numeroStr = ultimoIdUtilizado.substr(ultimoIdUtilizado.size() - 6);

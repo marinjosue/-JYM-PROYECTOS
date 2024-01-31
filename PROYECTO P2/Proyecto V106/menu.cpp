@@ -230,6 +230,7 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                 }
         } while (aux);
 }
+
 bool Menus::Menu_ConfirmarGuardar() {
     validaciones valida;
     bool aux = true;
