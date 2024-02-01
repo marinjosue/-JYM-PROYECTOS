@@ -18,6 +18,8 @@
 #include "validaciones.h"
 #include "Cuenta.h"
 
+
+
 using namespace std;
 
 Amortizacion::Amortizacion(){
@@ -75,7 +77,6 @@ void Amortizacion::generar_fechas_pago(){
     }
 }
 
-
 void Amortizacion::imprimir(){
      int n_mostrados = 0;
     int n_mostrar = credito.get_n_cuotas_pagar();
@@ -123,19 +124,31 @@ std::string obtenerFechaHoraActual() {
     return fechaHora;
 }
 
-void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
+void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::string& cedula,
+                                const std::string& nombreCompleto, const std::string& id,
+                                const std::string& Ncuenta, double monto, int ncuotas,
+                                double tasa_interes) {
     std::ofstream archivo(nombreArchivo);
 
     if (!archivo.is_open()) {
         std::cerr << "Error al abrir el archivo: " << nombreArchivo << std::endl;
         return;
     }
-
     // Obtener la fecha y hora actual utilizando la nueva función
     std::string fechaHoraGeneracion = obtenerFechaHoraActual();
 
     // Imprimir la fecha y hora de generación de la tabla
     archivo << "Tabla generada el " << fechaHoraGeneracion << "\n\n";
+
+    // Imprimir información del cliente
+    archivo << "Datos del cliente:\n";
+    archivo << "Cedula: " << cedula << "\n";
+    archivo << "Nombre: " << nombreCompleto << "\n";
+    archivo << "ID: " << id << "\n";
+    archivo << "No.Cuenta: " << Ncuenta << "\n";
+    archivo << "Monto: " << monto << "\n";
+    archivo << "No.Cuotas: " << ncuotas << "\n";
+    archivo << "Tasa de interes: " << tasa_interes << "\n\n";
 
     int n_mostrados = 0;
     int n_mostrar = credito.get_n_cuotas_pagar();
@@ -146,9 +159,7 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
     Nodo<double>* valor_cuota = valor_cuotas->get_cabeza();
     Nodo<Fecha>* aux_fecha_pagar = fechas_pago->get_cabeza();
     Fecha fecha_pagar;
-
-
-    archivo << "N    VALOR CUOTA   CAPITAL     INTERES      SALDO      FECHA\n";
+    archivo << "N      VALOR CUOTA     CAPITAL       INTERES        SALDO          FECHA\n";
 
     while (n_mostrados < n_mostrar) {
         fecha_pagar = aux_fecha_pagar->get_valor();
@@ -171,24 +182,35 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
 
     cout<<"\nLA TABLA DE CREDITOS SE GUARDO EN EL ARCHIVO '"<<nombreArchivo<<"'.\n\n'";
     createBackupRegistro();
-
 }
+
+
 void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
-    system("cls");
-    Fecha sacado;
     Cuenta nuevacuenta;
-    double monto = 0, tasa_interes = 0;
-    int ncuotas = 0;
-
     std::string cedula;
+
     do {
         cedula = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
-        if (valida.validarCedula(cedula)) {
-            if (nuevacuenta.verificarCedula(cedula)) {
-                cout << "\nLa cedula ingresada existe" << endl;
-                             // Resto de la l�gica para ingresar los datos del cr�dito
+        if (valida.validarCedula(cedula) && nuevacuenta.verificarCedula(cedula)) {
+            system("cls");
+
+            std::ifstream archivoUsuarios("Usuarios.txt");
+            if (archivoUsuarios.is_open()) {
+                // Obtener datos del usuario
+                DatosUsuario datosUsuario = nuevacuenta.mostrarDatosUsuarios("Usuarios.txt", cedula);
+                std::string nombreCompleto = datosUsuario.nombreCompleto;
+                std::string id = datosUsuario.id;
+                std::string Ncuenta = datosUsuario.Ncuenta;
+                archivoUsuarios.close();
+
+                // Resto de la lógica para ingresar los datos del crédito
+                Fecha sacado;
+                double monto = 0, tasa_interes = 0;
+                int ncuotas = 0;
+
+                // Bucle para ingresar monto
                 while (monto <= 999 || monto > 99999999.99) {
                     monto = valida.ingresar_reales("\nIngrese el monto del credito");
 
@@ -198,6 +220,8 @@ void Amortizacion::ingresar_datos_credito() {
                         printf("                                                           ");
                     }
                 }
+
+                // Bucle para ingresar número de cuotas
                 while (ncuotas <= 0 || ncuotas > 500) {
                     ncuotas = valida.ingresar_enteros("\nIngrese el numero de cuotas a pagar del credito");
 
@@ -207,6 +231,7 @@ void Amortizacion::ingresar_datos_credito() {
                         printf("                                                           ");
                     }
                 }
+                // Bucle para ingresar tasa de interés
                 while (tasa_interes <= 0 || tasa_interes > 99.99) {
                     tasa_interes = valida.ingresar_reales("\nIngrese la tasa de interes del credito");
 
@@ -216,22 +241,28 @@ void Amortizacion::ingresar_datos_credito() {
                         printf("                                                           ");
                     }
                 }
+
+                // Crear objetos Credito y Amortizacion con los datos ingresados
+                Credito credito(ncuotas, monto, sacado, tasa_interes);
+                Amortizacion tabla(credito);
+
+                // Imprimir y guardar la tabla de amortización
+                printf("\n");
+                tabla.imprimir();
+                printf("\nTABLA GUARDADA CORRECTAMENTE");
+                tabla.guardarTabla("tabla_amortizacion.txt",cedula, datosUsuario.nombreCompleto, datosUsuario.id, datosUsuario.Ncuenta, monto, ncuotas, tasa_interes);
+                printf("\n");
+                system("pause");
+
+                break;  // Salir del bucle do-while
+            } else {
+                cout << "\nLa cedula ingresada no es válida o no existe. Vuelva a intentarlo." << endl;
             }
-        } else {
-            cout << "\nLa cedula ingresada es invalida. Vuelva a intentarlo." << endl;
         }
-    }while (true);
-
-
-    Credito credito(ncuotas, monto, sacado, tasa_interes);
-    Amortizacion tabla(credito);
-    printf("\n");
-    imprimir();
-    printf("\nTABLA GUARDADA CORRECTAMENTE");
-    guardarTabla("tabla_amortizacion.txt");
-    printf("\n");
-    system("pause");
+    } while (true);
 }
+
+
 
 Credito Amortizacion::get_credito(){
     return credito;

@@ -22,6 +22,7 @@
 #include <string>
 #include <regex>
 #include <dirent.h>
+#include "Amortizacion.h"
 
 void createBackupFolder(const std::string& folderName) {
     if (mkdir(folderName.c_str()) == 0) {
@@ -61,6 +62,7 @@ void createBackupRegistro() {
     std::cout << "Se realizo una copia de seguridad en la carpeta 'backup'.\n";
 }
 void imprimirContenidoArchivo(const std::string& nombreArchivo) {
+    Amortizacion tabla;
     std::ifstream archivo(nombreArchivo);
 
     if (!archivo.is_open()) {

@@ -34,7 +34,10 @@ public:
         void set_pagos_capital(ListaDoble<double>* nuevo_pagos_capital);
         void set_valor_cuotas(ListaDoble<double>* nuevo_valor_cuotas);
         void set_fechas_pago(ListaDoble<Fecha>* nuevo_fechas_pago);
-        void guardarTabla(const std::string& nombreArchivo);
+        void guardarTabla(const std::string& nombreArchivo, const std::string& cedula,
+                                const std::string& nombreCompleto, const std::string& id,
+                                const std::string& Ncuenta, double monto, int ncuotas,
+                                double tasa_interes);
         void ingresar_datos_credito();
     private:
         Credito credito;

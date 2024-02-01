@@ -2,6 +2,13 @@
 #define CUENTA_H_INCLUDED
 
 #include"Persona.h"
+#include <string>
+struct DatosUsuario {
+    std::string cedula;
+    std::string nombreCompleto;
+    std::string id;
+    std::string Ncuenta;
+};
 class Cuenta{
 public:
      Cuenta();
@@ -11,7 +18,8 @@ public:
      void setCuenta(std::string );
      void guardarTabla(const std::string& archivo, const std::string& cedula, const std::string& nombreCompleto, const std::string& id, const Cuenta& cuenta);
      Cuenta(std::string cuenta);
-     void mostrarRegistroCuenta();
+     void mostrarDatosUsuarios(const std::string& archivo);
+     DatosUsuario mostrarDatosUsuarios(const std::string& archivo, const std::string& cedulaIngresada);
      static int contadorId;
      bool  verificarCedula(const std::string& cedula);
       std::string getCedula() const {

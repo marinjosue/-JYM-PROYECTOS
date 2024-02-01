@@ -216,13 +216,13 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                     case 2:
                      {
                         system("cls");
-                        
+
 
                         break;
                         }
                     case 3:
                         system("cls");
-                        cuenta.mostrarRegistroCuenta();
+                        cuenta.mostrarDatosUsuarios("Usuarios.txt");
                         system("pause");
                         Menu_Cuenta(listaPersonas);
                         break;

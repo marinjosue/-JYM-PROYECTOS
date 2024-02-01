@@ -79,7 +79,7 @@ Cuenta Cuenta::crear_cuenta() {
             } else {
                 std::cerr << "No se pudo abrir el archivo Personas.txt\n";
             }
-        } else {
+            } else {
             std::cout << "\nLa cedula ingresada es invalida. Vuelva a intentarlo." << std::endl;
         }
     } while (true);

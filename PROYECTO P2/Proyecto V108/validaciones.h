@@ -36,7 +36,7 @@ class validaciones{
         std::string ingresar_alfabetico_con_un_espacio(const char* msj);
         std::string leerArchivoTxt();
         std::string leerArchivoTxtCuenta();
-
+        std::string trim(const std::string& str);
 };
 
 #endif // VALIDACIONES_H_INCLUDED
