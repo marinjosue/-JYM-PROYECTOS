@@ -47,21 +47,19 @@ Cuenta Cuenta::crear_cuenta() {
                     std::string cedulaArchivo, nombreCompleto, id;
 
                     // Leer los componentes de la línea
-                    iss >> cedulaArchivo >> nombreCompleto;  // Leer la cédula y el nombre completo
-                    std::string apellido, nombre;
-                    while (iss >> nombre >> apellido) {
-                        // Concatenar el nombre y el apellido en uno solo
-                        nombreCompleto += " " + apellido;
+                    iss >> cedulaArchivo;  // Leer la cédula
+                    std::string nombreApellido;
+                    while (iss >> nombreApellido) {
+                        // Si el componente actual es numérico, es el ID, no el nombre
+                        if (!isdigit(nombreApellido[0])) {
+                            // Concatenar los nombres y apellidos en uno solo
+                            nombreCompleto += nombreApellido + " ";
+                        } else {
+                            id = nombreApellido;
+                        }
                     }
-
-                    // Encontrar el índice del último espacio (posición del ID)
-                    size_t pos = nombreCompleto.rfind(" ");
-
-                    // Extraer el ID desde la posición del último espacio
-                    if (pos != std::string::npos && pos < nombreCompleto.length() - 1) {
-                        id = nombreCompleto.substr(pos + 1);
-                        nombreCompleto.erase(pos);
-                    }
+                    // Eliminar el espacio extra al final del nombre completo
+                    nombreCompleto.pop_back();
 
                     // Comparar la cédula ingresada con la cédula en la línea actual
                     if (cedulaArchivo == cedulaIngresada) {
@@ -69,15 +67,13 @@ Cuenta Cuenta::crear_cuenta() {
                         std::string newCuenta = nuevaCuenta.generar_cuenta_automatica();
                         std::cout << "\nSu cuenta es: " << newCuenta << std::endl;
                         nuevaCuenta.setCuenta(newCuenta);
+
                         std::cout << "\nDatos encontrados:\n";
                         std::cout << "Cedula: " << cedulaArchivo << "\n";
-                        std::cout << "Nombre completo: " << nombreCompleto << "\n";
+                        std::cout << "Nombre: " << nombreCompleto << "\n";
                         std::cout << "ID: " << id << "\n";
-
-                        // Guardar los datos en el archivo nuevo (puedes cambiar el nombre del archivo según tus necesidades)
-                        nuevaCuenta.guardarTabla("USUARIOS.txt", cedulaArchivo, nombreCompleto, id, nuevaCuenta);
-
                         archivo.close();
+                        nuevaCuenta.guardarTabla("Usuarios.txt",cedulaArchivo ,nombreCompleto,id, nuevaCuenta);
                         return nuevaCuenta;
                     }
                 }
@@ -94,22 +90,14 @@ Cuenta Cuenta::crear_cuenta() {
 
 void Cuenta::guardarTabla(const std::string& archivo, const std::string& cedula, const std::string& nombreCompleto, const std::string& id, const Cuenta& cuenta) {
     std::ofstream outFile(archivo, std::ios::app);
-
     if (outFile.is_open()) {
         outFile << cedula << " "
                 << nombreCompleto << " "
-                << id << "\n"
+                << id << " "
                 << cuenta.getCuenta() << "\n";
 
         outFile.close();
         std::cout << "Datos guardados en " << archivo << std::endl;
-
-        // Imprimir información encontrada
-        std::cout << "Datos encontrados:\n";
-        std::cout << "Cedula: " << cedula << "\n";
-        std::cout << "Nombre completo: " << nombreCompleto << "\n";
-        std::cout << "ID: " << id << "\n";
-        std::cout << "Número de cuenta: " << cuenta.getCuenta() << "\n";
 
         // Línea en blanco opcional
         std::cout << std::endl;
@@ -117,22 +105,62 @@ void Cuenta::guardarTabla(const std::string& archivo, const std::string& cedula,
         std::cerr << "No se pudo abrir el archivo " << archivo << std::endl;
     }
 }
-
-void Cuenta::mostrarRegistroCuenta(){
+void Cuenta::mostrarRegistroCuenta() {
     validaciones valida;
-    string line;
-    string lectura;
+    std::string lectura = valida.leerArchivoTxtCuenta();
+    std::stringstream input_stringstream(lectura);
 
-    lectura = valida.leerArchivoTxtCuenta();
-    stringstream input_stringstream(lectura);
-    cout << "N°Cuenta" << endl;
-    cout << "===========================================================================" << endl;
-    while (getline(input_stringstream, line, '\n'))
-    {
-        cout << line << endl;
+    int ancho_cedula = 12, ancho_nombre = 35, ancho_id = 10, ancho_cuenta = 10;
+
+    std::cout << '|' << std::setw(ancho_cedula) << std::left << "CEDULA" << '|'
+              << std::setw(ancho_nombre) << std::left << "NOMBRE COMPLETO" << '|'
+              << std::setw(ancho_id) << std::left << "ID" << '|'
+              << std::setw(ancho_cuenta) << std::left << "No.Cuenta" << '|';
+    std::cout << "\n========================================================" << std::endl;
+
+    std::string cedula, nombreCompleto, id, cuenta;
+
+    while (input_stringstream >> cedula) {
+        // Leer el nombre completo hasta encontrar el siguiente campo numérico (ID)
+        nombreCompleto = "";
+        while (input_stringstream >> id && !isdigit(id[0])) {
+            nombreCompleto += id + " ";
+        }
+
+        // El último token leído es el ID
+        // Leer el N°Cuenta
+        input_stringstream >> cuenta;
+
+        std::cout << '|' << std::setw(ancho_cedula) << std::left << cedula << '|'
+                  << std::setw(ancho_nombre) << std::left << nombreCompleto << '|'
+                  << std::setw(ancho_id) << std::left << id << '|'
+                  << std::setw(ancho_cuenta) << std::left << cuenta << '|';
+
+        std::cout << std::endl;
     }
-    cout << "===========================================================================" << endl;
 }
+bool Cuenta::verificarCedula(const std::string& cedula) {
+    std::ifstream archivo("Usuarios.txt");
+    std::string cedulaArchivo;
+
+    if (archivo.is_open()) {
+        while (archivo >> cedulaArchivo) {
+            // Comparar la cédula actual con la cédula ingresada
+            if (cedula == cedulaArchivo) {
+                archivo.close();
+                return true;  // La cédula ya existe en el archivo
+            }
+
+            // Leer los otros campos (nombre, apellido, id) y descartarlos
+            archivo >> cedulaArchivo;  // nombre
+            archivo >> cedulaArchivo;  // apellido
+            archivo >> cedulaArchivo;  // id
+        }
+        archivo.close();
+    }
+    return false;
+}
+
 
 int Cuenta::contadorId = 0;
 std::string  Cuenta::generar_cuenta_automatica(){

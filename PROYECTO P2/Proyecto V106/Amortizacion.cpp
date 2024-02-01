@@ -172,6 +172,7 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo) {
     createBackupRegistro();
 
 }
+
 void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
     system("cls");

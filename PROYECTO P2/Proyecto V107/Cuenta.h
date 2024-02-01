@@ -12,7 +12,8 @@ public:
      void guardarTabla(const std::string& archivo, const std::string& cedula, const std::string& nombreCompleto, const std::string& id, const Cuenta& cuenta);
      Cuenta(std::string cuenta);
      void mostrarRegistroCuenta();
-      static int contadorId;
+     static int contadorId;
+     bool  verificarCedula(const std::string& cedula);
       std::string getCedula() const {
         return cedulaAsociada;
     }

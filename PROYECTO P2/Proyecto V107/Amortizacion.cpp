@@ -16,6 +16,7 @@
 #include <iomanip>
 #include <ctime>
 #include "validaciones.h"
+#include "Cuenta.h"
 
 using namespace std;
 
@@ -176,7 +177,7 @@ void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
     system("cls");
     Fecha sacado;
-    Persona nuevaPersona;
+    Cuenta nuevacuenta;
     double monto = 0, tasa_interes = 0;
     int ncuotas = 0;
 
@@ -185,7 +186,7 @@ void Amortizacion::ingresar_datos_credito() {
         cedula = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
         if (valida.validarCedula(cedula)) {
-            if (nuevaPersona.verificarCedula(cedula)) {
+            if (nuevacuenta.verificarCedula(cedula)) {
                 cout << "\nLa cedula ingresada existe" << endl;
                              // Resto de la l�gica para ingresar los datos del cr�dito
                 while (monto <= 999 || monto > 99999999.99) {

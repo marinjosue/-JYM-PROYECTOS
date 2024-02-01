@@ -1125,7 +1125,7 @@
 	"Cuenta.cpp"
 	<iomanip>
 
-1706745701 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.cpp
+1706752011 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.cpp
 	"Cuenta.h"
 	"validaciones.h"
 	<iostream>
@@ -1134,7 +1134,7 @@
 	<vector>
 	<iomanip>
 
-1706745124 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.h
+1706752011 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.h
 	"Persona.h"
 
 1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\nodo.cpp
@@ -1154,7 +1154,7 @@
 	<vector>
 	<fstream>
 
-1706744545 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\persona.cpp
+1706752011 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\persona.cpp
 	"Persona.h"
 	<iostream>
 	<fstream>

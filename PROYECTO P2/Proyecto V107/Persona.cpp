@@ -233,7 +233,7 @@ bool Persona::verificarCedula(const std::string& cedula) {
         }
         archivo.close();
     }
-    return false;  // La cédula no existe en el archivo
+    return false;
 }
 
 
@@ -339,6 +339,34 @@ void Persona::guardarEnArchivo(const std::string& nombreArchivo) {
     }
 }
 
+void Persona::mostrarRegistroPersona() {
+    validaciones valida;
+    std::string lectura = valida.leerArchivoTxt();
+    std::stringstream input_stringstream(lectura);
+
+    int ancho_cedula = 12, ancho_nombre = 35, ancho_id = 10;
+
+    std::cout  << '|' << std::setw(ancho_cedula) << std::left << "CEDULA" << '|'
+              << std::setw(ancho_nombre) << std::left << "NOMBRE COMPLETO" << '|'
+              << std::setw(ancho_id) << std::right << "ID" << '|';
+    std::cout << "\n===============================================================" << std::endl;
+    std::string cedula, nombreCompleto, id, cuenta;
+
+    while (input_stringstream >> cedula) {
+        // Leer el nombre completo hasta encontrar el siguiente campo numérico (ID)
+        nombreCompleto = "";
+        while (input_stringstream >> id && !isdigit(id[0])) {
+            nombreCompleto += id + " ";
+        }
+
+        std::cout << '|' << std::setw(ancho_cedula) << std::left << cedula << '|'
+                  << std::setw(ancho_nombre) << std::left << nombreCompleto << '|'
+                  << std::setw(ancho_id) << std::right << id << '|';
+        std::cout<< std::endl;
+    }
+}
+
+
 Persona Persona::cargarDesdeArchivo(const std::string& nombreArchivo, const std::string& cedulaBuscar) const {
     std::ifstream archivo(nombreArchivo);
 
@@ -368,18 +396,3 @@ Persona Persona::cargarDesdeArchivo(const std::string& nombreArchivo, const std:
 }
 
 
-void Persona::mostrarRegistroPersona(){
-     validaciones valida;
-    string line;
-    string lectura;
-
-    lectura = valida.leerArchivoTxt();
-    stringstream input_stringstream(lectura);
-    cout << "Cedula    Nombre    Apellido   Fecha" << endl;
-    cout << "===========================================================================" << endl;
-    while (getline(input_stringstream, line, '\n'))
-    {
-        cout << line << endl;
-    }
-    cout << "===========================================================================" << endl;
-}
