@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/yeshu/Dropbox/DataStructure/SecondPartial/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V106",
-      "program": "c:/Users/yeshu/Dropbox/DataStructure/SecondPartial/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V106/build/Debug/outDebug",
+      "cwd": "d:/ESPE/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V106",
+      "program": "d:/ESPE/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V106/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
