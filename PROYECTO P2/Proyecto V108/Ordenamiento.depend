@@ -1107,7 +1107,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1706763557 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\menu.cpp
+1706768862 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
@@ -1126,8 +1126,9 @@
 	"Amortizacion.h"
 	"Cuenta.cpp"
 	<iomanip>
+	"Movimientos.h"
 
-1706765877 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.cpp
+1706770632 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.cpp
 	"Cuenta.h"
 	"validaciones.h"
 	<iostream>
@@ -1135,8 +1136,9 @@
 	<sstream>
 	<vector>
 	<iomanip>
+	"Movimientos.h"
 
-1706765905 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.h
+1706770672 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.h
 	"Persona.h"
 	<string>
 
@@ -1167,10 +1169,12 @@
 	"validaciones.h"
 	"ListaDoble.h"
 
-1706768733 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.cpp
+1706770632 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.cpp
 	"Movimientos.h"
 	"validaciones.h"
 	"Persona.h"
+	"Cuenta.h"
+	"Fecha.h"
 	<iostream>
 	<fstream>
 	<sstream>

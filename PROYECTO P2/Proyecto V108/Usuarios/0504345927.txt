@@ -1,3 +1,7 @@
+Fecha: 01/02/2024
+Monto: $5
 Cedula: 0504345927
 Nombre: Josue Isaac Marin
 ID: 000003
+No.Cuenta: 000001
+

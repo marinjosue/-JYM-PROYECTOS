@@ -143,6 +143,7 @@ void Cuenta::mostrarDatosUsuarios(const std::string& archivo) {
     }
 }
 
+
 DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std::string& cedulaIngresada) {
     std::ifstream archivoUsuarios(archivo);
     DatosUsuario datosUsuario;  // Estructura para almacenar los datos
@@ -167,16 +168,10 @@ DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std:
         // Verificar si la cédula ingresada coincide con la cédula del archivo
         if (cedulaArchivo == cedulaIngresada) {
             // Asignar los datos a la estructura
+            datosUsuario.cedula = cedulaArchivo;
             datosUsuario.nombreCompleto = nombreCompleto;
             datosUsuario.id = id;
             datosUsuario.Ncuenta = Ncuenta;
-
-            // Imprimir los datos
-            std::cout << "\nDatos encontrados:\n";
-            std::cout << "Cedula: " << cedulaArchivo << "\n";
-            std::cout << "Nombre: " << datosUsuario.nombreCompleto << "\n";
-            std::cout << "ID: " << datosUsuario.id << "\n";
-            std::cout << "No.Cuenta: " << datosUsuario.Ncuenta << "\n";
 
             break;  // Salir del bucle al encontrar la cédula
         }
@@ -187,7 +182,6 @@ DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std:
     // Devolver la estructura con los datos
     return datosUsuario;
 }
-
 
 bool Cuenta::verificarCedula(const std::string& cedula) {
     std::ifstream archivo("Usuarios.txt");
