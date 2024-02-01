@@ -48,7 +48,7 @@ void createBackupRegistro() {
 
     // Crear una cadena con el formato de fecha deseado
     char nombreBackup[100];
-    std::strftime(nombreBackup, sizeof(nombreBackup), "%Y-%m-%d_%H-%M-%S", incremented_time);
+    std::strftime(nombreBackup, sizeof(nombreBackup), "%Y-%m-%d", incremented_time);
 
 
     // Crear la carpeta de respaldo
@@ -61,6 +61,19 @@ void createBackupRegistro() {
 
     std::cout << "Se realizo una copia de seguridad en la carpeta 'backup'.\n";
 }
+
+void createBackupRegistro(const std::string& cedula) {
+    // Crear la carpeta de respaldo
+    createBackupFolder("Prestamos");
+
+   // Copiar el archivo a la carpeta de respaldo con el nombre de la cédula ingresada
+    std::ifstream srcFile("tabla_amortizacion.txt", std::ios::binary);
+    std::ofstream dstFile("Prestamos/" + cedula + ".txt", std::ios::binary);
+    dstFile << srcFile.rdbuf();
+
+    std::cout << "Se realizo una copia de seguridad en la carpeta 'Prestamos'.\n";
+}
+
 void imprimirContenidoArchivo(const std::string& nombreArchivo) {
     Amortizacion tabla;
     std::ifstream archivo(nombreArchivo);

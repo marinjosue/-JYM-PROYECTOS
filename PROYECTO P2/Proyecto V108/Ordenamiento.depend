@@ -959,7 +959,7 @@
 	"validaciones.h"
 	"ListaDoble.h"
 
-1706767853 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\amortizacion.cpp
+1706772029 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\amortizacion.cpp
 	<iostream>
 	<fstream>
 	"Amortizacion.h"
@@ -971,7 +971,10 @@
 	<iomanip>
 	<ctime>
 	"validaciones.h"
+	"Movimientos.h"
 	"Cuenta.h"
+	<sys/stat.h>
+	<cerrno>
 
 1706765167 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\amortizacion.h
 	"ListaDoble.h"
@@ -1004,7 +1007,7 @@
 	<fstream>
 	"Nodo.h"
 
-1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.h
+1706771982 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.h
 	<string>
 	<vector>
 	<filesystem>
@@ -1055,7 +1058,7 @@
 1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\credito.cpp
 	"Credito.h"
 
-1706767028 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.cpp
+1706772321 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.cpp
 	"Extra.h"
 	<iostream>
 	<cstdlib>
@@ -1169,7 +1172,7 @@
 	"validaciones.h"
 	"ListaDoble.h"
 
-1706770632 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.cpp
+1706771273 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.cpp
 	"Movimientos.h"
 	"validaciones.h"
 	"Persona.h"

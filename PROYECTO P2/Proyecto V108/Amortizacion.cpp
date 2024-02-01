@@ -16,8 +16,10 @@
 #include <iomanip>
 #include <ctime>
 #include "validaciones.h"
+#include "Movimientos.h"
 #include "Cuenta.h"
-
+#include <sys/stat.h>
+#include <cerrno>
 
 
 using namespace std;
@@ -182,11 +184,13 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::str
 
     cout<<"\nLA TABLA DE CREDITOS SE GUARDO EN EL ARCHIVO '"<<nombreArchivo<<"'.\n\n'";
     createBackupRegistro();
+    createBackupRegistro(cedula);
 }
 
 
 void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
+    Movimientos mov;
     Cuenta nuevacuenta;
     std::string cedula;
 

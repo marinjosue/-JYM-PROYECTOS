@@ -17,6 +17,7 @@
 void createFile();
 void createBackup();
 void createBackupRegistro();
+void createBackupRegistro(const std::string&);
 std::string leerArchivoComoString(const std::string& nombreArchivo);
 void imprimirContenidoArchivo(const std::string& nombreArchivo);
 void restaurarDesdeBackup(const std::string& archivoOriginal, const std::string& archivoBackup);

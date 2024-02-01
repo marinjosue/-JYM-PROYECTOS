@@ -57,6 +57,8 @@
 		<Unit filename="Imagen.h" />
 		<Unit filename="ListaDoble.cpp" />
 		<Unit filename="ListaDoble.h" />
+		<Unit filename="Movimientos.cpp" />
+		<Unit filename="Movimientos.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
 		<Unit filename="Persona.cpp" />

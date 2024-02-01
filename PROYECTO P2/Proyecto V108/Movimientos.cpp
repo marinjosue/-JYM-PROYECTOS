@@ -54,7 +54,6 @@ void Movimientos::registrarMovimiento(const std::string& cedulaIngresada) {
             return;
         }
     }
-
     // Solicitar el monto al usuario
     double montoIngresado = valida.ingresar_reales("\nIngrese el monto a registrar ($): ");
 
