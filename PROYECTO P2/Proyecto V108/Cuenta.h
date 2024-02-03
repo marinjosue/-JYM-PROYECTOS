@@ -18,7 +18,8 @@ public:
      void setCuenta(std::string );
      void guardarTabla(const std::string& archivo, const std::string& cedula, const std::string& nombreCompleto, const std::string& id, const Cuenta& cuenta);
      Cuenta(std::string cuenta);
-     void mostrarDatosUsuarios(const std::string& archivo);
+     bool compararCuentas(const std::string &cuenta);
+     void mostrarDatosUsuarios(const std::string &archivo);
      DatosUsuario mostrarDatosUsuarios(const std::string& archivo, const std::string& cedulaIngresada);
      static int contadorId;
      bool  verificarCedula(const std::string& cedula);

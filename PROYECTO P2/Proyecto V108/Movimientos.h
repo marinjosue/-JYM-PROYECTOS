@@ -26,6 +26,7 @@ public:
     void mostrarMovimientos();
     bool directorioExiste(const std::string& nombreDirectorio);
     bool crearDirectorio(const std::string& nombreDirectorio);
+    void realizarDeposito(const std::string& cedulaIngresada);
 
 };
 
