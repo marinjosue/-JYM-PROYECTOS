@@ -28,13 +28,35 @@ Cuenta::Cuenta(std::string cuenta)
     }
 }
 
+bool Cuenta::compararCuentas(const std::string& cuenta) {
+    std::ifstream archivo("Usuarios.txt");
+    std::string cuentaArchivo;
+
+    if (archivo.is_open()) {
+        while (archivo >> cuentaArchivo) {
+            // Comparar la cuenta actual con la cuenta ingresada
+            if (cuenta == cuentaArchivo) {
+                archivo.close();
+                return true;  // La cuenta ya existe en el archivo
+            }
+            // Leer los otros campos (nombre, apellido, cÃ©dula) y descartarlos
+            archivo >> cuentaArchivo;
+            archivo >> cuentaArchivo;
+            archivo >> cuentaArchivo;
+        }
+        archivo.close();
+    }
+    return false;
+}
+
+
 Cuenta Cuenta::crear_cuenta() {
     Movimientos monto;
     validaciones valida;
     Persona nuevaPersona;
     std::string cedulaIngresada;
 
-    // Solicitar la cédula al usuario
+    // Solicitar la cï¿½dula al usuario
     do {
         cedulaIngresada = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
@@ -43,16 +65,16 @@ Cuenta Cuenta::crear_cuenta() {
             std::string linea;
 
             if (archivo.is_open()) {
-                // Leer cada línea del archivo
+                // Leer cada lï¿½nea del archivo
                 while (std::getline(archivo, linea)) {
                     std::istringstream iss(linea);
                     std::string cedulaArchivo, nombreCompleto, id;
 
-                    // Leer los componentes de la línea
-                    iss >> cedulaArchivo;  // Leer la cédula
+                    // Leer los componentes de la lï¿½nea
+                    iss >> cedulaArchivo;  // Leer la cï¿½dula
                     std::string nombreApellido;
                     while (iss >> nombreApellido) {
-                        // Si el componente actual es numérico, es el ID, no el nombre
+                        // Si el componente actual es numï¿½rico, es el ID, no el nombre
                         if (!isdigit(nombreApellido[0])) {
                             // Concatenar los nombres y apellidos en uno solo
                             nombreCompleto += nombreApellido + " ";
@@ -63,7 +85,7 @@ Cuenta Cuenta::crear_cuenta() {
                     // Eliminar el espacio extra al final del nombre completo
                     nombreCompleto.pop_back();
 
-                    // Comparar la cédula ingresada con la cédula en la línea actual
+                    // Comparar la cï¿½dula ingresada con la cï¿½dula en la lï¿½nea actual
                     if (cedulaArchivo == cedulaIngresada) {
                         Cuenta nuevaCuenta;
                         std::string newCuenta = nuevaCuenta.generar_cuenta_automatica();
@@ -101,7 +123,7 @@ void Cuenta::guardarTabla(const std::string& archivo, const std::string& cedula,
 
         outFile.close();
         std::cout << "Datos guardados en " << archivo << std::endl;
-        // Línea en blanco opcional
+        // Lï¿½nea en blanco opcional
         std::cout << std::endl;
     } else {
         std::cerr << "No se pudo abrir el archivo " << archivo << std::endl;
@@ -123,14 +145,14 @@ void Cuenta::mostrarDatosUsuarios(const std::string& archivo) {
     std::string cedula, nombreCompleto, id, cuenta;
 
     while (input_stringstream >> cedula) {
-        // Leer el nombre completo hasta encontrar el siguiente campo numérico (ID)
+        // Leer el nombre completo hasta encontrar el siguiente campo numï¿½rico (ID)
         nombreCompleto = "";
         while (input_stringstream >> id && !isdigit(id[0])) {
             nombreCompleto += id + " ";
         }
 
-        // El último token leído es el ID
-        // Leer el N°Cuenta
+        // El ï¿½ltimo token leï¿½do es el ID
+        // Leer el Nï¿½Cuenta
         input_stringstream >> cuenta;
 
         std::cout << '|' << std::setw(ancho_cedula) << std::left << cedula << '|'
@@ -148,22 +170,22 @@ DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std:
 
     std::string cedulaArchivo, nombreCompleto, id, Ncuenta;
 
-    // Leer cada línea del archivo
+    // Leer cada lï¿½nea del archivo
     while (archivoUsuarios >> cedulaArchivo) {
-        // Leer el nombre completo hasta encontrar el siguiente campo numérico (ID)
+        // Leer el nombre completo hasta encontrar el siguiente campo numï¿½rico (ID)
         nombreCompleto = "";
         while (archivoUsuarios >> id && !isdigit(id[0])) {
             nombreCompleto += id + " ";
         }
 
-        // El último token leído es el ID
-        // Leer el N°Cuenta
+        // El ï¿½ltimo token leï¿½do es el ID
+        // Leer el Nï¿½Cuenta
         archivoUsuarios >> Ncuenta;
 
         // Eliminar el espacio extra al final del nombre completo
         nombreCompleto.pop_back();
 
-        // Verificar si la cédula ingresada coincide con la cédula del archivo
+        // Verificar si la cï¿½dula ingresada coincide con la cï¿½dula del archivo
         if (cedulaArchivo == cedulaIngresada) {
             // Asignar los datos a la estructura
             datosUsuario.cedula = cedulaArchivo;
@@ -171,7 +193,7 @@ DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std:
             datosUsuario.id = id;
             datosUsuario.Ncuenta = Ncuenta;
 
-            break;  // Salir del bucle al encontrar la cédula
+            break;  // Salir del bucle al encontrar la cï¿½dula
         }
     }
 
@@ -187,10 +209,10 @@ bool Cuenta::verificarCedula(const std::string& cedula) {
 
     if (archivo.is_open()) {
         while (archivo >> cedulaArchivo) {
-            // Comparar la cédula actual con la cédula ingresada
+            // Comparar la cï¿½dula actual con la cï¿½dula ingresada
             if (cedula == cedulaArchivo) {
                 archivo.close();
-                return true;  // La cédula ya existe en el archivo
+                return true;  // La cï¿½dula ya existe en el archivo
             }
             // Leer los otros campos (nombre, apellido, id) y descartarlos
             archivo >> cedulaArchivo;

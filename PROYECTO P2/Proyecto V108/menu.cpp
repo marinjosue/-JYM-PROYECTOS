@@ -216,8 +216,12 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                     case 2:
                      {
                         system("cls");
-
-
+                        validaciones validar;
+                        std::string newCedula;
+                        newCedula = validar.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
+                        movimiento.realizarDeposito(newCedula);
+                        system("pause");
+                        Menu_Cuenta(listaPersonas);
                         break;
                         }
                     case 3:
