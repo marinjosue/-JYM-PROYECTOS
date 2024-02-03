@@ -9,7 +9,6 @@
 
 Cuenta::Cuenta(){
 }
-
 std::string Cuenta::getCuenta(void)const
 {
    return cuenta;
@@ -143,7 +142,6 @@ void Cuenta::mostrarDatosUsuarios(const std::string& archivo) {
     }
 }
 
-
 DatosUsuario Cuenta::mostrarDatosUsuarios(const std::string& archivo, const std::string& cedulaIngresada) {
     std::ifstream archivoUsuarios(archivo);
     DatosUsuario datosUsuario;  // Estructura para almacenar los datos
@@ -203,11 +201,21 @@ bool Cuenta::verificarCedula(const std::string& cedula) {
     }
     return false;
 }
+int contadorCuenta = 2024;
+int codigoV = 0;
 
-int Cuenta::contadorId = 0;
-std::string  Cuenta::generar_cuenta_automatica(){
+std::string Cuenta::generar_cuenta_automatica() {
+    // Numero de cuenta = 009 10 2024 0   y el 10 se va incrementando
     std::ostringstream oss;
-    oss << std::setfill('0') << std::setw(6) << ++contadorId;
+    int digitoVerificador = ++codigoV % 10;
+
+    if (digitoVerificador == 10) {
+        digitoVerificador = 0;
+        ++codigoV;
+    }
+
+    oss << "009" <<  digitoVerificador << std::setfill('0') << std::setw(5) << ++contadorCuenta << digitoVerificador;
     return oss.str();
 }
+
 
