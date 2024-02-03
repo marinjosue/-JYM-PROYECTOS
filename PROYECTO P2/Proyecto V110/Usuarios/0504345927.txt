@@ -1,0 +1,13 @@
+Fecha: 03/02/2024
+Monto: $5
+Cedula: 0504345927
+Nombre: Josue Isaac Marin
+ID: 000003
+No.Cuenta: 000001
+
+|FECHA Y HORA        |DEPOSITOS |RETISOS   |SALDO     |
+=======================================================
+
+3/2/2024 4:21:1     |100       |0         |100        |
+3/2/2024 4:22:25    |0         |100       |100       |
+
