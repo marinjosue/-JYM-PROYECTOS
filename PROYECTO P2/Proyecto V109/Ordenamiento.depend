@@ -1,0 +1,1189 @@
+# depslib dependency file v1.0
+1706338442 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706379051 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\nodo.h
+	"Persona.h"
+
+1706385875 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\persona.h
+	<string>
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\credito.h
+	"Fecha.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\fecha.h
+	<iostream>
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\calculoscredito.h
+	"ListaDoble.h"
+
+1706379370 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\nodo.cpp
+	"Nodo.h"
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\bibliotecas\easybmp_datastructures.h
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\bibliotecas\easybmp_bmp.h
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\bibliotecas\easybmp_variousbmputilities.h
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\credito.cpp
+	"Credito.h"
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\imagen.h
+	<string>
+	<windows.h>
+
+1706379370 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706385801 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+
+1705257195 d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\nodo.cpp
+	"Nodo.h"
+
+1706385900 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1705257195 source:d:\espe\-jym-proyecto-estructura\proyecto p2\proyecto v101\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\nodo.h
+	"Persona.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\persona.h
+	<string>
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\credito.h
+	"Fecha.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\fecha.h
+	<iostream>
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\calculoscredito.h
+	"ListaDoble.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\nodo.cpp
+	"Nodo.h"
+
+1706671558 source:c:\gitrepos\proyecto_jym\proyecto v101\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706671558 c:\gitrepos\proyecto_jym\proyecto v101\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706671558 c:\gitrepos\proyecto_jym\proyecto v101\bibliotecas\easybmp_datastructures.h
+
+1706671558 c:\gitrepos\proyecto_jym\proyecto v101\bibliotecas\easybmp_bmp.h
+
+1706671558 c:\gitrepos\proyecto_jym\proyecto v101\bibliotecas\easybmp_variousbmputilities.h
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\credito.cpp
+	"Credito.h"
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\imagen.h
+	<string>
+	<windows.h>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\nodo.cpp
+	"Nodo.h"
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706671557 c:\gitrepos\proyecto_jym\proyecto v101\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706671557 source:c:\gitrepos\proyecto_jym\proyecto v101\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706682146 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+
+1706681922 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\nodo.h
+	"Persona.h"
+
+1706682348 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\persona.h
+	<string>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\credito.h
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\fecha.h
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\calculoscredito.h
+	"ListaDoble.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\nodo.cpp
+	"Nodo.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\bibliotecas\easybmp_datastructures.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\bibliotecas\easybmp_bmp.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\bibliotecas\easybmp_variousbmputilities.h
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\credito.cpp
+	"Credito.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\imagen.h
+	<string>
+	<windows.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706681057 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706681922 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	<iomanip>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v103\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\nodo.cpp
+	"Nodo.h"
+
+1706682348 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v103\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706685182 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+
+1706681922 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\nodo.h
+	"Persona.h"
+
+1706686187 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\persona.h
+	<string>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\credito.h
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\fecha.h
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\calculoscredito.h
+	"ListaDoble.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\nodo.cpp
+	"Nodo.h"
+
+1706688739 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\bibliotecas\easybmp_datastructures.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\bibliotecas\easybmp_bmp.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\bibliotecas\easybmp_variousbmputilities.h
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\credito.cpp
+	"Credito.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\imagen.h
+	<string>
+	<windows.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706681057 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\nodo.cpp
+	"Nodo.h"
+
+1706688985 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"Cuenta.cpp"
+	<iomanip>
+
+1706688739 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706689023 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v105\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706689023 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\cuenta.cpp
+	"Cuenta.h"
+	"validaciones.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+
+1706688900 d:\espe\3-4 level\estructura de datos\programas\proyecto v105\cuenta.h
+	"Persona.h"
+
+1706689751 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+
+1706681922 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\nodo.h
+	"Persona.h"
+
+1706691774 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\persona.h
+	<string>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\credito.h
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\fecha.h
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\calculoscredito.h
+	"ListaDoble.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\nodo.cpp
+	"Nodo.h"
+
+1706688739 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\bibliotecas\easybmp_datastructures.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\bibliotecas\easybmp_bmp.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\bibliotecas\easybmp_variousbmputilities.h
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\credito.cpp
+	"Credito.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\imagen.h
+	<string>
+	<windows.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706681057 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706693123 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"Cuenta.cpp"
+	<iomanip>
+
+1706729354 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\cuenta.cpp
+	"Cuenta.h"
+	"validaciones.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+
+1706728911 d:\espe\3-4 level\estructura de datos\programas\proyecto v106\cuenta.h
+	"Persona.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\nodo.cpp
+	"Nodo.h"
+
+1706688739 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706692836 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v106\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706772029 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+	"Movimientos.h"
+	"Cuenta.h"
+	<sys/stat.h>
+	<cerrno>
+
+1706765167 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\nodo.h
+	"Persona.h"
+
+1706691774 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\persona.h
+	<string>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\credito.h
+	"Fecha.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\fecha.h
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\calculoscredito.h
+	"ListaDoble.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706771982 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\nodo.cpp
+	"Nodo.h"
+
+1706761028 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\bibliotecas\easybmp_datastructures.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\bibliotecas\easybmp_bmp.h
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\bibliotecas\easybmp_variousbmputilities.h
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\credito.cpp
+	"Credito.h"
+
+1706932650 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+	"Amortizacion.h"
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1706678063 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\imagen.h
+	<string>
+	<windows.h>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1706931138 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1706932889 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1706933704 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"Cuenta.cpp"
+	<iomanip>
+	"Movimientos.h"
+
+1706932652 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.cpp
+	"Cuenta.h"
+	"validaciones.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"Movimientos.h"
+
+1706770672 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\cuenta.h
+	"Persona.h"
+	<string>
+
+1706678063 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\nodo.cpp
+	"Nodo.h"
+
+1706761028 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1706752011 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1706933298 source:d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.cpp
+	"Movimientos.h"
+	"validaciones.h"
+	"Persona.h"
+	"Cuenta.h"
+	"Fecha.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<sys/stat.h>
+	<cerrno>
+
+1706933287 d:\espe\3-4 level\estructura de datos\programas\proyecto v107\movimientos.h
+	<string>
+

@@ -1,0 +1,7 @@
+Fecha: 01/02/2024
+Monto: $5
+Cedula: 1212121212
+Nombre: Yehua Amador Chiliquinga Fernando
+ID: 000002
+No.Cuenta: 000001
+
