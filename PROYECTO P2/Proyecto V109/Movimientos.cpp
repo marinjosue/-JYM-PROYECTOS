@@ -119,7 +119,56 @@ void Movimientos::pagoPrestamoAutomatico(){
 }
 
 
+void Movimientos::realizarDeposito(const std::string& cedulaIngresada) {
+    validaciones valida;
+    Cuenta nuevaCuenta;
 
+    // Crear la carpeta "Usuarios" si no existe
+    std::string carpetaUsuarios = "Usuarios";
+    if (!directorioExiste(carpetaUsuarios)) {
+        if (crearDirectorio(carpetaUsuarios)) {
+            std::cout << "Carpeta de usuarios creada correctamente." << std::endl;
+        } else {
+            std::cerr << "Error al crear la carpeta de usuarios." << std::endl;
+            return;
+        }
+    }
+
+    // Solicitar el monto al usuario
+    double montoIngresado = valida.ingresar_enteros("\nIngrese el monto a depositar ($): ");
+
+    // Obtener datos del usuario
+    DatosUsuario datosUsuario = nuevaCuenta.mostrarDatosUsuarios("Usuarios.txt", cedulaIngresada);
+
+    if (datosUsuario.cedula.empty()) {
+        std::cout << "\nLa cedula ingresada no existe en el archivo. Vuelva a intentarlo." << std::endl;
+        return;
+    }
+
+    // Obtener la fecha actual
+    Fecha fechaActual;
+    std::string nombreArchivo = carpetaUsuarios + "/" + cedulaIngresada + ".txt";
+
+    // Abrir el archivo de usuario en modo de añadir (append)
+    std::ofstream outFile(nombreArchivo, std::ios::app);
+
+    if (outFile.is_open()) {
+        // Escribir los datos en el archivo
+        outFile << "Fecha: " << fechaActual.to_string() << "\n";
+        outFile << "Deposito: $" << montoIngresado << "\n";
+        outFile << "Cedula: " << datosUsuario.cedula << "\n";
+        outFile << "Nombre: " << datosUsuario.nombreCompleto << "\n";
+        outFile << "ID: " << datosUsuario.id << "\n";
+        outFile << "No.Cuenta: " << datosUsuario.Ncuenta << "\n";
+        outFile << "\n";
+
+        std::cout << "\nDeposito realizado con éxito. Datos guardados en " << nombreArchivo << std::endl;
+
+        outFile.close();
+    } else {
+        std::cerr << "\nNo se pudo abrir el archivo " << nombreArchivo << std::endl;
+    }
+}
 
 
 bool Movimientos::directorioExiste(const std::string& nombreDirectorio) {
@@ -141,3 +190,4 @@ bool Movimientos::crearDirectorio(const std::string& nombreDirectorio) {
 void Movimientos::mostrarMovimientos() {
     // Implementa la lógica para mostrar los movimientos realizados
 }
+

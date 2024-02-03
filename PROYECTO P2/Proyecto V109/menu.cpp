@@ -255,7 +255,7 @@ void Menus::Menu_Movimientos(){
     const char *titulo ="\t\tMOVIMEINTOS";
     const char *opciones[] =
     {
-    "\t\t[1]AVONAR",
+    "\t\t[1]ABONAR",
     "\t\t[2]RETIRAR",
     "\t\t[3]BUSCAR TABLA",
     "\t\t[4]ELIMINAR",
@@ -269,7 +269,11 @@ void Menus::Menu_Movimientos(){
      switch (selec) {
                      case 1: {
                         system("cls");
-                       
+                        validaciones validar;
+                        std::string newCedula;
+                        newCedula = validar.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
+                        movimiento.realizarDeposito(newCedula);
+                        system("pause");
                         break;
                         }
 

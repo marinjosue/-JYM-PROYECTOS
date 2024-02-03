@@ -28,6 +28,28 @@ Cuenta::Cuenta(std::string cuenta)
     }
 }
 
+bool Cuenta::compararCuentas(const std::string& cuenta) {
+    std::ifstream archivo("Usuarios.txt");
+    std::string cuentaArchivo;
+
+    if (archivo.is_open()) {
+        while (archivo >> cuentaArchivo) {
+            // Comparar la cuenta actual con la cuenta ingresada
+            if (cuenta == cuentaArchivo) {
+                archivo.close();
+                return true;  // La cuenta ya existe en el archivo
+            }
+            // Leer los otros campos (nombre, apellido, cédula) y descartarlos
+            archivo >> cuentaArchivo;
+            archivo >> cuentaArchivo;
+            archivo >> cuentaArchivo;
+        }
+        archivo.close();
+    }
+    return false;
+}
+
+
 Cuenta Cuenta::crear_cuenta() {
     Movimientos monto;
     validaciones valida;

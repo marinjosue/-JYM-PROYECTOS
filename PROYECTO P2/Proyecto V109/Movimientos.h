@@ -27,6 +27,7 @@ public:
     void mostrarMovimientosPorCedula();
     void tablaMoviemito();
     void pagoPrestamoAutomatico();
+    void realizarDeposito(const std::string& cedulaIngresada);
     
 };
 
