@@ -318,11 +318,30 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
 
                         // Ahora que el árbol está construido, buscas la cédula ingresada
                         std::cout << "\nCuentas encontradas para la cedula " << cedulaIngresada << ":" << std::endl;
-                        arbol.buscarCedula(cedulaIngresada);
+                        arbol.buscarCedula(cedulaIngresada, "Usuarios.txt");
+
+                        // Obtener y ordenar los números de cédula del archivo
+                        std::vector<std::string> cedulas = obtenerNumerosCedula("Usuarios.txt");
+                        // Ordenar las cédulas de manera ascendente
+                        std::sort(cedulas.begin(), cedulas.end());
+
+                        // Imprimir las cédulas con flechas "->"
+                        std::cout << "Cedulas encontradas ordenadas: ";
+                        for (size_t i = 0; i < cedulas.size(); ++i) {
+                            std::cout << cedulas[i];
+                            // Imprimir flecha "->" solo si no es la última cédula
+                            if (i < cedulas.size() - 1) {
+                                std::cout << " -> ";
+                            }
+                        }
+                        // Nueva línea al final para separar las cédulas de la siguiente sección
+                        std::cout << std::endl;
 
                         system("pause");
                         break;
                     }
+
+
                     case 4:
                         system("cls");
                         cuenta.mostrarDatosUsuarios("Usuarios.txt");

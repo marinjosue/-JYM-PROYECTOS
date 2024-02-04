@@ -29,8 +29,9 @@ public:
     ~ArbolBinario();
     void insertar(std::string cedula);
     void imprimirEnOrden();
-    void buscarCedula(const std::string& cedulaBuscada);
+    void buscarCedula(const std::string& cedulaBuscada,const std::string& nombreArchivo);
     void leerCedulas(const std::string& archivo);
+    void inordenRecursivoConFlechas(NodoArbol* nodo);
 };
 
 #endif // ARBOLBINARIO_H

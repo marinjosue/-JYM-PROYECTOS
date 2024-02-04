@@ -2505,7 +2505,7 @@
 	<vector>
 	<fstream>
 
-1707035796 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\menu.cpp
+1707043827 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
@@ -2537,10 +2537,13 @@
 	<iomanip>
 	"Movimientos.h"
 
-1707035586 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\arbolbinario.cpp
+1707043984 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\arbolbinario.cpp
 	"ArbolBinario.h"
+	<algorithm>
+	"Cuenta.h"
+	"Fecha.h"
 
-1707035084 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\arbolbinario.h
+1707042180 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v112\arbolbinario.h
 	<iostream>
 	<fstream>
 	<sstream>
