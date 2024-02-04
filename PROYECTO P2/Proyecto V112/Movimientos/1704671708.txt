@@ -1,0 +1,8 @@
+Fecha de Creacion: 04/02/2024
+Cedula/CI: 1704671708
+Cliente: Edgar Fernando Solis Alquinga
+ID de Cliente: 000007
+No.Cuenta Cliente: 0091717877715
+Prestamo: 0
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/ESPE/3-4 level/Estructura de Datos/Programas/Proyecto V111",
-      "program": "d:/ESPE/3-4 level/Estructura de Datos/Programas/Proyecto V111/build/Debug/outDebug",
+      "cwd": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V112",
+      "program": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V112/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
