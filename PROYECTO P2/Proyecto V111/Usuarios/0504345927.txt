@@ -1,0 +1,8 @@
+Fecha: 03/02/2024
+Monto: $5
+Cedula: 0504345927
+Nombre: Josue Isaac Marin Alquinga
+ID: 000001
+No.Cuenta: 0092020262
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

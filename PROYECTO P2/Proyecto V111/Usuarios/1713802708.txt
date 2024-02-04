@@ -1,0 +1,7 @@
+Fecha: 03/02/2024
+Cedula: 1713802708
+Nombre: Alquinga Josue Marin Isaas
+ID: 000003
+No.Cuenta: 0091020251
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

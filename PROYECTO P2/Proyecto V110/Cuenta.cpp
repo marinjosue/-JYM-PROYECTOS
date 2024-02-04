@@ -104,7 +104,7 @@ Cuenta Cuenta::crear_cuenta() {
                 }
                 archivo.close();
                 std::cout << "\nLa cedula ingresada no existe en el archivo. Vuelva a intentarlo." << std::endl;
-            } else {
+                } else {
                 std::cerr << "No se pudo abrir el archivo Personas.txt\n";
             }
         } else {
