@@ -1,0 +1,8 @@
+Fecha: 04/02/2024
+Cedula: 0504345927
+Nombre: Josue Isaac Marin Alquinga
+ID: 000001
+No.Cuenta: 0091020251
+Prestamo: 0
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================
