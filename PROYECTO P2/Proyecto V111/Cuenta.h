@@ -28,6 +28,8 @@ public:
       std::string getCedula() const {
         return cedulaAsociada;
     }
+    bool verificar_cuenta_existente(const std::string& cuenta, const std::string& archivo);
+    std::string generar_cuenta_unico();
 private:
  std::string cuenta;
  std::string cedulaAsociada;

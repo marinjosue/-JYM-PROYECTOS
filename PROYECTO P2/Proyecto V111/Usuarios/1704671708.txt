@@ -6,3 +6,10 @@ No.Cuenta: 0091020251
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 3/2/2024 20:0:24    |100       |0         |100       |
+Fecha: 03/02/2024
+Cedula: 1704671708
+Nombre: Edgar Fernando Solis Alquinga
+ID: 000007
+No.Cuenta: 0097020317
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

@@ -48,6 +48,45 @@ bool Cuenta::compararCuentas(const std::string& cuenta) {
     }
     return false;
 }
+
+// Implementación de la función para generar un número de cuenta único
+std::string Cuenta::generar_cuenta_unico() {
+    std::string nueva_cuenta;
+    bool cuenta_unica = false;
+
+    do {
+        nueva_cuenta = generar_cuenta_automatica(); // Supongamos que esto genera el número de cuenta
+        // Verifica si la cuenta generada ya existe en Usuarios.txt
+        if (!verificar_cuenta_existente(nueva_cuenta, "Usuarios.txt")) {
+            cuenta_unica = true;
+        }
+    } while (!cuenta_unica);
+
+    return nueva_cuenta;
+}
+
+// Implementación de la función para verificar si una cuenta ya existe en el archivo dado
+bool Cuenta::verificar_cuenta_existente(const std::string& cuenta, const std::string& archivo) {
+    std::ifstream archivo_cuentas(archivo);
+    std::string cuenta_archivo;
+
+    if (archivo_cuentas.is_open()) {
+        while (archivo_cuentas >> cuenta_archivo) {
+            // Comparar la cuenta actual con la cuenta ingresada
+            if (cuenta == cuenta_archivo) {
+                archivo_cuentas.close();
+                return true;  // La cuenta ya existe en el archivo
+            }
+            // Leer los otros campos (nombre, apellido, cédula) y descartarlos
+            archivo_cuentas >> cuenta_archivo;
+            archivo_cuentas >> cuenta_archivo;
+            archivo_cuentas >> cuenta_archivo;
+        }
+        archivo_cuentas.close();
+    }
+    return false;
+}
+
 Cuenta Cuenta::crear_cuenta() {
     Movimientos monto;
     validaciones valida;
@@ -91,17 +130,16 @@ Cuenta Cuenta::crear_cuenta() {
 
                     // Comparar la cédula ingresada con la cédula en la línea actual
                     if (cedulaArchivo == cedula && !nuevacuenta.verificarCedula("Usuarios.txt", cedula)) {
-                        Cuenta nuevaCuenta;
-                        std::string newCuenta = nuevaCuenta.generar_cuenta_automatica();
-                        std::cout << "\nSu cuenta es: " << newCuenta << std::endl;
-                        nuevaCuenta.setCuenta(newCuenta);
+                        // Generar un número de cuenta único
+                        std::string newCuenta = nuevacuenta.generar_cuenta_unico();
+                        nuevacuenta.setCuenta(newCuenta);
 
                         std::cout << "\nDatos encontrados:\n";
                         std::cout << "Cedula: " << cedulaArchivo << "\n";
                         std::cout << "Nombre: " << nombreCompleto << "\n";
                         std::cout << "ID: " << id << "\n";
                         archivo.close();
-                        nuevaCuenta.guardarTabla("Usuarios.txt", cedulaArchivo, nombreCompleto, id, nuevaCuenta);
+                        nuevacuenta.guardarTabla("Usuarios.txt", cedulaArchivo, nombreCompleto, id, nuevacuenta);
                         monto.registrarMovimiento(cedulaArchivo);
                         cedulaEncontrada = true;
                         procesarCedula = false;  // Set the flag to false to exit the loop
@@ -128,7 +166,6 @@ Cuenta Cuenta::crear_cuenta() {
     // Return a dummy account if needed (replace this with your actual return logic)
     return Cuenta();
 }
-
 
 
 
