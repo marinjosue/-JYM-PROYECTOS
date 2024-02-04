@@ -67,41 +67,7 @@ void  Movimientos::set_fecha_de_pago(ListaDoble<Fecha>* nuevo_fechas_pago){
 fecha_de_pago=nuevo_fechas_pago;
 }
 
-double Movimientos::obtenerSaldoActual(const std::string& rutaArchivo) {
-    double saldoActual = 0.0;
 
-    std::ifstream archivoEntrada;
-    archivoEntrada.open(rutaArchivo);
-
-    if (archivoEntrada.is_open()) {
-        std::string linea;
-
-        // Ignorar las líneas hasta llegar a la línea de saldo
-        while (getline(archivoEntrada, linea) && linea != "=======================================================");
-
-        // Leer la línea de saldo y obtener el valor de saldo
-        if (getline(archivoEntrada, linea)) {
-            std::istringstream ss(linea);
-
-            std::string fechaHora;
-            int deposito, retiro, saldo;
-
-            // Leer las partes de la línea
-            ss >> fechaHora >> deposito >> retiro >> saldo;
-
-            // Actualizar el saldo actual con el valor leído
-            saldoActual = saldo;
-        } else {
-            std::cerr << "Error: No se encontró la línea de saldo en el archivo." << std::endl;
-        }
-
-        archivoEntrada.close();
-    } else {
-        std::cerr << "Error al abrir el archivo: " << rutaArchivo << std::endl;
-    }
-
-    return saldoActual;
-}
 
 
 
