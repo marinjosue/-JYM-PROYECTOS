@@ -1863,7 +1863,7 @@
 	"Nodo.h"
 	"Persona.h"
 
-1707012073 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.h
+1707030505 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.h
 	"Persona.h"
 
 1707012073 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\persona.h
@@ -1891,7 +1891,7 @@
 	<filesystem>
 	<fstream>
 
-1707012073 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.cpp
+1707030511 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.cpp
 	"Nodo.h"
 
 1707012073 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\validaciones.h
@@ -1997,7 +1997,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1707012073 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\menu.cpp
+1707033897 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
@@ -2017,6 +2017,7 @@
 	"Cuenta.cpp"
 	<iomanip>
 	"Movimientos.h"
+	"ArbolBinario.cpp"
 
 1707021756 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\cuenta.cpp
 	"Cuenta.h"
@@ -2043,7 +2044,7 @@
 	<iomanip>
 	"ListaDoble.cpp"
 
-1707012073 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.cpp
+1707030511 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\nodo.cpp
 	"Nodo.h"
 
 1707012073 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\persona.cpp
@@ -2070,4 +2071,33 @@
 	<cstdlib>
 	<vector>
 	<fstream>
+
+1707030723 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\arbolbinariobusqueda.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1707030315 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\arbolbinariobusqueda.cpp
+	"ArbolBinarioBusqueda.h"
+
+1707025012 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\gestorusuarios.h
+	"ArbolBinarioBusqueda.h"
+	<string>
+	"GestorUsuarios.cpp"
+
+1707024880 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\gestorusuarios.cpp
+	"GestorUsuarios.h"
+	<fstream>
+	<sstream>
+	<iostream>
+
+1707034757 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\arbolbinario.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1707034723 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v111\arbolbinario.cpp
+	"ArbolBinario.h"
 

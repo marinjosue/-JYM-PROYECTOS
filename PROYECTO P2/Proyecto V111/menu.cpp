@@ -24,6 +24,7 @@
 #include "Cuenta.cpp"
 #include <iomanip>
 #include "Movimientos.h"
+#include "ArbolBinario.cpp"
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -271,10 +272,13 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
                }
         } while (aux);
 }
+
+
 void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     Cuenta cuenta;
     Persona persona;
     Movimientos movimiento;
+    validaciones validar;
     bool aux = true;
     const char *titulo ="\t\tCUENTAS DE CLIENTES";
     const char *opciones[] =
@@ -305,13 +309,23 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                         Menu_Movimientos();
                         break;
                         }
-                    case 3:
-                     {
+                    case 3: {
                         system("cls");
+                        std::string cedulaIngresada;
+                        cedulaIngresada = validar.ingresar_numeros_como_string("Ingrese el numero de cedula a buscar: ");
 
+                        // Aquí realizas la búsqueda en el árbol binario de búsqueda
+                        ArbolBinario arbol;
+                        // Leer el archivo y construir el árbol con las cédulas
+                        arbol.leerCedulas("Usuarios.txt");
 
+                        // Ahora que el árbol está construido, buscas la cédula ingresada
+                        std::cout << "\nCuentas encontradas para la cedula " << cedulaIngresada << ":" << std::endl;
+                        arbol.buscarCedula(cedulaIngresada);
+
+                        system("pause");
                         break;
-                        }
+                    }
                     case 4:
                         system("cls");
                         cuenta.mostrarDatosUsuarios("Usuarios.txt");
