@@ -2,27 +2,6 @@ Fecha: 03/02/2024
 Cedula: 1713802708
 Nombre: Alquinga Josue Marin Isaas
 ID: 000003
-No.Cuenta: 0091212121213
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
-No.Cuenta: 0091708264949
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
 No.Cuenta: 0091
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
@@ -31,26 +10,5 @@ Cedula: 1713802708
 Nombre: Alquinga Josue Marin Isaas
 ID: 000003
 No.Cuenta: 0091708264949
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1713802708
-Nombre: Alquinga Josue Marin Isaas
-ID: 000003
-No.Cuenta: 0091717877715
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================

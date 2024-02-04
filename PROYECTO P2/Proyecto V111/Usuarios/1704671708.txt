@@ -9,27 +9,20 @@ Fecha: 03/02/2024
 Cedula: 1704671708
 Nombre: Edgar Fernando Solis Alquinga
 ID: 000007
-No.Cuenta: 0091
+No.Cuenta: 0091717877715
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024
 Cedula: 1704671708
 Nombre: Edgar Fernando Solis Alquinga
 ID: 000007
-No.Cuenta: 0091
+No.Cuenta: 0091212121213
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024
 Cedula: 1704671708
 Nombre: Edgar Fernando Solis Alquinga
 ID: 000007
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1704671708
-Nombre: Edgar Fernando Solis Alquinga
-ID: 000007
-No.Cuenta: 0091
+No.Cuenta: 0091212121213
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================

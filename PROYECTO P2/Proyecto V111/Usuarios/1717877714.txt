@@ -9,21 +9,7 @@ Fecha: 03/02/2024
 Cedula: 1717877714
 Nombre: Mayorista Pavin Xoer Roder
 ID: 000005
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1717877714
-Nombre: Mayorista Pavin Xoer Roder
-ID: 000005
-No.Cuenta: 0091
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-Fecha: 03/02/2024
-Cedula: 1717877714
-Nombre: Mayorista Pavin Xoer Roder
-ID: 000005
-No.Cuenta: 0091
+No.Cuenta: 0091704671709
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024

@@ -92,27 +92,6 @@ std::string Cuenta::generar_cuenta_unico() {
     return nueva_cuenta;
 }
 
-// Implementación de la función para verificar si una cuenta ya existe en el archivo dado
-bool Cuenta::verificar_cuenta_existente(const std::string& cuenta, const std::string& archivo) {
-    std::ifstream archivo_cuentas(archivo);
-    std::string cuenta_archivo;
-
-    if (archivo_cuentas.is_open()) {
-        while (archivo_cuentas >> cuenta_archivo) {
-            // Comparar la cuenta actual con la cuenta ingresada
-            if (cuenta == cuenta_archivo) {
-                archivo_cuentas.close();
-                return true;  // La cuenta ya existe en el archivo
-            }
-            // Leer los otros campos (nombre, apellido, cédula) y descartarlos
-            archivo_cuentas >> cuenta_archivo;
-            archivo_cuentas >> cuenta_archivo;
-            archivo_cuentas >> cuenta_archivo;
-        }
-        archivo_cuentas.close();
-    }
-    return false;
-}
 
 Cuenta Cuenta::crear_cuenta() {
     Movimientos monto;
@@ -350,32 +329,99 @@ int contadorCuenta = 2024;
 int codigoV = 0;
 
 std::string Cuenta::generar_cuenta_automatica() {
-    int primeros_digitos = 7; // Puedes definir los primeros dígitos según tus necesidades
-    int numero_cuentas = 2; // Podrías ajustar el número de cuentas según tu lógica
-
-    int num_cuenta = primeros_digitos * pow(10, 6) + numero_cuentas;
-    num_cuenta = num_cuenta * 10 + calcular_digito_verificador(num_cuenta);
-
-    // Formatear el número de cuenta con ceros a la izquierda para alcanzar 10 dígitos
     std::ostringstream oss;
-    oss << std::setw(10) << std::setfill('0') << num_cuenta;
+    
+    // Se calcula el dígito verificador con el algoritmo de Luhn
+    int digitoVerificador = ++codigoV % 10;
 
-    return oss.str();
-}
-
-int Cuenta::calcular_digito_verificador(int digitos_anteriores) {
-    int longitud = (int) log10(digitos_anteriores);
-    int digito, verificador = 0;
-    for(int i = 0; i < longitud; i++){
-        digito = digitos_anteriores / (int) pow(10, longitud - i);
-        verificador += (i % 2 == 0) ? digito * 2 : digito;
+    if (digitoVerificador == 10) {
+        digitoVerificador = 0;
+        ++codigoV;
     }
 
-    int decena_prox = verificador / 10;
+    // Incrementar el contador de cuenta
+    ++contadorCuenta;
 
-    if(verificador % 10 != 0) decena_prox += 1;
-    decena_prox *= 10;
-    verificador = decena_prox - verificador;
+    // Formatear el número de cuenta con ceros a la izquierda
+    oss << "009" << std::setfill('0') << std::setw(5) << contadorCuenta << digitoVerificador;
 
-    return verificador;
+    std::string nuevaCuenta = oss.str();
+
+    // Verificar si la cuenta generada ya existe en el archivo Usuarios.txt
+    while (verificar_cuenta_existente("Usuarios.txt", nuevaCuenta)) {
+        // Si la cuenta ya existe, generamos una nueva cuenta
+        ++contadorCuenta;
+        digitoVerificador = ++codigoV % 10;
+        if (digitoVerificador == 10) {
+            digitoVerificador = 0;
+            ++codigoV;
+        }
+        oss.str(""); // Limpiamos el stringstream
+        oss << "009" << std::setfill('0') << std::setw(5) << contadorCuenta << digitoVerificador;
+        nuevaCuenta = oss.str();
+    }
+
+    return nuevaCuenta;
+}
+
+
+bool Cuenta::verificar_cuenta_existente(const std::string& archivo, const std::string& nuevaCuenta) {
+    std::ifstream archivoCuentas(archivo);
+    std::string linea;
+
+    if (archivoCuentas.is_open()) {
+        while (std::getline(archivoCuentas, linea)) {
+            // Obtener la cuenta existente de la línea
+            std::istringstream iss(linea);
+            std::string cuentaExistente;
+            iss >> cuentaExistente;
+
+            // Comparar la nueva cuenta con las cuentas existentes en el archivo
+            if (cuentaExistente == nuevaCuenta) {
+                archivoCuentas.close();
+                return true;  // La cuenta ya existe en el archivo
+            }
+        }
+
+        archivoCuentas.close();
+    } else {
+        std::cerr << "Error: No se pudo abrir el archivo " << archivo << std::endl;
+    }
+
+    return false;  // La cuenta no está duplicada
+}
+
+
+
+int Cuenta::calcular_digito_verificador(int numeroCuenta) {
+    // Convertir el número de cuenta a cadena
+    std::string cuentaStr = std::to_string(numeroCuenta);
+
+    int suma = 0;
+    bool doblar = false;
+
+    // Recorrer los dígitos de derecha a izquierda
+    for (int i = cuentaStr.length() - 1; i >= 0; --i) {
+        int digito = cuentaStr[i] - '0';
+
+        // Duplicar los dígitos alternos
+        if (doblar) {
+            digito *= 2;
+            // Si el resultado es mayor o igual a 10, restar 9
+            if (digito >= 10) {
+                digito -= 9;
+            }
+        }
+
+        // Sumar los dígitos al total
+        suma += digito;
+
+        // Cambiar el flag para el siguiente dígito
+        doblar = !doblar;
+    }
+
+    // Calcular el dígito verificador como el complemento a 10 de la suma
+    int digitoVerificador = (10 - (suma % 10)) % 10;
+
+    return digitoVerificador;
 }

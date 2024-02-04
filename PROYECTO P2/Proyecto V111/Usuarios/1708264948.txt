@@ -2,7 +2,7 @@ Fecha: 03/02/2024
 Cedula: 1708264948
 Nombre: Kevin Fernando Zambrano Costa
 ID: 000004
-No.Cuenta: 0091704671709
+No.Cuenta: 0091717877715
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024
@@ -16,6 +16,6 @@ Fecha: 03/02/2024
 Cedula: 1708264948
 Nombre: Kevin Fernando Zambrano Costa
 ID: 000004
-No.Cuenta: 0091
+No.Cuenta: 0091704671709
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
