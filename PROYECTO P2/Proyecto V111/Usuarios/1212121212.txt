@@ -1,15 +1,21 @@
 Fecha: 03/02/2024
-Monto: $5
 Cedula: 1212121212
 Nombre: Mari Fernanda Lopez Cuello
 ID: 000002
-No.Cuenta: 0093020273
+No.Cuenta: 009504345928
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024
 Cedula: 1212121212
 Nombre: Mari Fernanda Lopez Cuello
 ID: 000002
-No.Cuenta: 0096020306
+No.Cuenta: 0091
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================
+Fecha: 03/02/2024
+Cedula: 1212121212
+Nombre: Mari Fernanda Lopez Cuello
+ID: 000002
+No.Cuenta: 0091
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================

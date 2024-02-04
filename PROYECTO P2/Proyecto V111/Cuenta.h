@@ -30,6 +30,8 @@ public:
     }
     bool verificar_cuenta_existente(const std::string& cuenta, const std::string& archivo);
     std::string generar_cuenta_unico();
+    int calcular_digito_verificador(int numero_cuenta);
+    void generar_ID_cuenta();
 private:
  std::string cuenta;
  std::string cedulaAsociada;

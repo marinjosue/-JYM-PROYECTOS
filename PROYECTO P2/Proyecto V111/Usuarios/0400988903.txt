@@ -2,13 +2,13 @@ Fecha: 03/02/2024
 Cedula: 0400988903
 Nombre: Calan Tulcan Tipan Chiquito
 ID: 000006
-No.Cuenta: 0093020273
+No.Cuenta: 0091020251
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 Fecha: 03/02/2024
 Cedula: 0400988903
 Nombre: Calan Tulcan Tipan Chiquito
 ID: 000006
-No.Cuenta: 0094020284
+No.Cuenta: 0091
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================

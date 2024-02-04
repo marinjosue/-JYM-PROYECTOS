@@ -6,6 +6,7 @@
 #include <vector>
 #include <iomanip>
 #include "Movimientos.h"
+#include <math.h>
 
 Cuenta::Cuenta(){
 }
@@ -47,6 +48,32 @@ bool Cuenta::compararCuentas(const std::string& cuenta) {
         archivo.close();
     }
     return false;
+}
+
+// Lee el archivo de usuarios y devuelve el último número de cuenta generado como una cadena
+std::string obtener_ultimo_numero_cuenta(const std::string& archivo) {
+    std::ifstream archivo_usuarios(archivo);
+    std::string linea;
+    std::string ultimo_numero = "0"; // Inicializar como cadena
+
+    if (archivo_usuarios.is_open()) {
+        while (std::getline(archivo_usuarios, linea)) {
+            std::istringstream iss(linea);
+            std::string cuenta;
+            while (iss >> cuenta) {
+                // Extraer el número de cuenta de la línea
+                // Suponiendo que el formato del archivo es: cedula nombre id cuenta
+                if (isdigit(cuenta[0])) {
+                    if (cuenta > ultimo_numero) {
+                        ultimo_numero = cuenta;
+                    }
+                }
+            }
+        }
+        archivo_usuarios.close();
+    }
+
+    return ultimo_numero;
 }
 
 // Implementación de la función para generar un número de cuenta único
@@ -94,6 +121,12 @@ Cuenta Cuenta::crear_cuenta() {
     Persona nuevaPersona;
     std::string cedula, cedulaArchivo, nombreCompleto, id;
 
+    // Obtener el último número de cuenta generado
+    std::string ultimo_numero = obtener_ultimo_numero_cuenta("Usuarios.txt");
+
+    // Continuar generando cuentas desde el último número generado + 1
+    int siguiente_numero = std::stoi(ultimo_numero) + 1;
+
     bool procesarCedula = true;  // Flag to control the loop
 
     do {
@@ -131,7 +164,7 @@ Cuenta Cuenta::crear_cuenta() {
                     // Comparar la cédula ingresada con la cédula en la línea actual
                     if (cedulaArchivo == cedula && !nuevacuenta.verificarCedula("Usuarios.txt", cedula)) {
                         // Generar un número de cuenta único
-                        std::string newCuenta = nuevacuenta.generar_cuenta_unico();
+                        std::string newCuenta = "009" + std::to_string(siguiente_numero);
                         nuevacuenta.setCuenta(newCuenta);
 
                         std::cout << "\nDatos encontrados:\n";
@@ -317,17 +350,32 @@ int contadorCuenta = 2024;
 int codigoV = 0;
 
 std::string Cuenta::generar_cuenta_automatica() {
-    // Numero de cuenta = 009 10 2024 0   y el 10 se va incrementando
+    int primeros_digitos = 7; // Puedes definir los primeros dígitos según tus necesidades
+    int numero_cuentas = 2; // Podrías ajustar el número de cuentas según tu lógica
+
+    int num_cuenta = primeros_digitos * pow(10, 6) + numero_cuentas;
+    num_cuenta = num_cuenta * 10 + calcular_digito_verificador(num_cuenta);
+
+    // Formatear el número de cuenta con ceros a la izquierda para alcanzar 10 dígitos
     std::ostringstream oss;
-    int digitoVerificador = ++codigoV % 10;
+    oss << std::setw(10) << std::setfill('0') << num_cuenta;
 
-    if (digitoVerificador == 10) {
-        digitoVerificador = 0;
-        ++codigoV;
-    }
-
-    oss << "009" <<  digitoVerificador << std::setfill('0') << std::setw(5) << ++contadorCuenta << digitoVerificador;
     return oss.str();
 }
 
+int Cuenta::calcular_digito_verificador(int digitos_anteriores) {
+    int longitud = (int) log10(digitos_anteriores);
+    int digito, verificador = 0;
+    for(int i = 0; i < longitud; i++){
+        digito = digitos_anteriores / (int) pow(10, longitud - i);
+        verificador += (i % 2 == 0) ? digito * 2 : digito;
+    }
 
+    int decena_prox = verificador / 10;
+
+    if(verificador % 10 != 0) decena_prox += 1;
+    decena_prox *= 10;
+    verificador = decena_prox - verificador;
+
+    return verificador;
+}
