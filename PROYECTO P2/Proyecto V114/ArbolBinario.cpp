@@ -78,9 +78,9 @@ void ArbolBinario::inordenRecursivo(NodoArbol* nodo) {
 void ArbolBinario::buscarCedula(const std::string& cedulaBuscada, const std::string& nombreArchivo) {
         if (buscarCedulaRecursivo(raiz, cedulaBuscada)) {
             if (buscarCedulaRecursivo(raiz, cedulaBuscada)) {
-            std::cout << "Cuenta encontrada: " << cedulaBuscada << std::endl;
+            std::cout << "\nCuenta encontrada: " << cedulaBuscada << std::endl;
         } else {
-            std::cout << "La cuenta " << cedulaBuscada << " no se encontró." << std::endl;
+            std::cout << "\nLa cuenta " << cedulaBuscada << " no se encontró." << std::endl;
         }
         // Aquí deberías implementar la lógica para imprimir el recorrido inorden con flechas
         std::cout << std::endl;
@@ -136,7 +136,7 @@ void ArbolBinario::leerCedulas(const std::string& archivo) {
         }
         file.close();
     } else {
-        std::cerr << "No se pudo abrir el archivo: " << archivo << std::endl;
+        std::cerr << "\nNo se pudo abrir el archivo: " << archivo << std::endl;
     }
 }
 

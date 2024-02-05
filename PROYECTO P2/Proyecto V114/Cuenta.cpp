@@ -194,11 +194,11 @@ void Cuenta::guardarTabla(const std::string& archivo, const std::string& cedula,
                 << cuenta.getCuenta() << "\n";
 
         outFile.close();
-        std::cout << "Datos guardados en " << archivo << std::endl;
+        std::cout << "\nDatos guardados en " << archivo << std::endl;
         // L�nea en blanco opcional
         std::cout << std::endl;
     } else {
-        std::cerr << "No se pudo abrir el archivo " << archivo << std::endl;
+        std::cerr << "\nNo se pudo abrir el archivo " << archivo << std::endl;
     }
 }
 

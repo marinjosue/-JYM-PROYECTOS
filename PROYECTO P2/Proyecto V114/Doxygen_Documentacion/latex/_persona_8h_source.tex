@@ -1,0 +1,66 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Persona.h}
+\hypertarget{_persona_8h_source}{}\label{_persona_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/***********************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Module:\ \ Persona.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Author:\ \ Usuario}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Modified:\ domingo,\ 7\ de\ enero\ de\ 2024\ 0:07:18}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Purpose:\ Declaration\ of\ the\ class\ Persona}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ ***********************************************************************/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#if\ !defined(\_\_Persona\_Persona\_h)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_Persona\_Persona\_h}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lista_doble}{ListaDoble}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_persona}{Persona}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Constructores\ modificados}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}(std::string\ Nombre,\ std::string\ Apellido,\ std::string\ Cedula);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}(std::string\ Nombre,\ std::string\ Apellido,\ std::string\ Cedula,\ std::string\ Id);}
+\DoxyCodeLine{00024\ \ \ \ \textcolor{comment}{//\ M{\ucr}todo\ est{\ucr}tico\ para\ obtener\ el\ siguiente\ ID}}
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keyword}{static}\ std::string\ generarSiguienteId();}
+\DoxyCodeLine{00026\ \ \ \ \mbox{\hyperlink{class_persona}{\string~Persona}}();}
+\DoxyCodeLine{00027\ \ \ \ std::string\ getNombre(\textcolor{keywordtype}{void})\textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00028\ \ \ \ \textcolor{keywordtype}{void}\ setNombre(std::string\ newNombre)\ ;}
+\DoxyCodeLine{00029\ \ \ \ std::string\ getApellido(\textcolor{keywordtype}{void})\textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00030\ \ \ \ \textcolor{keywordtype}{void}\ setApellido(std::string\ newApellido)\ ;}
+\DoxyCodeLine{00031\ \ \ \ std::string\ getCedula(\textcolor{keywordtype}{void})\textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00032\ \ \ \ \textcolor{keywordtype}{void}\ setCedula(std::string\ newCedula)\ ;}
+\DoxyCodeLine{00033\ \ \ \ std::string\ getId(\textcolor{keywordtype}{void})\textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00034\ \ \ \ \textcolor{keywordtype}{void}\ setId(std::string\ newId)\ ;}
+\DoxyCodeLine{00035\ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_persona}{Persona}}\ ingresarPersona(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\&\ listaPersonas);}
+\DoxyCodeLine{00036\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ contadorId;}
+\DoxyCodeLine{00037\ \ \ \ std::string\ id;}
+\DoxyCodeLine{00038\ \ \ \ \textcolor{keywordtype}{void}\ guardarEnArchivo(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo);}
+\DoxyCodeLine{00039\ \ \ \ \textcolor{keywordtype}{void}\ mostrarRegistroPersona();}
+\DoxyCodeLine{00040\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ verificarCedulaEnArchivo(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00041\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ cargarContadorDesdeArchivo();}
+\DoxyCodeLine{00042\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ guardarContadorEnArchivo();}
+\DoxyCodeLine{00043\ \ \ \ \textcolor{keywordtype}{bool}\ \ \mbox{\hyperlink{class_persona_a9a55b279e78abc941547d9103f24d093}{verificarCedula}}(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00044\ \ \ \ std::string\ generarSiguienteId(\textcolor{keyword}{const}\ std::string\&\ ultimoIdUtilizado);}
+\DoxyCodeLine{00045\ \ \ \ \textcolor{keyword}{static}\ std::string\ obtenerUltimoIdUtilizado(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo2);}
+\DoxyCodeLine{00046\ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}\ cargarDesdeArchivo(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo,\ \textcolor{keyword}{const}\ std::string\&\ cedulaBuscar)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \textcolor{keywordtype}{void}\ ordenarEnArchivo(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo,\ \textcolor{keywordtype}{bool}\ (*criterio)(\mbox{\hyperlink{class_persona}{Persona}},\ \mbox{\hyperlink{class_persona}{Persona}}));}
+\DoxyCodeLine{00048\ \ \ \ \textcolor{keywordtype}{bool}\ eliminarPersona(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ std::string\ Nombre;}
+\DoxyCodeLine{00054\ \ \ \ std::string\ Apellido;}
+\DoxyCodeLine{00055\ \ \ \ std::string\ Cedula;}
+\DoxyCodeLine{00056\ \ \ \ std::string\ Id;}
+\DoxyCodeLine{00057\ \ \ \ \textcolor{keywordtype}{bool}\ existeEnUsuarios(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

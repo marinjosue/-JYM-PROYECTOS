@@ -1,8 +1,0 @@
-Fecha de Creacion: 05/02/2024
-Cedula/CI: 1212121212
-Cliente: Mari Fernanda Lopez Cuello
-ID de Cliente: 000002
-No.Cuenta Cliente: 009504345928
-Monto de Deuda: 0
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================

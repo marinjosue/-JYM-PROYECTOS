@@ -81,9 +81,9 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
     std::string carpetaUsuarios = "Movimientos";
     if (!directorioExiste(carpetaUsuarios)) {
         if (crearDirectorio(carpetaUsuarios)) {
-            std::cout << "Carpeta de usuarios creada correctamente." << std::endl;
+            std::cout << "\nCarpeta de usuarios creada correctamente." << std::endl;
         } else {
-            std::cerr << "Error al crear la carpeta de usuarios." << std::endl;
+            std::cerr << "\nError al crear la carpeta de usuarios." << std::endl;
             return;
         }
     }
@@ -92,9 +92,9 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
     std::string carpetaDatos = "DATOS";
     if (!directorioExiste(carpetaDatos)) {
         if (crearDirectorio(carpetaDatos)) {
-            std::cout << "Carpeta de datos creada correctamente." << std::endl;
+            std::cout << "\nCarpeta de datos creada correctamente." << std::endl;
         } else {
-            std::cerr << "Error al crear la carpeta de datos." << std::endl;
+            std::cerr << "\nError al crear la carpeta de datos." << std::endl;
             return;
         }
     }
@@ -113,17 +113,16 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
 
     double saldoActual = obtenerSaldoActual(cedulaIngresada, carpetaDatos);
      if (saldoActual < 0.0) {
-    std::cout << " Su saldo inicial es $0.0." << std::endl;
+    std::cout << " \nSu saldo inicial es $0.0." << std::endl;
     saldoActual = 0.0;  // Establecer el saldo inicial en 0.0
         }
     if (saldoActual < 0.0) {
-        std::cerr << "Error al obtener el saldo actual." << std::endl;
+        std::cerr << "\nError al obtener el saldo actual." << std::endl;
         return;
     }
 
     if (tipoMovimiento == "Deposito") {
-        std::cout << "\nIngrese el monto del deposito: ";
-        std::cin >> deposito;
+        deposito = valida.ingresar_reales("\nIngrese el monto del deposito: ");
 
         // Actualizar el saldo con el nuevo depósito
         saldoActual += deposito;
@@ -132,12 +131,11 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
         depositos->insertar_cola(static_cast<int>(deposito));
         monto->insertar_cola(saldoActual);  // Actualizar monto con el nuevo saldo
     } else if (tipoMovimiento == "Retiro") {
-        std::cout << "\nIngrese el monto del retiro: ";
-        std::cin >> retiro;
+        retiro = valida.ingresar_enteros("\nIngrese el monto del retiro: ");
 
         // Validar que el monto de retiro no sea mayor que el saldo actual
         if (retiro > saldoActual) {
-            std::cerr << "Error: El monto de retiro supera el saldo actual." << std::endl;
+            std::cerr << "\nError: El monto de retiro supera el saldo actual." << std::endl;
             return;
         }
 
@@ -148,7 +146,7 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
         retiros->insertar_cola(static_cast<int>(retiro));
         monto->insertar_cola(saldoActual);  // Actualizar monto con el nuevo saldo
     } else {
-        std::cerr << "Error: Tipo de movimiento no valido. Ingrese 'Deposito' o 'Retiro'." << std::endl;
+        std::cerr << "\nError: Tipo de movimiento no valido. Ingrese 'Deposito' o 'Retiro'." << std::endl;
         return;  // Salir del método si el tipo de movimiento no es válido
     }
 
@@ -162,7 +160,7 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
     archivo.open(rutaArchivo, std::ios_base::app);
 
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo para escritura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para escritura." << std::endl;
         return;
     }
     int ancho_fecha = 20, ancho_deposito = 10, ancho_retiro = 10, ancho_saldo = 10;
@@ -172,7 +170,7 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
               << std::left << std::setw(ancho_retiro) << retiro << '|'
               << std::left << std::setw(ancho_saldo) << saldoActual << '|' << std::endl;
     archivo.close();
-    std::cout << "Movimiento registrado con exito." << std::endl;
+    std::cout << "\nMovimiento registrado con exito." << std::endl;
 }
 
 
@@ -183,7 +181,7 @@ std::string rutaArchivo = carpeta + "/" + cedula + ".txt";
 archivo.open(rutaArchivo, std::ios_base::trunc);  // Cambiado a std::ios_base::trunc
 
 if (!archivo.is_open()) {
-    std::cerr << "Error al abrir el archivo para escritura." << std::endl;
+    std::cerr << "\nError al abrir el archivo para escritura." << std::endl;
     return;
 }
 // Formato de salida en el archivo
@@ -214,11 +212,11 @@ double Movimientos::obtenerSaldoActual(const std::string& cedula, const std::str
         if (iss >> saldoActual) {
             // Se leyó correctamente
         } else {
-            std::cerr << "Error al convertir el saldo a double." << std::endl;
+            std::cerr << "\nError al convertir el saldo a double." << std::endl;
             saldoActual = -1.0;
         }
     } else {
-        std::cerr << "Error al leer la línea del saldo actual." << std::endl;
+        std::cerr << "\nError al leer la línea del saldo actual." << std::endl;
         saldoActual = -1.0;
     }
 
@@ -255,7 +253,7 @@ bool Movimientos::directorioExiste(const std::string& nombreDirectorio) {
 bool Movimientos::crearDirectorio(const std::string& nombreDirectorio) {
     int resultado = mkdir(nombreDirectorio.c_str());
     if (resultado == -1) {
-        std::cerr << "Error al crear el directorio: " << strerror(errno) << std::endl;
+        std::cerr << "\nError al crear el directorio: " << strerror(errno) << std::endl;
         return false;
     }
     return true;
@@ -272,9 +270,9 @@ void Movimientos::registrarMovimiento(const std::string& cedulaIngresada, double
     std::string carpetaUsuarios = "Movimientos";
     if (!directorioExiste(carpetaUsuarios)) {
         if (crearDirectorio(carpetaUsuarios)) {
-            std::cout << "Carpeta de usuarios creada correctamente." << std::endl;
+            std::cout << "\nCarpeta de usuarios creada correctamente." << std::endl;
         } else {
-            std::cerr << "Error al crear la carpeta de usuarios." << std::endl;
+            std::cerr << "\nError al crear la carpeta de usuarios." << std::endl;
             return;
         }
     }
@@ -329,7 +327,7 @@ void Movimientos::guardarMontoDeuda(const std::string& cedula, double montoDeuda
     archivoLectura.open(rutaArchivo);
 
     if (!archivoLectura.is_open()) {
-        std::cerr << "Error al abrir el archivo para lectura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para lectura." << std::endl;
         return;
     }
 
@@ -368,7 +366,7 @@ void Movimientos::guardarMontoDeuda(const std::string& cedula, double montoDeuda
     archivoEscritura.open(rutaArchivo);
 
     if (!archivoEscritura.is_open()) {
-        std::cerr << "Error al abrir el archivo para escritura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para escritura." << std::endl;
         return;
     }
 
@@ -376,7 +374,7 @@ void Movimientos::guardarMontoDeuda(const std::string& cedula, double montoDeuda
     archivoEscritura << contenidoArchivo;
 
     archivoEscritura.close();
-    std::cout << "Monto de deuda guardado correctamente en " << rutaArchivo << std::endl;
+    std::cout << "\nMonto de deuda guardado correctamente en " << rutaArchivo << std::endl;
 }
 
 void Movimientos::pagoAutomatico(const std::string& cedula, bool pagoTotal) {
@@ -649,10 +647,6 @@ void Movimientos::eliminarUsuario(const std::string& cedula) {
     eliminarArchivo(rutaDatos);
     eliminarArchivo(rutaMovimientos);
     eliminarArchivo(rutaPrestamos);
-
-    // Eliminar el directorio asociado al usuario
-    std::string rutaDirectorioUsuario = "DATOS/" + cedula;
-    eliminarDirectorio(rutaDirectorioUsuario);
     eliminarUsuarioDeArchivo(cedula);
 }
 

@@ -152,7 +152,7 @@ void Amortizacion::imprimirYGuardar(const std::string& cedula) {
     std::ofstream archivoTabla(rutaArchivo, std::ios::trunc);
 
     if (!archivoTabla.is_open()) {
-        std::cerr << "Error al abrir el archivo para guardar la tabla." << std::endl;
+        std::cerr << "\nError al abrir el archivo para guardar la tabla." << std::endl;
         return;
     }
 
@@ -198,7 +198,7 @@ void Amortizacion::imprimirYGuardar(const std::string& cedula) {
         }
         archivoLectura.close();
     } else {
-        std::cerr << "Error al abrir el archivo para lectura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para lectura." << std::endl;
     }
 
     std::cout << "\nLa tabla se ha guardado en el archivo '" << rutaArchivo << "'.\n\n";
@@ -213,7 +213,7 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::str
     Fecha fecha;
 
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo: " << nombreArchivo << std::endl;
+        std::cerr << "\nError al abrir el archivo: " << nombreArchivo << std::endl;
         return;
     }
     // Obtener la fecha y hora actual utilizando la nueva función

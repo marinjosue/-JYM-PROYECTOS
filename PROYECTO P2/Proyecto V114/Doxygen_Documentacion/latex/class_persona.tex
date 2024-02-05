@@ -1,0 +1,95 @@
+\doxysection{Persona Class Reference}
+\hypertarget{class_persona}{}\label{class_persona}\index{Persona@{Persona}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_persona_a972b2e278f0289e2080ca39dc5bf8f3c}\label{class_persona_a972b2e278f0289e2080ca39dc5bf8f3c} 
+{\bfseries Persona} (std\+::string Nombre, std\+::string Apellido, std\+::string Cedula)
+\item 
+\Hypertarget{class_persona_ad0f9d17eeb9685e75c753f8ed9613ad7}\label{class_persona_ad0f9d17eeb9685e75c753f8ed9613ad7} 
+{\bfseries Persona} (std\+::string Nombre, std\+::string Apellido, std\+::string Cedula, std\+::string Id)
+\item 
+\Hypertarget{class_persona_ab4d0cbc49dbaa8846e92a537d38b4c5c}\label{class_persona_ab4d0cbc49dbaa8846e92a537d38b4c5c} 
+std\+::string {\bfseries get\+Nombre} (void) const
+\item 
+\Hypertarget{class_persona_ab4b331332fcf898454886d4ce2afbc6d}\label{class_persona_ab4b331332fcf898454886d4ce2afbc6d} 
+void {\bfseries set\+Nombre} (std\+::string new\+Nombre)
+\item 
+\Hypertarget{class_persona_a7d7d74d40881746c85e52eb82955f28a}\label{class_persona_a7d7d74d40881746c85e52eb82955f28a} 
+std\+::string {\bfseries get\+Apellido} (void) const
+\item 
+\Hypertarget{class_persona_a7a6550f0902d889ea95d713aafed9dd1}\label{class_persona_a7a6550f0902d889ea95d713aafed9dd1} 
+void {\bfseries set\+Apellido} (std\+::string new\+Apellido)
+\item 
+\Hypertarget{class_persona_a808c5a342f3d952f393b33d4713fff7c}\label{class_persona_a808c5a342f3d952f393b33d4713fff7c} 
+std\+::string {\bfseries get\+Cedula} (void) const
+\item 
+\Hypertarget{class_persona_a648bee596e613fafe572233fcf056629}\label{class_persona_a648bee596e613fafe572233fcf056629} 
+void {\bfseries set\+Cedula} (std\+::string new\+Cedula)
+\item 
+\Hypertarget{class_persona_a61ae1ab079542a9c26216657239d82bc}\label{class_persona_a61ae1ab079542a9c26216657239d82bc} 
+std\+::string {\bfseries get\+Id} (void) const
+\item 
+\Hypertarget{class_persona_a2a06b127bf4f8f02cc36334798280d98}\label{class_persona_a2a06b127bf4f8f02cc36334798280d98} 
+void {\bfseries set\+Id} (std\+::string new\+Id)
+\item 
+\Hypertarget{class_persona_a24b673b2b5f3edde30c1552674860d85}\label{class_persona_a24b673b2b5f3edde30c1552674860d85} 
+void {\bfseries guardar\+En\+Archivo} (const std\+::string \&nombre\+Archivo)
+\item 
+\Hypertarget{class_persona_aa7d5e108b954010ff9d60daa7454a466}\label{class_persona_aa7d5e108b954010ff9d60daa7454a466} 
+void {\bfseries mostrar\+Registro\+Persona} ()
+\item 
+\Hypertarget{class_persona_a9a55b279e78abc941547d9103f24d093}\label{class_persona_a9a55b279e78abc941547d9103f24d093} 
+bool {\bfseries verificar\+Cedula} (const std\+::string \&cedula)
+\begin{DoxyCompactList}\small\item\em Ingresa una nueva persona y la guarda en un archivo de texto. \end{DoxyCompactList}\item 
+\Hypertarget{class_persona_a37ac799911203e6fd013e2e595cef453}\label{class_persona_a37ac799911203e6fd013e2e595cef453} 
+std\+::string {\bfseries generar\+Siguiente\+Id} (const std\+::string \&ultimo\+Id\+Utilizado)
+\item 
+\Hypertarget{class_persona_a403b86784a9b2456cd3ada479aa1480f}\label{class_persona_a403b86784a9b2456cd3ada479aa1480f} 
+\mbox{\hyperlink{class_persona}{Persona}} {\bfseries cargar\+Desde\+Archivo} (const std\+::string \&nombre\+Archivo, const std\+::string \&cedula\+Buscar) const
+\item 
+\Hypertarget{class_persona_aeb270046c8c68a1a87cebac2a289f785}\label{class_persona_aeb270046c8c68a1a87cebac2a289f785} 
+void {\bfseries ordenar\+En\+Archivo} (const std\+::string \&nombre\+Archivo, bool(\texorpdfstring{$\ast$}{*}criterio)(\mbox{\hyperlink{class_persona}{Persona}}, \mbox{\hyperlink{class_persona}{Persona}}))
+\item 
+\Hypertarget{class_persona_a2d4d309407fa37ede1ee44066267b8dc}\label{class_persona_a2d4d309407fa37ede1ee44066267b8dc} 
+bool {\bfseries eliminar\+Persona} (const std\+::string \&cedula)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_persona_a03dd8c48789ef79f03c16914bbb4b490}\label{class_persona_a03dd8c48789ef79f03c16914bbb4b490} 
+static std\+::string {\bfseries generar\+Siguiente\+Id} ()
+\item 
+\Hypertarget{class_persona_a9d826894e96208020520048c8157b82a}\label{class_persona_a9d826894e96208020520048c8157b82a} 
+static \mbox{\hyperlink{class_persona}{Persona}} {\bfseries ingresar\+Persona} (\mbox{\hyperlink{class_lista_doble}{Lista\+Doble}}$<$ \mbox{\hyperlink{class_persona}{Persona}} \texorpdfstring{$\ast$}{*} $>$ \&lista\+Personas)
+\item 
+\Hypertarget{class_persona_a427c718c399aea56ae583352efbf3e47}\label{class_persona_a427c718c399aea56ae583352efbf3e47} 
+static bool {\bfseries verificar\+Cedula\+En\+Archivo} (const std\+::string \&cedula)
+\item 
+\Hypertarget{class_persona_a8e07201b112a9ea069ad1c9d320d4276}\label{class_persona_a8e07201b112a9ea069ad1c9d320d4276} 
+static void {\bfseries cargar\+Contador\+Desde\+Archivo} ()
+\item 
+\Hypertarget{class_persona_a49072e13c6f1e2dad82234f3e2c61fc9}\label{class_persona_a49072e13c6f1e2dad82234f3e2c61fc9} 
+static void {\bfseries guardar\+Contador\+En\+Archivo} ()
+\item 
+\Hypertarget{class_persona_a4618a152242e44fd901a97876d587ae1}\label{class_persona_a4618a152242e44fd901a97876d587ae1} 
+static std\+::string {\bfseries obtener\+Ultimo\+Id\+Utilizado} (const std\+::string \&nombre\+Archivo2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_persona_ad15fe3977a3d5ed039e6f99c23b72796}\label{class_persona_ad15fe3977a3d5ed039e6f99c23b72796} 
+std\+::string {\bfseries id}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_persona_adc59600cd228c30bf0b37b057c6af85e}\label{class_persona_adc59600cd228c30bf0b37b057c6af85e} 
+static int {\bfseries contador\+Id} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/Persona.\+h\item 
+C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/Persona.\+cpp\end{DoxyCompactItemize}

@@ -1,22 +1,33 @@
-\doxysection{menu.\+h}
-\hypertarget{menu_8h_source}{}\label{menu_8h_source}\index{C:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-\/JYM-\/PROYECTO-\/ESTRUCTURA/V Proyecto/Proyecto V005 versionVSCODE/menu.h@{C:/Users/yeshu/Dropbox/DataStructure/FirstPartial/PROYECT/-\/JYM-\/PROYECTO-\/ESTRUCTURA/V Proyecto/Proyecto V005 versionVSCODE/menu.h}}
-
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/menu.h}
+\hypertarget{menu_8h_source}{}\label{menu_8h_source}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MENU\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MENU\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menus}{Menus}}\ \{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{void}\ gotoxy(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nodo}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nodo}{y}});}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{void}\ color(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nodo}{foreground}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nodo}{background}});}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ submenu2();}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menus_ad8b7f27b1003506b93af2142a96789a5}{menuSeleccion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_nodo}{titulo}},\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_nodo}{opciones}}[],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nodo}{numeroOpciones}},\ \textcolor{keywordtype}{int}\ \&\mbox{\hyperlink{class_nodo}{selec}});}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Principal();}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Credito();}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Extras();}
-\DoxyCodeLine{00014\ \};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENU\_H}}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ UFA\ -\/\ ESPE}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Module:\ \ Menus.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Author:\ \ Chiliquinga\ Yeshua,\ Marin\ Alquinga,\ Salcedo\ Micaela}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Modified:\ domingo,\ 17\ de\ diciembre\ de\ 2023}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Purpose:\ Declaracion\ del\ encabezado\ Menus}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ ***********************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MENU\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MENU\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ListaDoble.h"{}}\ \ \textcolor{comment}{//\ Agrega\ la\ inclusi{\ucr}n\ del\ archivo\ de\ encabezado\ de\ ListaDoble}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Persona.h"{}}\ \ \ \ \textcolor{comment}{//\ Agrega\ la\ inclusi{\ucr}n\ del\ archivo\ de\ encabezado\ de\ Persona}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menus}{Menus}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ gotoxy(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ color(\textcolor{keywordtype}{int}\ foreground,\ \textcolor{keywordtype}{int}\ background);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menus_ad8b7f27b1003506b93af2142a96789a5}{menuSeleccion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ titulo,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *opciones[],\ \textcolor{keywordtype}{int}\ numeroOpciones,\ \textcolor{keywordtype}{int}\ \&selec);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Principal(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ listaPersonas);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Cuenta(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ \&listaPersonas);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Credito(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ listaPersonas);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Extras(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ listaPersonas);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarYRestaurarBackups(\textcolor{keyword}{const}\ std::string\&\ archivoOriginal);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Usuario(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ \&listaPersonas);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ Menu\_ConfirmarGuardar();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Movimientos();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_PagoAutomatico();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ Menu\_Ordenar(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Persona*>}}\ \&listaPersonas);}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENU\_H}}
 
 \end{DoxyCode}

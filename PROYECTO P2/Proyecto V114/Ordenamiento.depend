@@ -2979,7 +2979,7 @@
 	<limits>
 	"Movimientos.h"
 
-1707120540 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\amortizacion.cpp
+1707122917 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\amortizacion.cpp
 	<iostream>
 	<fstream>
 	"Amortizacion.h"
@@ -3140,7 +3140,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1707121096 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\menu.cpp
+1707123140 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>
@@ -3162,7 +3162,7 @@
 	"Movimientos.h"
 	"ArbolBinario.cpp"
 
-1707119834 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\cuenta.cpp
+1707122999 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\cuenta.cpp
 	"Cuenta.h"
 	"validaciones.h"
 	<iostream>
@@ -3176,7 +3176,7 @@
 1707119834 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\nodo.cpp
 	"Nodo.h"
 
-1707120753 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\persona.cpp
+1707121475 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\persona.cpp
 	"Persona.h"
 	<iostream>
 	<fstream>
@@ -3216,7 +3216,7 @@
 	"ListaDoble.cpp"
 	"Amortizacion.h"
 
-1707119834 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\arbolbinario.cpp
+1707122946 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\arbolbinario.cpp
 	"ArbolBinario.h"
 	<algorithm>
 	"Cuenta.h"

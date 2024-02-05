@@ -141,7 +141,7 @@ void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
                 break;
             case 7:
                 system("cls");
-                std::cout << "Gracias por usar el programa. Hasta luego!\n";
+                std::cout << "\nGracias por usar el programa. Hasta luego!\n";
                 aux = false;
                 break;
             }
@@ -153,7 +153,7 @@ void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
     Persona persona;
     std::string nombreArchivo2 = "Personas.txt";
     std::string ultimoIdUtilizado = Persona::obtenerUltimoIdUtilizado(nombreArchivo2);
-    std::cout << "Ultimo ID utilizado: " << ultimoIdUtilizado << std::endl;
+    std::cout << "\nUltimo ID utilizado: " << ultimoIdUtilizado << std::endl;
     bool aux = true;
     Menus menu;
     const char *titulo = "\t\tDESEA REGISTRAR UNA PERSONA:";
@@ -195,7 +195,7 @@ void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
             }
             case 4:{
                 system("cls");
-                std::string cedulaAEliminar = valida.ingresar_numeros_como_string("Ingrese la cedula de la persona que desea eliminar: ");
+                std::string cedulaAEliminar = valida.ingresar_numeros_como_string("\nIngrese la cedula de la persona que desea eliminar: ");
                 if (!cedulaAEliminar.empty()) {
                     Persona personaEliminar;
                     if (personaEliminar.eliminarPersona(cedulaAEliminar)) {
@@ -233,7 +233,7 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
                      case 1: {
                             system("cls");
                             persona.mostrarRegistroPersona();
-                            printf("Lista Ordenada por Nombre ");
+                            printf("\nLista Ordenada por Nombre ");
                             printf("\n");
                             persona.ordenarEnArchivo("Personas.txt", [](Persona p1, Persona p2) {
                                 return p1.getNombre() < p2.getNombre();
@@ -252,7 +252,7 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
                         persona.ordenarEnArchivo("Personas.txt", [](Persona p1, Persona p2) {
                             return p1.getApellido() < p2.getApellido();
                         });
-                        printf("Lista Ordenada por Apellido");
+                        printf("\nLista Ordenada por Apellido");
                         printf("\n");
                         persona.mostrarRegistroPersona();
                         system("pause");
@@ -267,7 +267,7 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
                         persona.ordenarEnArchivo("Personas.txt", [](Persona p1, Persona p2) {
                             return p1.getCedula() < p2.getCedula();
                         });
-                        printf("Lista Ordenada por Cedula ");
+                        printf("\nLista Ordenada por Cedula ");
                         printf("\n");
                         persona.mostrarRegistroPersona();
                         system("pause");
@@ -344,7 +344,7 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                         std::sort(cedulas.begin(), cedulas.end());
 
                         // Imprimir las cédulas con flechas "->"
-                        std::cout << "Cedulas encontradas ordenadas: ";
+                        std::cout << "\nCedulas encontradas ordenadas: ";
                         for (size_t i = 0; i < cedulas.size(); ++i) {
                             std::cout << cedulas[i];
                             // Imprimir flecha "->" solo si no es la última cédula
@@ -578,10 +578,10 @@ validaciones valida;
           case 1:
            {
                 system("cls");
-                std::cout << "Archivos TXT en la carpeta 'backup':" << std::endl;
+                std::cout << "\nArchivos TXT en la carpeta 'backup':" << std::endl;
                 std::vector<std::string> archivos = listarArchivosTXT("backup");
                 imprimirArchivosTXT(archivos);
-                std::cout << "Ingrese el nombre del archivo a restaurar: " << std::endl;
+                std::cout << "\nIngrese el nombre del archivo a restaurar: " << std::endl;
                 std::string archivoRespaldo;
                 std::cin >> archivoRespaldo;
                 listarRespaldos(archivoRespaldo);
