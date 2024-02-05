@@ -38,7 +38,7 @@ public:
     bool directorioExiste(const std::string& nombreDirectorio);
     bool crearDirectorio(const std::string& nombreDirectorio);
     void mostrarMovimientosPorCedula();
-    void registrarMovimiento(const std::string& ,double);
+    void registrarMovimiento(const std::string& );
     void mostrarTabla(const std::string& cedulaIngresada);
     double obtenerSaldoActual(const std::string& cedula, const std::string& carpeta);
     void guardarSaldoActual(const std::string& cedula, const std::string& carpeta, double saldo);

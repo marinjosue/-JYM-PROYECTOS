@@ -24,6 +24,7 @@
 #include "Cuenta.cpp"
 #include <iomanip>
 #include "Movimientos.h"
+#include "ArbolBinario.cpp"
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -274,6 +275,7 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     Cuenta cuenta;
     Persona persona;
     Movimientos movimiento;
+    validaciones validar;
     bool aux = true;
     const char *titulo ="\t\tCUENTAS DE CLIENTES";
     const char *opciones[] =
@@ -304,13 +306,42 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                         Menu_Movimientos();
                         break;
                         }
-                    case 3:
-                     {
+                    case 3: {
                         system("cls");
+                        std::string cedulaIngresada;
+                        cedulaIngresada = validar.ingresar_numeros_como_string("Ingrese el numero de cedula a buscar: ");
 
+                        // Aquí realizas la búsqueda en el árbol binario de búsqueda
+                        ArbolBinario arbol;
+                        // Leer el archivo y construir el árbol con las cédulas
+                        arbol.leerCedulas("Usuarios.txt");
 
-                        break;
+                        // Ahora que el árbol está construido, buscas la cédula ingresada
+                        std::cout << "\nCuentas encontradas para la cedula " << cedulaIngresada << ":" << std::endl;
+                        arbol.buscarCedula(cedulaIngresada, "Usuarios.txt");
+
+                        // Obtener y ordenar los números de cédula del archivo
+                        std::vector<std::string> cedulas = obtenerNumerosCedula("Usuarios.txt");
+                        // Ordenar las cédulas de manera ascendente
+                        std::sort(cedulas.begin(), cedulas.end());
+
+                        // Imprimir las cédulas con flechas "->"
+                        std::cout << "Cedulas encontradas ordenadas: ";
+                        for (size_t i = 0; i < cedulas.size(); ++i) {
+                            std::cout << cedulas[i];
+                            // Imprimir flecha "->" solo si no es la última cédula
+                            if (i < cedulas.size() - 1) {
+                                std::cout << " -> ";
+                            }
                         }
+                        // Nueva línea al final para separar las cédulas de la siguiente sección
+                        std::cout << std::endl;
+
+                        system("pause");
+                        break;
+                    }
+
+
                     case 4:
                         system("cls");
                         cuenta.mostrarDatosUsuarios("Usuarios.txt");

@@ -261,7 +261,7 @@ void Movimientos::mostrarMovimientos() {
     // Implementa la lógica para mostrar los movimientos realizados
 }
 
-void Movimientos::registrarMovimiento(const std::string& cedulaIngresada, double montoDeuda) {
+void Movimientos::registrarMovimiento(const std::string& cedulaIngresada) {
     validaciones valida;
     Cuenta nuevacuenta;
 
@@ -290,7 +290,7 @@ void Movimientos::registrarMovimiento(const std::string& cedulaIngresada, double
 
     // Abrir el archivo de usuario en modo de añadir (append)
     std::ofstream outFile(nombreArchivo, std::ios::app);
-
+    double prestamo=0.0;
     if (outFile.is_open()) {
         // Escribir los datos en el archivo
         outFile << "Fecha de Creacion: " << fechaActual.to_string() << "\n";
@@ -298,7 +298,7 @@ void Movimientos::registrarMovimiento(const std::string& cedulaIngresada, double
         outFile << "Cliente: " << datosUsuario.nombreCompleto << "\n";
         outFile << "ID de Cliente: " << datosUsuario.id << "\n";
         outFile << "No.Cuenta Cliente: " << datosUsuario.Ncuenta << "\n";
-        outFile << "Monto de Deuda: " << montoDeuda  << "\n";
+        outFile << "Prestamo: " << prestamo  << "\n";
 
         // Añadir encabezado
         int ancho_fecha = 20, ancho_deposito = 10, ancho_retiro = 10, ancho_saldo = 10;
@@ -317,7 +317,6 @@ void Movimientos::registrarMovimiento(const std::string& cedulaIngresada, double
         std::cerr << "\nNo se pudo abrir el archivo " << nombreArchivo << std::endl;
     }
 }
-
 void Movimientos::guardarMontoDeuda(const std::string& cedula, double montoDeuda) {
     std::ifstream archivoLectura;
     std::ofstream archivoEscritura;

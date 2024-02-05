@@ -2539,3 +2539,207 @@
 	"ListaDoble.cpp"
 	"Amortizacion.h"
 
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+	"validaciones.h"
+	"Movimientos.h"
+	"Cuenta.h"
+	<sys/stat.h>
+	<cerrno>
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\listadoble.h
+	"Nodo.h"
+	"Persona.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.h
+	"Persona.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.h
+	<string>
+
+1707091504 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\credito.h
+	"Fecha.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\fecha.h
+	<iostream>
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\calculoscredito.h
+	"ListaDoble.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.cpp
+	"Nodo.h"
+
+1707091203 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+
+1707091988 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.h
+	"ListaDoble.h"
+	"Fecha.h"
+	<string>
+	<vector>
+
+1707092084 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\cuenta.h
+	"Persona.h"
+	<string>
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\bibliotecas\easybmp_datastructures.h
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\bibliotecas\easybmp_bmp.h
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\bibliotecas\easybmp_variousbmputilities.h
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\credito.cpp
+	"Credito.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+	"Amortizacion.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\imagen.h
+	<string>
+	<windows.h>
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\listadoble.cpp
+	"ListaDoble.h"
+	"Persona.h"
+	<iostream>
+	<fstream>
+	"Nodo.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\main.cpp
+	<iostream>
+	"Nodo.h"
+	"menu.h"
+	"ListaDoble.cpp"
+
+1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\menu.h
+	"ListaDoble.h"
+	"Persona.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.cpp
+	"Movimientos.h"
+	"validaciones.h"
+	"Persona.h"
+	"Cuenta.h"
+	"Fecha.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<sys/stat.h>
+	<cerrno>
+	<iomanip>
+	"ListaDoble.cpp"
+	"Amortizacion.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.cpp
+	"Nodo.h"
+
+1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.cpp
+	"Persona.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	<algorithm>
+	"validaciones.h"
+	"ListaDoble.h"
+
+1707091203 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\validaciones.cpp
+	"validaciones.h"
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+	<ios>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<fstream>
+

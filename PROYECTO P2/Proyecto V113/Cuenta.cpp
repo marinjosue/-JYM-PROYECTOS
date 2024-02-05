@@ -28,12 +28,44 @@ Cuenta::Cuenta(std::string cuenta)
         contadorId = idValor;
     }
 }
+
+// Lee el archivo de usuarios y devuelve el último número de cuenta generado como una cadena
+std::string obtener_ultimo_numero_cuenta(const std::string& archivo) {
+    std::ifstream archivo_usuarios(archivo);
+    std::string linea;
+    std::string ultimo_numero = "0"; // Inicializar como cadena
+
+    if (archivo_usuarios.is_open()) {
+        while (std::getline(archivo_usuarios, linea)) {
+            std::istringstream iss(linea);
+            std::string cuenta;
+            while (iss >> cuenta) {
+                // Extraer el número de cuenta de la línea
+                // Suponiendo que el formato del archivo es: cedula nombre id cuenta
+                if (isdigit(cuenta[0])) {
+                    if (cuenta > ultimo_numero) {
+                        ultimo_numero = cuenta;
+                    }
+                }
+            }
+        }
+        archivo_usuarios.close();
+    }
+
+    return ultimo_numero;
+}
 Cuenta Cuenta::crear_cuenta() {
     Movimientos monto;
     validaciones valida;
     Cuenta nuevacuenta;
     Persona nuevaPersona;
     std::string cedula, cedulaArchivo, nombreCompleto, id;
+
+    // Obtener el último número de cuenta generado
+    std::string ultimo_numero = obtener_ultimo_numero_cuenta("Usuarios.txt");
+
+    // Continuar generando cuentas desde el último número generado + 1
+    int siguiente_numero = std::stoi(ultimo_numero) + 1;
 
     bool procesarCedula = true;  // Flag to control the loop
 
@@ -72,7 +104,7 @@ Cuenta Cuenta::crear_cuenta() {
                     // Comparar la cédula ingresada con la cédula en la línea actual
                     if (cedulaArchivo == cedula && !nuevacuenta.verificarCedula("Usuarios.txt", cedula)) {
                         // Generar un número de cuenta único
-                        std::string newCuenta = nuevacuenta.generar_cuenta_unico();
+                        std::string newCuenta = "009" + std::to_string(siguiente_numero);
                         nuevacuenta.setCuenta(newCuenta);
 
                         std::cout << "\nDatos encontrados:\n";
@@ -81,7 +113,7 @@ Cuenta Cuenta::crear_cuenta() {
                         std::cout << "ID: " << id << "\n";
                         archivo.close();
                         nuevacuenta.guardarTabla("Usuarios.txt", cedulaArchivo, nombreCompleto, id, nuevacuenta);
-                        monto.registrarMovimiento(cedulaArchivo,0.0);
+                        monto.registrarMovimiento(cedulaArchivo);
                         cedulaEncontrada = true;
                         procesarCedula = false;  // Set the flag to false to exit the loop
                         break;  // Salir del bucle si ya existe en Usuarios.txt
@@ -94,6 +126,7 @@ Cuenta Cuenta::crear_cuenta() {
                     procesarCedula = false;
                 }
             } else {
+                std::cerr << "\nError: No se pudo abrir el archivo Personas.txt\n";
                 procesarCedula = false;
             }
         } else {
@@ -106,6 +139,7 @@ Cuenta Cuenta::crear_cuenta() {
     // Return a dummy account if needed (replace this with your actual return logic)
     return Cuenta();
 }
+
 
 bool Cuenta::verificarCedula(const std::string& archivo, const std::string& cedula) {
     std::ifstream archivoCuentas(archivo);
@@ -287,30 +321,6 @@ bool Cuenta::verificar_cuenta_existente(const std::string& archivo, const std::s
     return false;  // La cédula no está duplicada
 }
 
-std::string obtener_ultimo_numero_cuenta(const std::string& archivo) {
-    std::ifstream archivo_usuarios(archivo);
-    std::string linea;
-    std::string ultimo_numero = "0"; // Inicializar como cadena
-
-    if (archivo_usuarios.is_open()) {
-        while (std::getline(archivo_usuarios, linea)) {
-            std::istringstream iss(linea);
-            std::string cuenta;
-            while (iss >> cuenta) {
-                // Extraer el número de cuenta de la línea
-                // Suponiendo que el formato del archivo es: cedula nombre id cuenta
-                if (isdigit(cuenta[0])) {
-                    if (cuenta > ultimo_numero) {
-                        ultimo_numero = cuenta;
-                    }
-                }
-            }
-        }
-        archivo_usuarios.close();
-    }
-
-    return ultimo_numero;
-}
 int contadorCuenta = 2024;
 int codigoV = 0;
 
