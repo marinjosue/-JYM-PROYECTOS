@@ -389,7 +389,7 @@ void Menus::Menu_Movimientos(){
     ListaDoble<Persona*> listaPersonas;
     Amortizacion tabla;
     bool aux = true;
-    const char *titulo ="\t\tMOVIMEINTOS";
+    const char *titulo ="\t\tMOVIMIENTOS";
     const char *opciones[] =
     {
     "\t\t[1]ABONAR",
@@ -418,7 +418,7 @@ void Menus::Menu_Movimientos(){
                         system("cls");
                         newCedula = validar.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
                         movimiento.realizarMovimiento(newCedula,"Retiro");
-
+                        system("pause");
                         break;
                         }
                     case 3:

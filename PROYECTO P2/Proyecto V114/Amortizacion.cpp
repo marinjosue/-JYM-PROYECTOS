@@ -22,6 +22,7 @@
 #include <cerrno>
 
 
+
 using namespace std;
 
 Amortizacion::Amortizacion(){
@@ -144,9 +145,18 @@ void Amortizacion::imprimirYGuardar(const std::string& cedula) {
     Nodo<double>* valor_cuota = valor_cuotas->get_cabeza();
     Nodo<Fecha>* aux_fecha_pagar = fechas_pago->get_cabeza();
     Fecha fecha_pagar;
-
+    Movimientos mov;
     // Ruta del archivo para guardar la tabla
     std::string rutaArchivo = "DATOS/" + cedula + "tabla.txt";
+    std::string carpetaDatos = "DATOS";
+    if (!mov.directorioExiste(carpetaDatos)) {
+        if (mov.crearDirectorio(carpetaDatos)) {
+            std::cout << "\nCarpeta de datos creada correctamente." << std::endl;
+        } else {
+            std::cerr << "\nError al crear la carpeta de datos." << std::endl;
+            return;
+        }
+    }
 
     // Abrir el archivo para escritura (agregar al final)
     std::ofstream archivoTabla(rutaArchivo, std::ios::trunc);
@@ -159,17 +169,17 @@ void Amortizacion::imprimirYGuardar(const std::string& cedula) {
     int ancho_ord = 10, ancho_vcuota = 12, ancho_capital = 12, ancho_interes = 10, ancho_saldo = 15, ancho_fecha = 14;
 
     // Encabezado de la tabla
-    archivoTabla << std::setw(ancho_ord) << "No." 
-                 << std::setw(ancho_vcuota) << "CUOTA FIJA" 
+    archivoTabla << std::setw(ancho_ord) << "No."
+                 << std::setw(ancho_vcuota) << "CUOTA FIJA"
                  << std::setw(ancho_capital) << "PAGO CAPITAL"
                  << std::setw(ancho_interes) << "INTERES"
                  << std::setw(ancho_saldo) << "SALDO CAPITAL"
                  << std::setw(ancho_fecha) << "FECHA DE PAGO"<< "\n";
     while (n_mostrados < n_mostrar) {
         fecha_pagar = aux_fecha_pagar->get_valor();
-        archivoTabla << std::setw(ancho_ord) << ord->get_valor() 
+        archivoTabla << std::setw(ancho_ord) << ord->get_valor()
                      << std::fixed << std::setprecision(2)  // Establecer precisión a 2 decimales
-                     << std::setw(ancho_vcuota) << valor_cuota->get_valor() 
+                     << std::setw(ancho_vcuota) << valor_cuota->get_valor()
                      << std::setw(ancho_capital) << capital_pag->get_valor()
                      << std::setw(ancho_interes) << interes->get_valor()
                      << std::setw(ancho_saldo) << saldo_cap->get_valor()
@@ -230,7 +240,7 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::str
     archivo << "No.Cuenta: " << Ncuenta << "\n";
     archivo << "Monto: " << monto << "\n";
     archivo << "No.Cuotas: " << ncuotas << "\n";
-    archivo << "Tasa de interes: " << tasa_interes << "\n\n";
+    archivo << "Tasa de interes: " << tasa_interes<<"%" << "\n\n";
 
     int n_mostrados = 0;
     int n_mostrar = credito.get_n_cuotas_pagar();
@@ -275,19 +285,14 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::str
     archivo.close();
     cout<<"\nLA TABLA DE CREDITOS SE GUARDO EN EL ARCHIVO '"<<nombreArchivo<<"'.\n\n'";
     createBackupRegistro();
-    createBackupRegistro(cedula);
-   
-}
 
-
-
-void Amortizacion::ingresar_datos_credito() {
+}void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
     Movimientos mov;
     Cuenta nuevacuenta;
     std::string cedula;
 
-    do {
+    while (true) {
         cedula = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
         if (valida.validarCedula(cedula) && nuevacuenta.verificarCedulaA("Usuarios.txt", cedula)) {
@@ -344,7 +349,6 @@ void Amortizacion::ingresar_datos_credito() {
                         printf("                                                           ");
                     }
                 }
-
                 // Crear objetos Credito y Amortizacion con los datos ingresados
                 Credito credito(ncuotas, monto, sacado, tasa_interes);
                 Amortizacion tabla(credito);
@@ -352,17 +356,25 @@ void Amortizacion::ingresar_datos_credito() {
                 // Imprimir y guardar la tabla de amortización
                 printf("\n");
                 tabla.imprimirYGuardar(cedula);
-                printf("\nTABLA GUARDADA CORRECTAMENTE");
                 tabla.guardarTabla("tabla_amortizacion.txt",cedula, datosUsuario.nombreCompleto, datosUsuario.id, datosUsuario.Ncuenta, monto, ncuotas, tasa_interes);
                 printf("\n");
                 mov.guardarMontoDeuda(cedula, monto);
                 system("pause");
 
-                break;  // Salir del bucle do-while
+                break;  // Salir del bucle while
             } else {
-                cout << "\nLa cedula ingresada no es valida o no existe. Vuelva a intentarlo." << endl;
+                // Error handling: Display a message if unable to open the file
+                cout << "\nError: No se pudo abrir el archivo de usuarios." << endl;
+                return;
             }
+        } else {
+            // Display a message if the cedula is not valid or does not exist
+            cout << "\nLa cedula ingresada no es válida o no existe. Vuelva a intentarlo." << endl;
+            return;  // Exit the loop if cedula is not valid
         }
-    } while (true);
+    }
 }
+
+
+
 

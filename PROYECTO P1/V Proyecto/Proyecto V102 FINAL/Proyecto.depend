@@ -416,3 +416,138 @@
 	<string.h>
 	<cstring>
 
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\amortizacion.cpp
+	<iostream>
+	<fstream>
+	"Amortizacion.h"
+	"CalculosCredito.h"
+	"Fecha.h"
+	"ListaDoble.cpp"
+	"Extra.h"
+	"Nodo.cpp"
+	<iomanip>
+	<ctime>
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\amortizacion.h
+	"ListaDoble.h"
+	"Credito.h"
+	"Fecha.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\listadoble.h
+	"Nodo.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\nodo.h
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\credito.h
+	"Fecha.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\fecha.h
+	<iostream>
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\calculoscredito.h
+	"ListaDoble.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\listadoble.cpp
+	"ListaDoble.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\extra.h
+	<string>
+	<vector>
+	<filesystem>
+	<fstream>
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\nodo.cpp
+	"Nodo.h"
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\bibliotecas\easybmp.cpp
+	"EasyBMP.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\bibliotecas\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\bibliotecas\easybmp_datastructures.h
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\bibliotecas\easybmp_bmp.h
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\bibliotecas\easybmp_variousbmputilities.h
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\calculoscredito.cpp
+	"CalculosCredito.h"
+	"ListaDoble.cpp"
+	"Nodo.cpp"
+	<cmath>
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\credito.cpp
+	"Credito.h"
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\extra.cpp
+	"Extra.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<ctime>
+	<sys/stat.h>
+	<dirent.h>
+	<cstring>
+	<sstream>
+	<string>
+	<regex>
+	<chrono>
+	<vector>
+	<string>
+	<regex>
+	<dirent.h>
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+	<iomanip>
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\imagen.cpp
+	"Bibliotecas/EasyBMP.h"
+	"Imagen.h"
+	<conio.h>
+	<iostream>
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\imagen.h
+	<string>
+	<windows.h>
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\listadoble.cpp
+	"ListaDoble.h"
+
+1707125167 source:d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\main.cpp
+	<iostream>
+	"Menu.cpp"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"validaciones.h"
+	"Fecha.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\menu.h
+	"validaciones.h"
+
+1707125167 d:\espe\manual-de-estructura-de-datos\-jym-proyecto-estructura\proyecto p1\v proyecto\proyecto v102 final\validaciones.h
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	<string.h>
+	<cstring>
+

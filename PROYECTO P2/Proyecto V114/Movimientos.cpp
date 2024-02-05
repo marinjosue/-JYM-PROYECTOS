@@ -87,7 +87,6 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
             return;
         }
     }
-
     // Crear la carpeta "DATOS" si no existe
     std::string carpetaDatos = "DATOS";
     if (!directorioExiste(carpetaDatos)) {
@@ -126,10 +125,10 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
 
         // Actualizar el saldo con el nuevo depósito
         saldoActual += deposito;
-
         // Insertar el monto en la cola de depósitos
         depositos->insertar_cola(static_cast<int>(deposito));
         monto->insertar_cola(saldoActual);  // Actualizar monto con el nuevo saldo
+        
     } else if (tipoMovimiento == "Retiro") {
         retiro = valida.ingresar_enteros("\nIngrese el monto del retiro: ");
 
@@ -138,7 +137,6 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
             std::cerr << "\nError: El monto de retiro supera el saldo actual." << std::endl;
             return;
         }
-
         // Actualizar el saldo con el nuevo retiro
         saldoActual -= retiro;
 
@@ -170,6 +168,7 @@ void Movimientos::realizarMovimiento(const std::string& cedulaIngresada, const s
               << std::left << std::setw(ancho_retiro) << retiro << '|'
               << std::left << std::setw(ancho_saldo) << saldoActual << '|' << std::endl;
     archivo.close();
+    mostrarMovimientosPorCedula(cedulaIngresada);
     std::cout << "\nMovimiento registrado con exito." << std::endl;
 }
 
@@ -420,6 +419,7 @@ void Movimientos::pagoAutomatico(const std::string& cedula, bool pagoTotal) {
     } else {
         std::cout << "\nNo hay deuda pendiente para realizar el pago automatico." << std::endl;
     }
+    mostrarMovimientosPorCedula(cedula);
 }
 
 vector<DatosTabla> Movimientos::obtenerDatosTabla(const string& cedula) {
@@ -488,7 +488,6 @@ void Movimientos::imprimirPagoUnitario(const std::string& cedula) {
     DatosTabla datoActual = datosTablaOriginal[posicionActual];
 
     int ancho_fecha = 20, ancho_deposito = 10, ancho_retiro = 10, ancho_saldo = 10;
-
     // Imprimir en el archivo
     archivoMovimientos << '|' << std::left << std::setw(ancho_fecha) << datoActual.fechaPago << '|'
                        << std::left << std::setw(ancho_deposito) << datoActual.cuotaFija << '|'
@@ -576,8 +575,6 @@ void Movimientos::imprimirPagototal(const std::string& cedula) {
 
     // Actualizar la posición actual en el archivo
     guardarPosicionActual(cedula, datosTabla.size());
-    // Mostrar los movimientos actualizados
-    mostrarMovimientosPorCedula(cedula);
 }
 
 void Movimientos::actualizarMontoDeudaEnTablaOriginal(const std::string& cedula, double montoDeudaActualizado) {

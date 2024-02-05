@@ -3,6 +3,7 @@ Cedula/CI: 0400988903
 Cliente: Calan Tulcan Tipan Chiquito
 ID de Cliente: 000006
 No.Cuenta Cliente: 0091717877715
-Monto de Deuda: 0
+Monto de Deuda: 5000.00
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
+

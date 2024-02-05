@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114",
-      "program": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114/build/Debug/outDebug",
+      "cwd": "d:/ESPE/Manual-de-Estructura-de-Datos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114",
+      "program": "d:/ESPE/Manual-de-Estructura-de-Datos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

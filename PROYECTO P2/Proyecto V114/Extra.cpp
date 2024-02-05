@@ -22,7 +22,6 @@
 #include <string>
 #include <regex>
 #include <dirent.h>
-#include "Amortizacion.h"
 
 void createBackupFolder(const std::string& folderName) {
     if (mkdir(folderName.c_str()) == 0) {
@@ -31,7 +30,6 @@ void createBackupFolder(const std::string& folderName) {
         std::cout << "La carpeta'" << folderName << "' ya existe\n";
     }
 }
-
 void createBackupRegistro() {
     // Obtener la fecha actual del sistema
     std::time_t tiempoActual = std::time(nullptr);
@@ -49,7 +47,9 @@ void createBackupRegistro() {
 
     // Crear una cadena con el formato de fecha deseado
     char nombreBackup[100];
-    std::strftime(nombreBackup, sizeof(nombreBackup), "%Y-%m-%d", incremented_time);
+    std::strftime(nombreBackup, sizeof(nombreBackup), "%Y-%m-%d_%H-%M-%S", incremented_time);
+
+
     // Crear la carpeta de respaldo
     createBackupFolder("backup");
 
@@ -60,21 +60,7 @@ void createBackupRegistro() {
 
     std::cout << "Se realizo una copia de seguridad en la carpeta 'backup'.\n";
 }
-
-void createBackupRegistro(const std::string& cedula) {
-    // Crear la carpeta de respaldo
-    createBackupFolder("Prestamos");
-
-   // Copiar el archivo a la carpeta de respaldo con el nombre de la cï¿½dula ingresada
-    std::ifstream srcFile("tabla_amortizacion.txt", std::ios::binary);
-    std::ofstream dstFile("Prestamos/" + cedula + ".txt", std::ios::binary);
-    dstFile << srcFile.rdbuf();
-
-    std::cout << "Se realizo una copia de seguridad en la carpeta 'Prestamos'.\n";
-}
-
 void imprimirContenidoArchivo(const std::string& nombreArchivo) {
-    Amortizacion tabla;
     std::ifstream archivo(nombreArchivo);
 
     if (!archivo.is_open()) {
@@ -108,7 +94,7 @@ void restaurarDesdeBackup(const std::string& archivoOriginal, const std::string&
     // Copiar el contenido del archivo de respaldo al archivo original
     archivoOriginalStream << archivoBackupStream.rdbuf();
 
-    std::cout << "Restauraciï¿½n completada con ï¿½xito." << std::endl;
+    std::cout << "Restauración completada con éxito." << std::endl;
 
     // Cerrar los archivos
     archivoOriginalStream.close();
