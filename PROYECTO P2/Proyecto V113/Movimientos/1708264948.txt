@@ -1,8 +1,0 @@
-Fecha de Creacion: 04/02/2024
-Cedula/CI: 1708264948
-Cliente: Kevin Fernando Zambrano Costa
-ID de Cliente: 000004
-No.Cuenta Cliente: 009020251
-Monto de Deuda: 0
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================

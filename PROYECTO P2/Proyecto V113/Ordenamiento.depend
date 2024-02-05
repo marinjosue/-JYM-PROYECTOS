@@ -2609,7 +2609,7 @@
 	<vector>
 	<fstream>
 
-1707091988 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.h
+1707103054 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.h
 	"ListaDoble.h"
 	"Fecha.h"
 	<string>
@@ -2700,7 +2700,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.cpp
+1707103038 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.cpp
 	"Movimientos.h"
 	"validaciones.h"
 	"Persona.h"
@@ -2714,6 +2714,8 @@
 	<iomanip>
 	"ListaDoble.cpp"
 	"Amortizacion.h"
+	<cstdio>
+	<unistd.h>
 
 1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.cpp
 	"Nodo.h"
@@ -2742,4 +2744,49 @@
 	<cstdlib>
 	<vector>
 	<fstream>
+
+1707101215 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\menu.cpp
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iostream>
+	"menu.h"
+	"Persona.h"
+	"ListaDoble.cpp"
+	"Nodo.h"
+	"validaciones.h"
+	"Fecha.h"
+	"Extra.h"
+	"Imagen.h"
+	"Amortizacion.h"
+	"Cuenta.cpp"
+	<iomanip>
+	"Movimientos.h"
+	"ArbolBinario.cpp"
+
+1707092062 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\cuenta.cpp
+	"Cuenta.h"
+	"validaciones.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<iomanip>
+	<limits>
+	"Movimientos.h"
+
+1707092176 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\arbolbinario.cpp
+	"ArbolBinario.h"
+	<algorithm>
+	"Cuenta.h"
+	"Fecha.h"
+	<vector>
+
+1707092129 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\arbolbinario.h
+	<iostream>
+	<fstream>
+	<sstream>
 

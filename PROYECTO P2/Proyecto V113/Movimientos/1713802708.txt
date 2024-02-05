@@ -1,9 +1,0 @@
-Fecha de Creacion: 04/02/2024
-Cedula/CI: 1713802708
-Cliente: Alquinga Josue Marin Isaas
-ID de Cliente: 000003
-No.Cuenta Cliente: 009020251
-Monto de Deuda: 0
-|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
-========================================================
-

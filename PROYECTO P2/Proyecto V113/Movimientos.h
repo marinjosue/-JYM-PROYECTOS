@@ -13,6 +13,10 @@ private:
         ListaDoble<double>* retiros;
         ListaDoble<Fecha>* fecha_de_pago;
         ListaDoble<double>* monto;
+        bool eliminarArchivo(const std::string& rutaArchivo);
+        bool eliminarDirectorio(const std::string& rutaDirectorio);
+        bool eliminarUsuarioDeArchivo(const std::string& cedulaAEliminar);
+        bool tieneDeudaPendiente(const std::string& cedula);
 
 public:
     Movimientos();  // Constructor por defecto
@@ -44,6 +48,7 @@ public:
     void guardarSaldoActual(const std::string& cedula, const std::string& carpeta, double saldo);
     void guardarMontoDeuda(const std::string& cedula, double montoDeuda);
     void pagoAutomatico(const std::string& cedula, bool pagoTotal);
+    void eliminarUsuario(const std::string& cedula);
     void actualizarMovimientos(const std::string& cedula, const std::vector<std::string>& fechas,
                                         const std::vector<double>& cuotasFijas, const std::vector<double>& pagosCapitales,
                                         const std::vector<double>& intereses, const std::vector<double>& saldosCapitales);

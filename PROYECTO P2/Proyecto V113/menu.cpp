@@ -284,9 +284,10 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     "\t\t[2]MOVIMIENTOS",
     "\t\t[3]BUSCAR CUENTA",
     "\t\t[4]MOSTAR USUARIOS",
-    "\t\t[5]SALIR"
+    "\t\t[5]ELIMINAR",
+    "\t\t[6]SALIR"
     };
-    int numeroOpciones = 5;
+    int numeroOpciones = 6;
     int selec = 1;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
@@ -340,15 +341,20 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                         system("pause");
                         break;
                     }
-
-
                     case 4:
                         system("cls");
                         cuenta.mostrarDatosUsuarios("Usuarios.txt");
                         system("pause");
                         Menu_Cuenta(listaPersonas);
                         break;
-                    case 5:
+                    case 5: {
+                        system("cls");
+                        std::string cedulaAEliminar = validar.ingresar_numeros_como_string("\nIngrese la cedula del usuario a eliminar: ");
+                        movimiento.eliminarUsuario(cedulaAEliminar);
+                        system("pause");
+                        break;
+                    }
+                    case 6:
                         system("cls");
                         Menu_Principal(listaPersonas);
                         break;
@@ -373,8 +379,7 @@ void Menus::Menu_Movimientos(){
     "\t\t[2]RETIRAR",
     "\t\t[3]PAGO AUTOMATICO",
     "\t\t[4]BUSCAR TABLA",
-    "\t\t[5]ELIMINAR",
-    "\t\t[6]SALIR"
+    "\t\t[5]SALIR"
     };
 
     int numeroOpciones = 5;
@@ -414,14 +419,6 @@ void Menus::Menu_Movimientos(){
                         break;
                         }
                     case 5:
-                    {
-                        system("cls");
-                       // tabla.imprimir(");
-                        system("pause");
-                        break;
-                    }
-
-                    case 6:
                         system("cls");
                         Menu_Principal(listaPersonas);
                         break;
