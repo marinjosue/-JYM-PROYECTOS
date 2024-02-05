@@ -498,6 +498,7 @@ void Menus::Menu_PagoAutomatico(){
 
 
 bool Menus::Menu_ConfirmarGuardar() {
+     ListaDoble<Persona*> listaPersonas;
     validaciones valida;
     bool aux = true;
     Menus menu;
@@ -517,7 +518,7 @@ bool Menus::Menu_ConfirmarGuardar() {
             }
             case 2:
                 system("cls");
-                return 0;
+                Menu_Usuario(listaPersonas);
                 break;
         }
     } while (aux);
