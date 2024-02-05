@@ -264,7 +264,6 @@ bool Persona::verificarCedulaEnArchivo(const std::string& cedula) {
 
     return false;
 }
-// Función para ingresar una nueva persona
 Persona Persona::ingresarPersona(ListaDoble<Persona*>& listaPersonas) {
     std::string nombreArchivo2 = "Personas.txt";
     std::string ultimoIdUtilizado = obtenerUltimoIdUtilizado(nombreArchivo2);
@@ -273,54 +272,55 @@ Persona Persona::ingresarPersona(ListaDoble<Persona*>& listaPersonas) {
     std::string newCedula, newNombre, newApellido, newId, datos;
     // Crear un objeto Persona sin inicializar
     Persona nuevaPersona;
-    // Input and validation for Cédula
-    do {
+
+    while (true) {
+        // Input and validation for Cédula
         newCedula = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
         if (valida.validarCedula(newCedula)) {
             if (!verificarCedulaEnArchivo(newCedula)) {
                 nuevaPersona.setCedula(newCedula);
-             do {
-        newNombre = valida.mayusculas_primeras(valida.ingresar_alfabetico_con_un_espacio("\nIngrese el nombre: "));
-        if (newNombre.empty()) {
-            cout << "\nEl nombre no puede estar vacio. Vuelva a intentarlo." << endl;
-        } else {
-            nuevaPersona.setNombre(newNombre);
-            break; // Nombre is not empty
-        }
-            } while (true);
 
-            // Input and validation for Apellido
-            do {
-                newApellido = valida.mayusculas_primeras(valida.ingresar_alfabetico_con_un_espacio("\nIngrese el apellido: "));
-                if (newApellido.empty()) {
-                    cout << "\nEl apellido no puede estar vacio. Vuelva a intentarlo." << endl;
-                } else {
-                    nuevaPersona.setApellido(newApellido);
-                    break; // Apellido is not empty
-                }
-            } while (true);
+                do {
+                    newNombre = valida.mayusculas_primeras(valida.ingresar_alfabetico_con_un_espacio("\nIngrese el nombre: "));
+                    if (newNombre.empty()) {
+                        cout << "\nEl nombre no puede estar vacío. Vuelva a intentarlo." << endl;
+                    } else {
+                        nuevaPersona.setNombre(newNombre);
+                        break; // Nombre is not empty
+                    }
+                } while (true);
 
-            // Generar el siguiente ID utilizando el último ID utilizado
-            Persona persona;
-            newId = persona.generarSiguienteId(ultimoIdUtilizado);
-            std::cout << "\nSu cuenta es: " << newId << std::endl;
+                // Input and validation for Apellido
+                do {
+                    newApellido = valida.mayusculas_primeras(valida.ingresar_alfabetico_con_un_espacio("\nIngrese el apellido: "));
+                    if (newApellido.empty()) {
+                        cout << "\nEl apellido no puede estar vacío. Vuelva a intentarlo." << endl;
+                    } else {
+                        nuevaPersona.setApellido(newApellido);
+                        break; // Apellido is not empty
+                    }
+                } while (true);
 
-                break;
+                // Generar el siguiente ID utilizando el último ID utilizado
+                Persona persona;
+                newId = persona.generarSiguienteId(ultimoIdUtilizado);
+                std::cout << "\nSu cuenta es: " << newId << std::endl;
+
+                nuevaPersona.setId(newId);
+                return nuevaPersona;
             } else {
                 cout << "\nLa cedula ingresada ya existe en el archivo. Vuelva a intentarlo." << endl;
+                // Automatically go back to the menu after displaying the error message
+                return Persona();
             }
         } else {
             cout << "\nLa cedula ingresada es invalida. Vuelva a intentarlo." << endl;
+            // Automatically go back to the menu after displaying the error message
+            return Persona();
         }
-    } while (true);
-
-    nuevaPersona.setId(newId);
-
-    return nuevaPersona;
+    }
 }
-
-
 
 void Persona::mostrarRegistroPersona() {
     validaciones valida;

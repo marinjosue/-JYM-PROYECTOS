@@ -1,0 +1,8 @@
+Fecha de Creacion: 05/02/2024
+Cedula/CI: 0400988903
+Cliente: Calan Tulcan Tipan Chiquito
+ID de Cliente: 000006
+No.Cuenta Cliente: 0091717877715
+Monto de Deuda: 0
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

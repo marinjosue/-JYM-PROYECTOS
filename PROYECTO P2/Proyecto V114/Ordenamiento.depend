@@ -3201,7 +3201,7 @@
 	<vector>
 	<fstream>
 
-1707121197 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\movimientos.cpp
+1707123731 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\movimientos.cpp
 	"Movimientos.h"
 	"validaciones.h"
 	"Persona.h"
@@ -3216,7 +3216,7 @@
 	"ListaDoble.cpp"
 	"Amortizacion.h"
 
-1707122946 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\arbolbinario.cpp
+1707124959 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v114\arbolbinario.cpp
 	"ArbolBinario.h"
 	<algorithm>
 	"Cuenta.h"
