@@ -1,0 +1,73 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Movimientos.h}
+\hypertarget{_movimientos_8h_source}{}\label{_movimientos_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MOVIMIENTOS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MOVIMIENTOS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ListaDoble.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Fecha.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_datos_tabla}{DatosTabla}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ numero;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{double}\ cuotaFija;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ pagoCapital;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ interes;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ saldoCapital;}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ fechaPago;}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movimientos}{Movimientos}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ cedula;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ tipoMovimiento;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ depositos;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ retiros;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<Fecha>}}*\ fecha\_de\_pago;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ monto;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ eliminarArchivo(\textcolor{keyword}{const}\ std::string\&\ rutaArchivo);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ eliminarDirectorio(\textcolor{keyword}{const}\ std::string\&\ rutaDirectorio);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ eliminarUsuarioDeArchivo(\textcolor{keyword}{const}\ std::string\&\ cedulaAEliminar);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ tieneDeudaPendiente(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_movimientos}{Movimientos}}();\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_movimientos}{Movimientos}}(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keyword}{const}\ std::string\&\ tipoMovimiento,\ \textcolor{keywordtype}{double}\ monto);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_movimientos}{\string~Movimientos}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Getters\ y\ setters}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ get\_depositos();}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ get\_retiros();}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<Fecha>}}*\ get\_fecha\_de\_pago();}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ get\_monto();}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ getCedula()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setCedula(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ getTipoMovimiento()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setTipoMovimiento(\textcolor{keyword}{const}\ std::string\&\ tipoMovimiento);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_depositos(\mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ nuevo\_Deposito);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_retiros(\mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ nuevo\_Retiro);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_monto(\mbox{\hyperlink{class_lista_doble}{ListaDoble<double>}}*\ nuevo\_Monto);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_fecha\_de\_pago(\mbox{\hyperlink{class_lista_doble}{ListaDoble<Fecha>}}*\ nuevo\_fechas\_pago);}
+\DoxyCodeLine{00045\ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Funciones\ específicas\ para\ la\ clase\ Movimientos}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ realizarMovimiento(\textcolor{keyword}{const}\ std::string\&\ cedulaIngresada,\ \textcolor{keyword}{const}\ std::string\&\ tipoMovimiento);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarMovimientos();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ directorioExiste(\textcolor{keyword}{const}\ std::string\&\ nombreDirectorio);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ crearDirectorio(\textcolor{keyword}{const}\ std::string\&\ nombreDirectorio);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarMovimientosPorCedula(\textcolor{keyword}{const}\ std::string\&\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ registrarMovimiento(\textcolor{keyword}{const}\ std::string\&\ ,\textcolor{keywordtype}{double});}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarTabla(\textcolor{keyword}{const}\ std::string\&\ cedulaIngresada);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ obtenerSaldoActual(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keyword}{const}\ std::string\&\ carpeta);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ guardarSaldoActual(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keyword}{const}\ std::string\&\ carpeta,\ \textcolor{keywordtype}{double}\ saldo);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ guardarMontoDeuda(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keywordtype}{double}\ montoDeuda);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ pagoAutomatico(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keywordtype}{bool}\ pagoTotal);}
+\DoxyCodeLine{00058\ \ \ \ \ std::vector<DatosTabla>\ obtenerDatosTabla(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ imprimirPagototal(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ imprimirPagoUnitario(\textcolor{keyword}{const}\ std::string\&\ ceula);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ actualizarMontoDeudaEnTablaOriginal(\textcolor{keyword}{const}\ std::string\&\ ,\ \textcolor{keywordtype}{double}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ guardarPosicionActual(\textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keywordtype}{size\_t}\ posicion);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ cargarPosicionActual(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ eliminarUsuario(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ validarNuevoCredito(\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00066\ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

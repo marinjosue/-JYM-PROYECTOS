@@ -1,0 +1,42 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Cuenta.h}
+\hypertarget{_cuenta_8h_source}{}\label{_cuenta_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CUENTA\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CUENTA\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include"{}Persona.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_datos_usuario}{DatosUsuario}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ std::string\ cedula;}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ nombreCompleto;}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ id;}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ Ncuenta;}
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ Prestamo;}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cuenta}{Cuenta}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \mbox{\hyperlink{class_cuenta}{Cuenta}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_cuenta}{Cuenta}}\ crear\_cuenta();}
+\DoxyCodeLine{00017\ \ \ \ \ \ std::string\ generar\_cuenta\_automatica();}
+\DoxyCodeLine{00018\ \ \ \ \ \ std::string\ getCuenta(\textcolor{keywordtype}{void})\textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \textcolor{keywordtype}{void}\ setCuenta(std::string\ );}
+\DoxyCodeLine{00020\ \ \ \ \ \ \textcolor{keywordtype}{void}\ guardarTabla(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keyword}{const}\ std::string\&\ nombreCompleto,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cuenta}{Cuenta}}\&\ cuenta);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \mbox{\hyperlink{class_cuenta}{Cuenta}}(std::string\ cuenta);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarDatosUsuarios(\textcolor{keyword}{const}\ std::string\ \&archivo);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ verificarCedula(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo,\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \mbox{\hyperlink{struct_datos_usuario}{DatosUsuario}}\ mostrarDatosUsuarios(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedulaIngresada);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ contadorId;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ verificarCedulaA(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo,\textcolor{keyword}{const}\ std::string\&\ cedula);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ std::string\ getCedula()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cedulaAsociada;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ verificar\_cuenta\_existente(\textcolor{keyword}{const}\ std::string\&\ cuenta,\ \textcolor{keyword}{const}\ std::string\&\ archivo);}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ generar\_cuenta\_unico();}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ std::string\ cuenta;}
+\DoxyCodeLine{00034\ \ std::string\ cedulaAsociada;}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CUENTA\_H\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,141 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Lista\+Doble.cpp}
+\hypertarget{_lista_doble_8cpp_source}{}\label{_lista_doble_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ UFA\ -\/\ ESPE}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Module:\ \ ListasDoble.cpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Author:\ \ Chiliquinga\ Yeshua,\ Marin\ Alquinga,Salcedo\ Micaela}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Modified:\ domingo,\ 17\ de\ diciembre\ de\ 2023}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Purpose:\ Implementacion\ de\ clase\ ListaDoble}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ ***********************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ListaDoble.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Persona.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Nodo.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::ListaDoble}}()\{}
+\DoxyCodeLine{00019\ \ \ \ \ siguiente\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ \ \ \ \ anterior\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00021\ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ \ \ \ \ cola\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::esta\_vacia}}()\{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ (cabeza\ ==\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::insertarAlFinal}}(\mbox{\hyperlink{class_persona}{Persona}}\&\ persona)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nuevo\_nodo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_persona}{Persona}}(persona.getNombre(),\ persona.getApellido(),\ persona.getCedula(),\ persona.getId()),\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (esta\_vacia())\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ cabeza\ =\ nuevo\_nodo;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ cola\ =\ nuevo\_nodo;}
+\DoxyCodeLine{00038\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ nuevo\_nodo-\/>set\_anterior(cola);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ cola-\/>set\_siguiente(nuevo\_nodo);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ cola\ =\ nuevo\_nodo;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::eliminarAlFinal}}()\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (esta\_vacia())\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ La\ lista\ est{\ucr}\ vac{\ucr}a,\ no\ hay\ nada\ que\ eliminar.}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nodo\_a\_eliminar\ =\ cola;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (cola-\/>get\_anterior()\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ cola\ =\ cola-\/>get\_anterior();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ cola-\/>set\_siguiente(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00055\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ La\ lista\ solo\ tiene\ un\ elemento.}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ cola\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Obtener\ la\ persona\ asociada\ al\ nodo}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}*\ persona\_a\_eliminar\ =\ nodo\_a\_eliminar-\/>get\_valor();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Actualizar\ el\ contadorId\ si\ es\ necesario}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::stoi(persona\_a\_eliminar-\/>getId().substr(1))\ ==\ Persona::contadorId)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ Persona::contadorId-\/-\/;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{delete}\ persona\_a\_eliminar;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{delete}\ nodo\_a\_eliminar;}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00074\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::get\_cabeza}}()\{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ cabeza;}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::set\_cabeza}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nueva\_cabeza)\{}
+\DoxyCodeLine{00080\ \ \ \ \ cabeza\ =\ nueva\_cabeza;}
+\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00084\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::get\_cola}}()\{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ cola;}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::set\_cola}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nueva\_cola)\{}
+\DoxyCodeLine{00090\ \ \ \ \ cola\ =\ nueva\_cola;}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::insertar\_cola}}(T\ valor)\{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nuevo\_nodo;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}(esta\_vacia())\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ nuevo\_nodo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}(valor,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ cabeza\ =\ nuevo\_nodo;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ nuevo\_nodo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo}{Nodo<T>}}(valor,\ \textcolor{keyword}{nullptr},\ cola);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ cola-\/>set\_siguiente(nuevo\_nodo);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ cola\ =\ nuevo\_nodo;}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::imprimir}}()\{}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ aux\ =\ cabeza;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{while}(aux!=\textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ \%f"{}},\ aux-\/>get\_valor());}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>get\_siguiente();}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \}}
+\DoxyCodeLine{00115\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00116\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::ListaDoble}}(\mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ \_cabeza)\{}
+\DoxyCodeLine{00117\ \ \ \ \ cabeza\ =\ \_cabeza;}
+\DoxyCodeLine{00118\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lista_doble}{ListaDoble<T>::buscarCedulaExistente}}(\textcolor{keyword}{const}\ std::string\&\ cedula)\textcolor{keyword}{\ const\ \ }\{}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_nodo}{Nodo<T>}}*\ nodo\_actual\ =\ cabeza;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{while}\ (nodo\_actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}*\ persona\_actual\ =\ nodo\_actual-\/>get\_valor();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (persona\_actual-\/>getCedula()\ ==\ cedula)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ nodo\_actual\ =\ nodo\_actual-\/>get\_siguiente();}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}

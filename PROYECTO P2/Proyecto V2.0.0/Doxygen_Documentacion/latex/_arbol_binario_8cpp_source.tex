@@ -1,0 +1,156 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Arbol\+Binario.cpp}
+\hypertarget{_arbol_binario_8cpp_source}{}\label{_arbol_binario_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ En\ ArbolBinario.cpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ArbolBinario.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <algorithm>}\ \textcolor{comment}{//\ Para\ std::sort}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Cuenta.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Fecha.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Función\ para\ extraer\ y\ ordenar\ los\ números\ de\ cédula\ del\ archivo}}
+\DoxyCodeLine{00010\ std::vector<std::string>\ obtenerNumerosCedula(\textcolor{keyword}{const}\ std::string\&\ archivo)\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ std::ifstream\ archivo\_usuarios(archivo);}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<std::string>\ numeros\_cedula;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (archivo\_usuarios.is\_open())\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::string\ linea;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(archivo\_usuarios,\ linea))\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(linea);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ cedula;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leemos\ la\ primera\ cadena\ que\ se\ asume\ es\ la\ cédula}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (iss\ >>\ cedula)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Agregamos\ la\ cédula\ al\ vector}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numeros\_cedula.push\_back(cedula);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ archivo\_usuarios.close();}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Ordenamos\ los\ números\ de\ cédula}}
+\DoxyCodeLine{00028\ \ \ \ \ std::sort(numeros\_cedula.begin(),\ numeros\_cedula.end());}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return}\ numeros\_cedula;}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Implementación\ de\ la\ clase\ NodoArbol}}
+\DoxyCodeLine{00034\ NodoArbol::NodoArbol(std::string\ cedula)\ :\ cedula(cedula),\ izquierdo(nullptr),\ derecho(nullptr)\ \{\}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ NodoArbol::\string~NodoArbol()\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{delete}\ izquierdo;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{delete}\ derecho;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Implementación\ de\ la\ clase\ ArbolBinario}}
+\DoxyCodeLine{00042\ ArbolBinario::ArbolBinario()\ :\ raiz(nullptr)\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ ArbolBinario::\string~ArbolBinario()\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{delete}\ raiz;}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ ArbolBinario::insertar(std::string\ cedula)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ raiz\ =\ insertarRecursivo(raiz,\ cedula);}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}*\ ArbolBinario::insertarRecursivo(\mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}*\ nodo,\ std::string\ cedula)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (nodo\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}(cedula);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (cedula\ <\ nodo-\/>cedula)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ nodo-\/>izquierdo\ =\ insertarRecursivo(nodo-\/>izquierdo,\ cedula);}
+\DoxyCodeLine{00059\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (cedula\ >\ nodo-\/>cedula)\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ nodo-\/>derecho\ =\ insertarRecursivo(nodo-\/>derecho,\ cedula);}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ nodo;}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ ArbolBinario::imprimirEnOrden()\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ inordenRecursivo(raiz);}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ ArbolBinario::inordenRecursivo(\mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}*\ nodo)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (nodo\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ inordenRecursivo(nodo-\/>izquierdo);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::cout\ <<\ nodo-\/>cedula\ <<\ std::endl;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ inordenRecursivo(nodo-\/>derecho);}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ ArbolBinario::buscarCedula(\textcolor{keyword}{const}\ std::string\&\ cedulaBuscada,\ \textcolor{keyword}{const}\ std::string\&\ nombreArchivo)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buscarCedulaRecursivo(raiz,\ cedulaBuscada))\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buscarCedulaRecursivo(raiz,\ cedulaBuscada))\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Cuenta\ encontrada:\ "{}}\ <<\ cedulaBuscada\ <<\ std::endl;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ cuenta\ "{}}\ <<\ cedulaBuscada\ <<\ \textcolor{stringliteral}{"{}\ no\ se\ encontró."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aquí\ deberías\ implementar\ la\ lógica\ para\ imprimir\ el\ recorrido\ inorden\ con\ flechas}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Crear\ un\ objeto\ Cuenta\ para\ acceder\ a\ la\ función\ mostrarDatosUsuarios}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cuenta}{Cuenta}}\ nuevaCuenta;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ los\ datos\ del\ usuario}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_datos_usuario}{DatosUsuario}}\ datosUsuario\ =\ nuevaCuenta.mostrarDatosUsuarios(\textcolor{stringliteral}{"{}Usuarios.txt"{}},\ cedulaBuscada);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Abrir\ el\ archivo\ para\ escribir}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fecha}{Fecha}}\ fecha;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ la\ fecha\ y\ hora\ actual\ utilizando\ la\ nueva\ función}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::string\ fechaHoraGeneracion\ =\ fecha.obtenerFechaHoraActual();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Imprimir\ los\ datos\ del\ usuario}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Fecha\ de\ Busqueda:\ "{}}\ <<\ fechaHoraGeneracion\ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Cedula/CI:\ "{}}\ <<\ cedulaBuscada\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Cliente:\ "{}}\ <<\ datosUsuario.nombreCompleto\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ID\ de\ Cliente:\ "{}}\ <<\ datosUsuario.id\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}No.Cuenta\ Cliente:\ "{}}\ <<\ datosUsuario.Ncuenta\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Recorrido\ inorden\ con\ flechas:\ "{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//inordenRecursivoConFlechas(raiz);}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ cuenta\ "{}}\ <<\ cedulaBuscada\ <<\ \textcolor{stringliteral}{"{}\ no\ se\ encontró."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{bool}\ ArbolBinario::buscarCedulaRecursivo(\mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}*\ nodo,\ \textcolor{keyword}{const}\ std::string\&\ cedulaBuscada)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}\ (nodo\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (nodo-\/>cedula\ ==\ cedulaBuscada)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (cedulaBuscada\ <\ nodo-\/>cedula)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ buscarCedulaRecursivo(nodo-\/>izquierdo,\ cedulaBuscada);}
+\DoxyCodeLine{00124\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ buscarCedulaRecursivo(nodo-\/>derecho,\ cedulaBuscada);}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ ArbolBinario::leerCedulas(\textcolor{keyword}{const}\ std::string\&\ archivo)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ std::ifstream\ file(archivo);}
+\DoxyCodeLine{00131\ \ \ \ \ std::string\ cedula;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (file.is\_open())\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (file\ >>\ cedula)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ insertar(cedula);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{00138\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}No\ se\ pudo\ abrir\ el\ archivo:\ "{}}\ <<\ archivo\ <<\ std::endl;}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ ArbolBinario::inordenRecursivoConFlechas(\mbox{\hyperlink{class_nodo_arbol}{NodoArbol}}*\ nodo)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{if}\ (nodo\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ inordenRecursivoConFlechas(nodo-\/>izquierdo);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ std::cout\ <<\ nodo-\/>cedula\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ inordenRecursivoConFlechas(nodo-\/>derecho);}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+
+\end{DoxyCode}
