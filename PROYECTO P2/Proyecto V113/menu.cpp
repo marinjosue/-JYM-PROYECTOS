@@ -284,7 +284,7 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     "\t\t[2]MOVIMIENTOS",
     "\t\t[3]BUSCAR CUENTA",
     "\t\t[4]MOSTAR USUARIOS",
-    "\t\t[5]ELIMINAR",
+    "\t\t[5]ELIMINAR CUENTA",
     "\t\t[6]SALIR"
     };
     int numeroOpciones = 6;
