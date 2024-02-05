@@ -1,0 +1,366 @@
+\doxysection{C\+:/\+Git\+Repos/-\/\+JYM-\/\+PROYECTO-\/\+ESTRUCTURA/\+PROYECTO P2/\+Proyecto V114/\+Cuenta.cpp}
+\hypertarget{_cuenta_8cpp_source}{}\label{_cuenta_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}Cuenta.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}validaciones.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Movimientos.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ Cuenta::Cuenta()\{}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ std::string\ Cuenta::getCuenta(\textcolor{keywordtype}{void})\textcolor{keyword}{const}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00015\ \ \ \ \textcolor{keywordflow}{return}\ cuenta;}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ Cuenta::setCuenta(std::string\ newCuenta)}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ cuenta\ =\ newCuenta;}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ Cuenta::Cuenta(std::string\ cuenta)}
+\DoxyCodeLine{00023\ \ \ \ \ :\ \ cuenta(cuenta)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ contadorId=0;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Actualizar\ el\ contadorId\ si\ es\ necesario}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ idValor\ =\ std::stoi(cuenta.substr(1));}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (idValor\ >\ contadorId)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ contadorId\ =\ idValor;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Lee\ el\ archivo\ de\ usuarios\ y\ devuelve\ el\ último\ número\ de\ cuenta\ generado\ como\ una\ cadena}}
+\DoxyCodeLine{00033\ std::string\ obtener\_ultimo\_numero\_cuenta(\textcolor{keyword}{const}\ std::string\&\ archivo)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ std::ifstream\ archivo\_usuarios(archivo);}
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ linea;}
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ ultimo\_numero\ =\ \textcolor{stringliteral}{"{}0"{}};\ \textcolor{comment}{//\ Inicializar\ como\ cadena}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (archivo\_usuarios.is\_open())\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(archivo\_usuarios,\ linea))\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(linea);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ cuenta;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (iss\ >>\ cuenta)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extraer\ el\ número\ de\ cuenta\ de\ la\ línea}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Suponiendo\ que\ el\ formato\ del\ archivo\ es:\ cedula\ nombre\ id\ cuenta}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isdigit(cuenta[0]))\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cuenta\ >\ ultimo\_numero)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ultimo\_numero\ =\ cuenta;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ archivo\_usuarios.close();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ ultimo\_numero;}
+\DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ \mbox{\hyperlink{class_cuenta}{Cuenta}}\ Cuenta::crear\_cuenta()\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_movimientos}{Movimientos}}\ monto;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classvalidaciones}{validaciones}}\ valida;}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_cuenta}{Cuenta}}\ nuevacuenta;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_persona}{Persona}}\ nuevaPersona;}
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ cedula,\ cedulaArchivo,\ nombreCompleto,\ id;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Obtener\ el\ último\ número\ de\ cuenta\ generado}}
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ ultimo\_numero\ =\ obtener\_ultimo\_numero\_cuenta(\textcolor{stringliteral}{"{}Usuarios.txt"{}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Continuar\ generando\ cuentas\ desde\ el\ último\ número\ generado\ +\ 1}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ siguiente\_numero\ =\ std::stoi(ultimo\_numero)\ +\ 1;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ procesarCedula\ =\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ Flag\ to\ control\ the\ loop}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Step\ 1:\ Ingresar\ el\ número\ de\ cedula}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ cedula\ =\ valida.ingresar\_numeros\_como\_string(\textcolor{stringliteral}{"{}\(\backslash\)nIngrese\ el\ numero\ de\ cedula:\ "{}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Step\ 2:\ Validar\ la\ cédula\ en\ Personas.txt\ y\ que\ no\ exista\ en\ Usuarios.txt}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valida.validarCedula(cedula)\ \&\&\ nuevacuenta.verificarCedula(\textcolor{stringliteral}{"{}Personas.txt"{}},\ cedula)\ \&\&\ !nuevacuenta.verificarCedula(\textcolor{stringliteral}{"{}Usuarios.txt"{}},\ cedula))\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Step\ 3:\ Leer\ información\ de\ Personas.txt}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ std::ifstream\ archivo(\textcolor{stringliteral}{"{}Personas.txt"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ linea;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ cedulaEncontrada\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (archivo.is\_open())\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leer\ cada\ línea\ del\ archivo}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(archivo,\ linea))\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(linea);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ iss\ >>\ cedulaArchivo;\ \ \textcolor{comment}{//\ Leer\ la\ cédula}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ idTemporal;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ nombreApellido;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extract\ ID\ and\ concatenate\ names\ and\ surnames}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (iss\ >>\ idTemporal)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isdigit(idTemporal[0]))\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ idTemporal;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nombreApellido\ +=\ idTemporal\ +\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ el\ espacio\ extra\ al\ final\ del\ nombre\ completo}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nombreCompleto\ =\ nombreApellido.substr(0,\ nombreApellido.size()\ -\/\ 1);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparar\ la\ cédula\ ingresada\ con\ la\ cédula\ en\ la\ línea\ actual}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cedulaArchivo\ ==\ cedula\ \&\&\ !nuevacuenta.verificarCedula(\textcolor{stringliteral}{"{}Usuarios.txt"{}},\ cedula))\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generar\ un\ número\ de\ cuenta\ único}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ newCuenta\ =\ \textcolor{stringliteral}{"{}009"{}}\ +\ std::to\_string(siguiente\_numero);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nuevacuenta.setCuenta(newCuenta);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDatos\ encontrados:\(\backslash\)n"{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Cedula:\ "{}}\ <<\ cedulaArchivo\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nombre:\ "{}}\ <<\ nombreCompleto\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ID:\ "{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ archivo.close();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nuevacuenta.guardarTabla(\textcolor{stringliteral}{"{}Usuarios.txt"{}},\ cedulaArchivo,\ nombreCompleto,\ \textcolor{keywordtype}{id},\ nuevacuenta);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ monto.registrarMovimiento(cedulaArchivo,0.0);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cedulaEncontrada\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ procesarCedula\ =\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ Set\ the\ flag\ to\ false\ to\ exit\ the\ loop}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ Salir\ del\ bucle\ si\ ya\ existe\ en\ Usuarios.txt}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ archivo.close();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!cedulaEncontrada)\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ se\ encuentra\ la\ cedula\ en\ Personas.txt}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError:\ La\ cedula\ ingresada\ no\ fue\ encontrada\ en\ Personas.txt.\(\backslash\)n"{}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ procesarCedula\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError:\ No\ se\ pudo\ abrir\ el\ archivo\ Personas.txt\(\backslash\)n"{}};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ procesarCedula\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ cedula\ es\ invalida\ o\ ya\ existe\ en\ Usuarios.txt}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError:\ La\ cedula\ ingresada\ es\ invalida\ o\ ya\ existe\ en\ Usuarios.txt.\ Vuelva\ a\ intentarlo.\(\backslash\)n"{}};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ procesarCedula\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (procesarCedula);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ Return\ a\ dummy\ account\ if\ needed\ (replace\ this\ with\ your\ actual\ return\ logic)}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_cuenta}{Cuenta}}();}
+\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{bool}\ Cuenta::verificarCedula(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedula)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ std::ifstream\ archivoCuentas(archivo);}
+\DoxyCodeLine{00146\ \ \ \ \ std::string\ linea;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{if}\ (archivoCuentas.is\_open())\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(archivoCuentas,\ linea))\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(linea);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ cedulaArchivo;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extraer\ la\ cédula\ de\ la\ línea}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ iss\ >>\ cedulaArchivo;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparar\ la\ cédula\ ingresada\ con\ la\ cédula\ en\ la\ línea\ actual}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cedulaArchivo\ ==\ cedula)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ archivoCuentas.close();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ Cédula\ encontrada,\ es\ duplicada}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ archivoCuentas.close();}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ La\ cédula\ no\ está\ duplicada}}
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{bool}\ Cuenta::verificarCedulaA(\textcolor{keyword}{const}\ std::string\&\ nombreArchivo,\ \textcolor{keyword}{const}\ std::string\&\ cedula)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ std::ifstream\ archivo(nombreArchivo);}
+\DoxyCodeLine{00170\ \ \ \ \ std::string\ cedulaArchivo;}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{if}\ (archivo.is\_open())\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (archivo\ >>\ cedulaArchivo)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparar\ la\ cédula\ actual\ con\ la\ cédula\ ingresada}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cedula\ ==\ cedulaArchivo)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ archivo.close();}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ La\ cédula\ ya\ existe\ en\ el\ archivo}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ir\ al\ final\ de\ la\ línea\ para\ continuar\ con\ la\ siguiente\ iteración}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ archivo.ignore(std::numeric\_limits<std::streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ archivo.close();}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{void}\ Cuenta::guardarTabla(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedula,\ \textcolor{keyword}{const}\ std::string\&\ nombreCompleto,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cuenta}{Cuenta}}\&\ cuenta)\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ std::ofstream\ outFile(archivo,\ std::ios::app);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (outFile.is\_open())\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ outFile\ <<\ cedula\ <<\ \textcolor{stringliteral}{"{}\ "{}}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ nombreCompleto\ <<\ \textcolor{stringliteral}{"{}\ "{}}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}\ "{}}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ cuenta.getCuenta()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ outFile.close();}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Datos\ guardados\ en\ "{}}\ <<\ archivo\ <<\ std::endl;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ L{\ucr}nea\ en\ blanco\ opcional}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00200\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}No\ se\ pudo\ abrir\ el\ archivo\ "{}}\ <<\ archivo\ <<\ std::endl;}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{void}\ Cuenta::mostrarDatosUsuarios(\textcolor{keyword}{const}\ std::string\&\ archivo)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{classvalidaciones}{validaciones}}\ valida;}
+\DoxyCodeLine{00209\ \ \ \ \ std::string\ lectura\ =\ valida.leerArchivoTxtCuenta();}
+\DoxyCodeLine{00210\ \ \ \ \ std::stringstream\ input\_stringstream(lectura);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{int}\ ancho\_cedula\ =\ 12,\ ancho\_nombre\ =\ 35,\ ancho\_id\ =\ 10,\ ancho\_cuenta\ =\ 10;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ std::cout\ <<\ \textcolor{charliteral}{'|'}\ <<\ std::setw(ancho\_cedula)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}CEDULA"{}}\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_nombre)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}NOMBRE\ COMPLETO"{}}\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_id)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}ID"{}}\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_cuenta)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}No.Cuenta"{}}\ <<\ \textcolor{charliteral}{'|'};}
+\DoxyCodeLine{00218\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n========================================================"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ std::string\ cedula,\ nombreCompleto,\ id,\ cuenta;}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{while}\ (input\_stringstream\ >>\ cedula)\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leer\ el\ nombre\ completo\ hasta\ encontrar\ el\ siguiente\ campo\ num{\ucr}rico\ (ID)}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ nombreCompleto\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (input\_stringstream\ >>\ \textcolor{keywordtype}{id}\ \&\&\ !isdigit(\textcolor{keywordtype}{id}[0]))\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ nombreCompleto\ +=\ \textcolor{keywordtype}{id}\ +\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ El\ ultimo\ token\ leido\ es\ el\ ID}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leer\ el\ NCuenta}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ input\_stringstream\ >>\ cuenta;}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{charliteral}{'|'}\ <<\ std::setw(ancho\_cedula)\ <<\ std::left\ <<\ cedula\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_nombre)\ <<\ std::left\ <<\ nombreCompleto\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_id)\ <<\ std::left\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{charliteral}{'|'}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(ancho\_cuenta)\ <<\ std::left\ <<\ cuenta\ <<\ \textcolor{charliteral}{'|'};}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \mbox{\hyperlink{struct_datos_usuario}{DatosUsuario}}\ Cuenta::mostrarDatosUsuarios(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedulaIngresada)\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ std::ifstream\ archivoUsuarios(archivo);}
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{struct_datos_usuario}{DatosUsuario}}\ datosUsuario;\ \ \textcolor{comment}{//\ Estructura\ para\ almacenar\ los\ datos}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ std::string\ cedulaArchivo,\ nombreCompleto,\ id,\ Ncuenta;}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{comment}{//\ Leer\ cada\ l{\ucr}nea\ del\ archivo}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{while}\ (archivoUsuarios\ >>\ cedulaArchivo)\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leer\ el\ nombre\ completo\ hasta\ encontrar\ el\ siguiente\ campo\ num{\ucr}rico\ (ID)}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ nombreCompleto\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (archivoUsuarios\ >>\ \textcolor{keywordtype}{id}\ \&\&\ !isdigit(\textcolor{keywordtype}{id}[0]))\ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ nombreCompleto\ +=\ \textcolor{keywordtype}{id}\ +\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ El\ {\ucr}ltimo\ token\ le{\ucr}do\ es\ el\ ID}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leer\ el\ N{\ucr}Cuenta}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ archivoUsuarios\ >>\ Ncuenta;}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminar\ el\ espacio\ extra\ al\ final\ del\ nombre\ completo}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ nombreCompleto.pop\_back();}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ si\ la\ cedula\ ingresada\ coincide\ con\ la\ c{\ucr}dula\ del\ archivo}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cedulaArchivo\ ==\ cedulaIngresada)\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asignar\ los\ datos\ a\ la\ estructura}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ datosUsuario.cedula\ =\ cedulaArchivo;}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ datosUsuario.nombreCompleto\ =\ nombreCompleto;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ datosUsuario.id\ =\ id;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ datosUsuario.Ncuenta\ =\ Ncuenta;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//datosUsuario.Prestamo\ =\ Prestamo;}}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ Salir\ del\ bucle\ al\ encontrar\ la\ c{\ucr}dula}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ archivoUsuarios.close();}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//\ Devolver\ la\ estructura\ con\ los\ datos}}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{return}\ datosUsuario;}
+\DoxyCodeLine{00279\ \}}
+\DoxyCodeLine{00280\ \textcolor{comment}{//\ Implementación\ de\ la\ función\ para\ generar\ un\ número\ de\ cuenta\ único}}
+\DoxyCodeLine{00281\ std::string\ Cuenta::generar\_cuenta\_unico()\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ std::string\ nueva\_cuenta;}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{bool}\ cuenta\_unica\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ nueva\_cuenta\ =\ generar\_cuenta\_automatica();\ \textcolor{comment}{//\ Supongamos\ que\ esto\ genera\ el\ número\ de\ cuenta}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ si\ la\ cuenta\ generada\ ya\ existe\ en\ Usuarios.txt}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!verificar\_cuenta\_existente(nueva\_cuenta,\ \textcolor{stringliteral}{"{}Usuarios.txt"{}}))\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ cuenta\_unica\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!cuenta\_unica);}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordflow}{return}\ nueva\_cuenta;}
+\DoxyCodeLine{00294\ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{comment}{//\ Implementación\ de\ la\ función\ para\ verificar\ si\ una\ cuenta\ ya\ existe\ en\ el\ archivo\ dado}}
+\DoxyCodeLine{00297\ \textcolor{keywordtype}{bool}\ Cuenta::verificar\_cuenta\_existente(\textcolor{keyword}{const}\ std::string\&\ archivo,\ \textcolor{keyword}{const}\ std::string\&\ cedula)\ \{}
+\DoxyCodeLine{00298\ \ \ \ std::ifstream\ archivoCuentas(archivo);}
+\DoxyCodeLine{00299\ \ \ \ \ std::string\ linea;}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{if}\ (archivoCuentas.is\_open())\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(archivoCuentas,\ linea))\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(linea);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ cedulaArchivo;}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extraer\ la\ cédula\ de\ la\ línea}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ iss\ >>\ cedulaArchivo;}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparar\ la\ cédula\ ingresada\ con\ la\ cédula\ en\ la\ línea\ actual}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cedulaArchivo\ ==\ cedula)\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ archivoCuentas.close();}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ Cédula\ encontrada,\ es\ duplicada}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ archivoCuentas.close();}
+\DoxyCodeLine{00317\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nError:\ No\ se\ pudo\ abrir\ el\ archivo\ "{}}\ <<\ archivo\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00319\ \ \ \ \ \}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ La\ cédula\ no\ está\ duplicada}}
+\DoxyCodeLine{00322\ \}}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \textcolor{keywordtype}{int}\ contadorCuenta\ =\ 2024;}
+\DoxyCodeLine{00325\ \textcolor{keywordtype}{int}\ codigoV\ =\ 0;}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ std::string\ Cuenta::generar\_cuenta\_automatica()\ \{}
+\DoxyCodeLine{00328\ \ \ \ \ std::ostringstream\ oss;}
+\DoxyCodeLine{00329\ \ \ \ \ }
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{comment}{//\ Se\ calcula\ el\ dígito\ verificador\ con\ el\ algoritmo\ de\ Luhn}}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{int}\ digitoVerificador\ =\ ++codigoV\ \%\ 10;}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{if}\ (digitoVerificador\ ==\ 10)\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ digitoVerificador\ =\ 0;}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ ++codigoV;}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{comment}{//\ Incrementar\ el\ contador\ de\ cuenta}}
+\DoxyCodeLine{00339\ \ \ \ \ ++contadorCuenta;}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{comment}{//\ Formatear\ el\ número\ de\ cuenta\ con\ ceros\ a\ la\ izquierda}}
+\DoxyCodeLine{00342\ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}009"{}}\ <<\ std::setfill(\textcolor{charliteral}{'0'})\ <<\ std::setw(5)\ <<\ contadorCuenta\ <<\ digitoVerificador;}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ std::string\ nuevaCuenta\ =\ oss.str();}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{comment}{//\ Verificar\ si\ la\ cuenta\ generada\ ya\ existe\ en\ el\ archivo\ Usuarios.txt}}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordflow}{while}\ (verificar\_cuenta\_existente(\textcolor{stringliteral}{"{}Usuarios.txt"{}},\ nuevaCuenta))\ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ cuenta\ ya\ existe,\ generamos\ una\ nueva\ cuenta}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ ++contadorCuenta;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ digitoVerificador\ =\ ++codigoV\ \%\ 10;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (digitoVerificador\ ==\ 10)\ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ digitoVerificador\ =\ 0;}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ ++codigoV;}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ oss.str(\textcolor{stringliteral}{"{}"{}});\ \textcolor{comment}{//\ Limpiamos\ el\ stringstream}}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}009"{}}\ <<\ std::setfill(\textcolor{charliteral}{'0'})\ <<\ std::setw(5)\ <<\ contadorCuenta\ <<\ digitoVerificador;}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ nuevaCuenta\ =\ oss.str();}
+\DoxyCodeLine{00358\ \ \ \ \ \}}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordflow}{return}\ nuevaCuenta;}
+\DoxyCodeLine{00361\ \}}
+
+\end{DoxyCode}
