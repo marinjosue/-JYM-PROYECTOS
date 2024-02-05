@@ -2539,7 +2539,7 @@
 	"ListaDoble.cpp"
 	"Amortizacion.h"
 
-1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.cpp
+1707115873 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.cpp
 	<iostream>
 	<fstream>
 	"Amortizacion.h"
@@ -2556,7 +2556,7 @@
 	<sys/stat.h>
 	<cerrno>
 
-1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.h
+1707113081 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\amortizacion.h
 	"ListaDoble.h"
 	"Credito.h"
 	"Fecha.h"
@@ -2609,7 +2609,7 @@
 	<vector>
 	<fstream>
 
-1707103054 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.h
+1707115904 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.h
 	"ListaDoble.h"
 	"Fecha.h"
 	<string>
@@ -2700,7 +2700,7 @@
 	"ListaDoble.h"
 	"Persona.h"
 
-1707103038 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.cpp
+1707116022 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\movimientos.cpp
 	"Movimientos.h"
 	"validaciones.h"
 	"Persona.h"
@@ -2720,7 +2720,7 @@
 1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.cpp
 	"Nodo.h"
 
-1707108198 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.cpp
+1707108845 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.cpp
 	"Persona.h"
 	<iostream>
 	<fstream>
@@ -2745,7 +2745,7 @@
 	<vector>
 	<fstream>
 
-1707101215 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\menu.cpp
+1707116097 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\menu.cpp
 	<stdio.h>
 	<conio.h>
 	<windows.h>

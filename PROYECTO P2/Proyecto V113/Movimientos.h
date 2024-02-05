@@ -34,6 +34,8 @@ public:
     void set_retiros(ListaDoble<double>* nuevo_Retiro);
     void set_monto(ListaDoble<double>* nuevo_Monto);
     void set_fecha_de_pago(ListaDoble<Fecha>* nuevo_fechas_pago);
+    double verificarDeuda(const std::string& cedula);
+    void guardarMontoDeuda(const std::string& cedula, double montoDeuda);
 
 
     // Funciones específicas para la clase Movimientos
@@ -46,7 +48,8 @@ public:
     void mostrarTabla(const std::string& cedulaIngresada);
     double obtenerSaldoActual(const std::string& cedula, const std::string& carpeta);
     void guardarSaldoActual(const std::string& cedula, const std::string& carpeta, double saldo);
-    void guardarMontoDeuda(const std::string& cedula, double montoDeuda);
+    bool validarNuevoCredito(const std::string& cedula);
+    //void guardarMontoDeuda(const std::string& cedula, double montoDeuda);
     void pagoAutomatico(const std::string& cedula, bool pagoTotal);
     void eliminarUsuario(const std::string& cedula);
     void actualizarMovimientos(const std::string& cedula, const std::vector<std::string>& fechas,

@@ -539,6 +539,7 @@ void Menus::Menu_Credito(ListaDoble<Persona*> listaPersonas) {
                    case 1:
                         system("cls");
                         tabla.ingresar_datos_credito();
+                        system("pause");
                         menu.Menu_Credito(listaPersonas);
                         break;
                     case 2:

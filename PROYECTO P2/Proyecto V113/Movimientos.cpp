@@ -570,6 +570,46 @@ bool Movimientos::tieneDeudaPendiente(const std::string& cedula) {
     return false; // El usuario no tiene deuda pendiente
 }
 
+bool Movimientos::validarNuevoCredito(const std::string& cedula) {
+    // Ruta del archivo de Movimientos
+    std::string rutaArchivoMovimientos = "Movimientos/" + cedula + ".txt";
+
+    // Abrir el archivo de Movimientos para lectura
+    std::ifstream archivoMovimientosLectura(rutaArchivoMovimientos);
+
+    if (!archivoMovimientosLectura.is_open()) {
+        std::cerr << "Error al abrir el archivo de Movimientos para lectura." << std::endl;
+        return false;
+    }
+
+    // Variable para almacenar el monto de deuda
+    double montoDeuda = 0.0;
+
+    // Leer el contenido de Movimientos y obtener el monto de deuda
+    std::string linea;
+    while (std::getline(archivoMovimientosLectura, linea)) {
+        size_t pos = linea.find("Monto de Deuda:");
+        if (pos != std::string::npos) {
+            montoDeuda = std::stod(linea.substr(pos + 15));  // Longitud de "Monto de Deuda: "
+            break;  // Salir del bucle si se encuentra el monto de deuda
+        }
+    }
+
+    archivoMovimientosLectura.close();
+
+    // Verificar si hay una deuda mayor a 0
+    if (montoDeuda > 0.0) {
+        std::cout << "No puede realizar un nuevo ingreso de credito. Tiene una deuda pendiente de: " << montoDeuda << std::endl;
+        return false;
+    } else {
+        std::cout << "Puede realizar un nuevo ingreso de credito." << std::endl;
+        return true;
+    }
+}
+
+
+
+
 // double nuevoMontoDeuda = 0.0;  // Actualiza con el nuevo monto después del pago
         //guardarMontoDeuda(cedula, nuevoMontoDeuda);
 

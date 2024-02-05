@@ -7,5 +7,10 @@ Prestamo: 0
 |FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
 ========================================================
 
-Monto de Deuda: 70000.00
+Monto de Deuda: 999999.00
 |4/2/2024 22:20:41   |1234      |0         |1234      |
+
+
+
+
+

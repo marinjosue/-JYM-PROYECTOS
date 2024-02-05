@@ -282,6 +282,7 @@ void Amortizacion::guardarTabla(const std::string& nombreArchivo, const std::str
    
 }
 
+
 void Amortizacion::ingresar_datos_credito() {
     validaciones valida;
     Movimientos mov;
@@ -291,12 +292,18 @@ void Amortizacion::ingresar_datos_credito() {
     do {
         cedula = valida.ingresar_numeros_como_string("\nIngrese el numero de cedula: ");
 
-        if (valida.validarCedula(cedula) && nuevacuenta.verificarCedulaA("Usuarios.txt",cedula)) {
+        if (valida.validarCedula(cedula) && nuevacuenta.verificarCedulaA("Usuarios.txt", cedula)) {
             system("cls");
 
+            // Validar si la persona puede realizar un nuevo ingreso de crédito
+            if (!mov.validarNuevoCredito(cedula)) {
+                // Si tiene deuda pendiente, mostrar mensaje y salir de la función
+                return;
+            }
+
+            // Obtener datos del usuario
             std::ifstream archivoUsuarios("Usuarios.txt");
             if (archivoUsuarios.is_open()) {
-                // Obtener datos del usuario
                 DatosUsuario datosUsuario = nuevacuenta.mostrarDatosUsuarios("Usuarios.txt", cedula);
                 std::string nombreCompleto = datosUsuario.nombreCompleto;
                 std::string id = datosUsuario.id;
@@ -360,3 +367,8 @@ void Amortizacion::ingresar_datos_credito() {
         }
     } while (true);
 }
+
+
+
+
+
