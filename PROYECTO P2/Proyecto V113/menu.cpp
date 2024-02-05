@@ -149,7 +149,7 @@ void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
 }
 
 void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
-validaciones valida;
+    validaciones valida;
     Persona persona;
     std::string nombreArchivo2 = "Personas.txt";
     std::string ultimoIdUtilizado = Persona::obtenerUltimoIdUtilizado(nombreArchivo2);
@@ -161,8 +161,9 @@ validaciones valida;
         "\t\t[1]REGISTRAR PERSONA",
         "\t\t[2]LISTADO DE PERSONAS",
         "\t\t[3]ORDENAR",
-        "\t\t[4]SALIR"};
-    int numeroOpciones = 4;
+        "\t\t[4]ELIMINAR PERSONA",
+        "\t\t[5]SALIR"};
+    int numeroOpciones = 5;
     int selec = 1;
     do {
         menuSeleccion(titulo, opciones, numeroOpciones, selec);
@@ -179,25 +180,45 @@ validaciones valida;
                 Menu_Usuario(listaPersonas);
                 break;
             }
-            case 2:
+            case 2:{
                 system("cls");
                 persona.mostrarRegistroPersona();
                 system("pause");
                 Menu_Usuario(listaPersonas);
                 break;
-            case 3:
+            }
+            case 3:{
                 system("cls");
                 Menu_Ordenar(listaPersonas);
                 system("pause");
                 break;
-            case 4:
+            }
+            case 4:{
+                system("cls");
+                std::string cedulaAEliminar = valida.ingresar_numeros_como_string("Ingrese la cedula de la persona que desea eliminar: ");
+                if (!cedulaAEliminar.empty()) {
+                    Persona personaEliminar;
+                    if (personaEliminar.eliminarPersona(cedulaAEliminar)) {
+                        // Eliminación exitosa
+                        // También debes eliminar la persona de la lista si es necesario
+                        // Supongamos que listaPersonas es una lista enlazada de personas
+                        // listaPersonas.eliminarPersona(cedulaAEliminar);
+                    }
+                }
+                system("pause");
+                break;
+            }
+            case 5:{
                 system("cls");
                 Menu_Principal(listaPersonas);
                 system("pause");
                 break;
+            }
         }
     } while (aux);
 }
+
+
 void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
     Persona persona;
     bool aux = true;

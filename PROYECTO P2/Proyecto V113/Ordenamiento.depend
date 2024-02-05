@@ -2568,7 +2568,7 @@
 1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.h
 	"Persona.h"
 
-1707091202 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.h
+1707108227 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.h
 	<string>
 
 1707091504 c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\credito.h
@@ -2720,7 +2720,7 @@
 1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\nodo.cpp
 	"Nodo.h"
 
-1707091202 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.cpp
+1707108198 source:c:\gitrepos\-jym-proyecto-estructura\proyecto p2\proyecto v113\persona.cpp
 	"Persona.h"
 	<iostream>
 	<fstream>
