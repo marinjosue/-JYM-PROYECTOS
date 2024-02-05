@@ -80,7 +80,7 @@ void ArbolBinario::buscarCedula(const std::string& cedulaBuscada, const std::str
             if (buscarCedulaRecursivo(raiz, cedulaBuscada)) {
             std::cout << "\nCuenta encontrada: " << cedulaBuscada << std::endl;
         } else {
-            std::cout << "\nLa cuenta " << cedulaBuscada << " no se encontró." << std::endl;
+            std::cout << "\nLa cuenta " << cedulaBuscada << " no se encontro." << std::endl;
         }
         // Aquí deberías implementar la lógica para imprimir el recorrido inorden con flechas
         std::cout << std::endl;
@@ -105,7 +105,7 @@ void ArbolBinario::buscarCedula(const std::string& cedulaBuscada, const std::str
             //inordenRecursivoConFlechas(raiz);
             std::cout << std::endl;
         } else {
-            std::cout << "La cuenta " << cedulaBuscada << " no se encontró." << std::endl;
+            std::cout << "La cuenta " << cedulaBuscada << " no se encontro." << std::endl;
         }
 }
 
