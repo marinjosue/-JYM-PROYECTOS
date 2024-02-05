@@ -86,12 +86,12 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
 }
 
 void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
-     validaciones valida;
-     Fecha f;
+    validaciones valida;
+    Fecha f;
     int anioActual = f.obtenerAnioActual();
-     bool aux = true;
+    bool aux = true;
     std::string nombreArchivo = "tabla_amortizacion.txt";
-    const char *titulo ="\t\tPRESTAMOS";
+    const char *titulo ="\t\tMENU PRINCIPAL";
     const char *opciones[] =
     {
      "\t\t[1]USUARIO",
@@ -101,51 +101,51 @@ void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
      "\t\t[5]LEER TABLA",
      "\t\t[6]EXTRAS",
      "\t\t[7]SALIR"
-      };
+    };
     int numeroOpciones = 7;
     int selec = 1;
-    do{
-    menuSeleccion(titulo,opciones, numeroOpciones, selec);
-     switch (selec) {
-                    case 1:
-                        system("cls");
-                        Menu_Usuario(listaPersonas);
-                        system("pause");
-                        break;
-                    case 2:
-                        system("cls");
-                        Menu_Cuenta(listaPersonas);
-                        system("pause");
-                        break;
-                    case 3:
-                        system("cls");
-                        Menu_Movimientos();
-                        system("pause");
-                        break;
-                    case 4:
-                        system("cls");
-                        Menu_Credito(listaPersonas);
-                        system("pause");
-                        break;
-                    case 5:
-                        system("cls");
-                        imprimirContenidoArchivo(nombreArchivo);
-                        system("pause");
-                        Menu_Principal(listaPersonas);
-                        system("pause");
-                        break;
-                    case 6:
-                        system("cls");
-                        Menu_Extras(listaPersonas);
-                        system("pause");
-                        break;
-                    case 7:
-                        system("cls");
-                        std::cout << "Gracias por usar el programa. Hasta luego!\n";
-                        aux = false;
-                        break;
-                }
-        } while (aux);
+    do {
+        menuSeleccion(titulo,opciones, numeroOpciones, selec);
+        switch (selec) {
+            case 1:
+                system("cls");
+                Menu_Usuario(listaPersonas);
+                system("pause");
+                break;
+            case 2:
+                system("cls");
+                Menu_Cuenta(listaPersonas);
+                system("pause");
+                break;
+            case 3:
+                system("cls");
+                Menu_Movimientos();
+                system("pause");
+                break;
+            case 4:
+                system("cls");
+                Menu_Credito(listaPersonas);
+                system("pause");
+                break;
+            case 5:
+                system("cls");
+                imprimirContenidoArchivo(nombreArchivo);
+                system("pause");
+                Menu_Principal(listaPersonas);
+                system("pause");
+                break;
+            case 6:
+                system("cls");
+                Menu_Extras(listaPersonas);
+                system("pause");
+                break;
+            case 7:
+                system("cls");
+                std::cout << "Gracias por usar el programa. Hasta luego!\n";
+                aux = false;
+                break;
+            }
+    } while (aux);
 }
 
 void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
