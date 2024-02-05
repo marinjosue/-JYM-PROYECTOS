@@ -24,6 +24,7 @@
 #include "Cuenta.cpp"
 #include <iomanip>
 #include "Movimientos.h"
+#include "ArbolBinario.cpp"
 
 using namespace std;
 void Menus::gotoxy(int x, int y) {
@@ -85,10 +86,10 @@ void Menus::menuSeleccion(const char *titulo, const char *opciones[], int numero
 }
 
 void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
-     validaciones valida;
-     Fecha f;
+    validaciones valida;
+    Fecha f;
     int anioActual = f.obtenerAnioActual();
-     bool aux = true;
+    bool aux = true;
     std::string nombreArchivo = "tabla_amortizacion.txt";
     const char *titulo ="\t\tMENU PRINCIPAL";
     const char *opciones[] =
@@ -100,55 +101,55 @@ void Menus::Menu_Principal(ListaDoble<Persona*> listaPersonas) {
      "\t\t[5]LEER TABLA",
      "\t\t[6]EXTRAS",
      "\t\t[7]SALIR"
-      };
+    };
     int numeroOpciones = 7;
     int selec = 1;
-    do{
-    menuSeleccion(titulo,opciones, numeroOpciones, selec);
-     switch (selec) {
-                    case 1:
-                        system("cls");
-                        Menu_Usuario(listaPersonas);
-                        system("pause");
-                        break;
-                    case 2:
-                        system("cls");
-                        Menu_Cuenta(listaPersonas);
-                        system("pause");
-                        break;
-                    case 3:
-                        system("cls");
-                        Menu_Movimientos();
-                        system("pause");
-                        break;
-                    case 4:
-                        system("cls");
-                        Menu_Credito(listaPersonas);
-                        system("pause");
-                        break;
-                    case 5:
-                        system("cls");
-                        imprimirContenidoArchivo(nombreArchivo);
-                        system("pause");
-                        Menu_Principal(listaPersonas);
-                        system("pause");
-                        break;
-                    case 6:
-                        system("cls");
-                        Menu_Extras(listaPersonas);
-                        system("pause");
-                        break;
-                    case 7:
-                        system("cls");
-                        std::cout << "Gracias por usar el programa. Hasta luego!\n";
-                        aux = false;
-                        break;
-                }
-        } while (aux);
+    do {
+        menuSeleccion(titulo,opciones, numeroOpciones, selec);
+        switch (selec) {
+            case 1:
+                system("cls");
+                Menu_Usuario(listaPersonas);
+                system("pause");
+                break;
+            case 2:
+                system("cls");
+                Menu_Cuenta(listaPersonas);
+                system("pause");
+                break;
+            case 3:
+                system("cls");
+                Menu_Movimientos();
+                system("pause");
+                break;
+            case 4:
+                system("cls");
+                Menu_Credito(listaPersonas);
+                system("pause");
+                break;
+            case 5:
+                system("cls");
+                imprimirContenidoArchivo(nombreArchivo);
+                system("pause");
+                Menu_Principal(listaPersonas);
+                system("pause");
+                break;
+            case 6:
+                system("cls");
+                Menu_Extras(listaPersonas);
+                system("pause");
+                break;
+            case 7:
+                system("cls");
+                std::cout << "Gracias por usar el programa. Hasta luego!\n";
+                aux = false;
+                break;
+            }
+    } while (aux);
 }
 
 void Menus::Menu_Usuario(ListaDoble<Persona*> &listaPersonas) {
-validaciones valida;
+    validaciones valida;
     Persona persona;
     std::string nombreArchivo2 = "Personas.txt";
     std::string ultimoIdUtilizado = Persona::obtenerUltimoIdUtilizado(nombreArchivo2);
@@ -160,8 +161,9 @@ validaciones valida;
         "\t\t[1]REGISTRAR PERSONA",
         "\t\t[2]LISTADO DE PERSONAS",
         "\t\t[3]ORDENAR",
-        "\t\t[4]SALIR"};
-    int numeroOpciones = 4;
+        "\t\t[4]ELIMINAR PERSONA",
+        "\t\t[5]SALIR"};
+    int numeroOpciones = 5;
     int selec = 1;
     do {
         menuSeleccion(titulo, opciones, numeroOpciones, selec);
@@ -178,25 +180,40 @@ validaciones valida;
                 Menu_Usuario(listaPersonas);
                 break;
             }
-            case 2:
+            case 2:{
                 system("cls");
                 persona.mostrarRegistroPersona();
                 system("pause");
                 Menu_Usuario(listaPersonas);
                 break;
-            case 3:
+            }
+            case 3:{
                 system("cls");
                 Menu_Ordenar(listaPersonas);
                 system("pause");
                 break;
-            case 4:
+            }
+            case 4:{
+                system("cls");
+                std::string cedulaAEliminar = valida.ingresar_numeros_como_string("Ingrese la cedula de la persona que desea eliminar: ");
+                if (!cedulaAEliminar.empty()) {
+                    Persona personaEliminar;
+                    if (personaEliminar.eliminarPersona(cedulaAEliminar)) {
+                    }
+                }
+                system("pause");
+                break;
+            }
+            case 5:{
                 system("cls");
                 Menu_Principal(listaPersonas);
                 system("pause");
                 break;
+            }
         }
     } while (aux);
 }
+
 void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
     Persona persona;
     bool aux = true;
@@ -270,10 +287,12 @@ void Menus::Menu_Ordenar(ListaDoble<Persona*> &listaPersonas) {
                }
         } while (aux);
 }
+
 void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     Cuenta cuenta;
     Persona persona;
     Movimientos movimiento;
+    validaciones validar;
     bool aux = true;
     const char *titulo ="\t\tCUENTAS DE CLIENTES";
     const char *opciones[] =
@@ -282,9 +301,10 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
     "\t\t[2]MOVIMIENTOS",
     "\t\t[3]BUSCAR CUENTA",
     "\t\t[4]MOSTAR USUARIOS",
-    "\t\t[5]SALIR"
+    "\t\t[5]ELIMINAR CUENTA",
+    "\t\t[6]SALIR"
     };
-    int numeroOpciones = 5;
+    int numeroOpciones = 6;
     int selec = 1;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
@@ -304,20 +324,54 @@ void Menus::Menu_Cuenta(ListaDoble<Persona*> &listaPersonas) {
                         Menu_Movimientos();
                         break;
                         }
-                    case 3:
-                     {
+                    case 3: {
                         system("cls");
+                        std::string cedulaIngresada;
+                        cedulaIngresada = validar.ingresar_numeros_como_string("Ingrese el numero de cedula a buscar: ");
 
+                        // Aquí realizas la búsqueda en el árbol binario de búsqueda
+                        ArbolBinario arbol;
+                        // Leer el archivo y construir el árbol con las cédulas
+                        arbol.leerCedulas("Usuarios.txt");
 
-                        break;
+                        // Ahora que el árbol está construido, buscas la cédula ingresada
+                        std::cout << "\nCuentas encontradas para la cedula " << cedulaIngresada << ":" << std::endl;
+                        arbol.buscarCedula(cedulaIngresada, "Usuarios.txt");
+
+                        // Obtener y ordenar los números de cédula del archivo
+                        std::vector<std::string> cedulas = obtenerNumerosCedula("Usuarios.txt");
+                        // Ordenar las cédulas de manera ascendente
+                        std::sort(cedulas.begin(), cedulas.end());
+
+                        // Imprimir las cédulas con flechas "->"
+                        std::cout << "Cedulas encontradas ordenadas: ";
+                        for (size_t i = 0; i < cedulas.size(); ++i) {
+                            std::cout << cedulas[i];
+                            // Imprimir flecha "->" solo si no es la última cédula
+                            if (i < cedulas.size() - 1) {
+                                std::cout << " -> ";
+                            }
                         }
+                        // Nueva línea al final para separar las cédulas de la siguiente sección
+                        std::cout << std::endl;
+
+                        system("pause");
+                        break;
+                    }
                     case 4:
                         system("cls");
                         cuenta.mostrarDatosUsuarios("Usuarios.txt");
                         system("pause");
                         Menu_Cuenta(listaPersonas);
                         break;
-                    case 5:
+                    case 5: {
+                        system("cls");
+                        std::string cedulaAEliminar = validar.ingresar_numeros_como_string("\nIngrese la cedula del usuario a eliminar: ");
+                        movimiento.eliminarUsuario(cedulaAEliminar);
+                        system("pause");
+                        break;
+                    }
+                    case 6:
                         system("cls");
                         Menu_Principal(listaPersonas);
                         break;
@@ -342,11 +396,10 @@ void Menus::Menu_Movimientos(){
     "\t\t[2]RETIRAR",
     "\t\t[3]PAGO AUTOMATICO",
     "\t\t[4]BUSCAR TABLA",
-    "\t\t[5]ELIMINAR",
-    "\t\t[6]SALIR"
+    "\t\t[5]SALIR"
     };
 
-    int numeroOpciones = 6;
+    int numeroOpciones = 5;
     int selec = 1;
     do{
     menuSeleccion(titulo,opciones, numeroOpciones, selec);
@@ -384,13 +437,6 @@ void Menus::Menu_Movimientos(){
                         break;
                         }
                     case 5:
-                    {
-                        system("cls");
-                        system("pause");
-                        break;
-                    }
-
-                    case 6:
                         system("cls");
                         Menu_Principal(listaPersonas);
                         break;

@@ -20,6 +20,10 @@ private:
         ListaDoble<double>* retiros;
         ListaDoble<Fecha>* fecha_de_pago;
         ListaDoble<double>* monto;
+        bool eliminarArchivo(const std::string& rutaArchivo);
+        bool eliminarDirectorio(const std::string& rutaDirectorio);
+        bool eliminarUsuarioDeArchivo(const std::string& cedulaAEliminar);
+        bool tieneDeudaPendiente(const std::string& cedula);
 
 public:
     Movimientos(); 
@@ -57,6 +61,8 @@ public:
     void actualizarMontoDeudaEnTablaOriginal(const std::string& , double );
     void guardarPosicionActual(const std::string& cedula, size_t posicion);
     int cargarPosicionActual(const std::string& cedula);
+    void eliminarUsuario(const std::string& cedula);
+    bool validarNuevoCredito(const std::string& cedula);
   };
 
 #endif

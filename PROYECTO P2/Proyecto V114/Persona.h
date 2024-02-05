@@ -45,6 +45,7 @@ public:
    static std::string obtenerUltimoIdUtilizado(const std::string& nombreArchivo2);
    Persona cargarDesdeArchivo(const std::string& nombreArchivo, const std::string& cedulaBuscar) const;
    void ordenarEnArchivo(const std::string& nombreArchivo, bool (*criterio)(Persona, Persona));
+   bool eliminarPersona(const std::string& cedula);
 
 
 protected:
@@ -53,6 +54,7 @@ private:
    std::string Apellido;
    std::string Cedula;
    std::string Id;
+   bool existeEnUsuarios(const std::string& cedula);
 
 };
 

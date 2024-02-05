@@ -1,0 +1,8 @@
+Fecha de Creacion: 05/02/2024
+Cedula/CI: 0504345927
+Cliente: Josue Isaac Marin Alquinga
+ID de Cliente: 000001
+No.Cuenta Cliente: 0091
+Monto de Deuda: 0
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

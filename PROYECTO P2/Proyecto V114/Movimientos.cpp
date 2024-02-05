@@ -387,7 +387,7 @@ void Movimientos::pagoAutomatico(const std::string& cedula, bool pagoTotal) {
     std::ifstream archivoMovimientosLectura(rutaArchivoMovimientos);
 
     if (!archivoMovimientosLectura.is_open()) {
-        std::cerr << "Error al abrir el archivo de Movimientos para lectura." << std::endl;
+        std::cerr << "\nError al abrir el archivo de Movimientos para lectura." << std::endl;
         return;
     }
 
@@ -431,7 +431,7 @@ vector<DatosTabla> Movimientos::obtenerDatosTabla(const string& cedula) {
     ifstream archivo(rutaTabla);
 
     if (!archivo.is_open()) {
-        cerr << "Error al abrir el archivo de la tabla: " << rutaTabla << endl;
+        cerr << "\nError al abrir el archivo de la tabla: " << rutaTabla << endl;
         return datosTabla;
     }
 
@@ -455,7 +455,7 @@ vector<DatosTabla> Movimientos::obtenerDatosTabla(const string& cedula) {
         if (datos.numero > 0 && datos.cuotaFija >= 0 && datos.pagoCapital >= 0 && datos.interes >= 0 && datos.saldoCapital >= 0) {
             datosTabla.push_back(datos);
         } else {
-            cerr << "Error: Datos inconsistentes en la linea: " << linea << endl;
+            cerr << "\nError: Datos inconsistentes en la linea: " << linea << endl;
         }
     }
 
@@ -472,7 +472,7 @@ void Movimientos::imprimirPagoUnitario(const std::string& cedula) {
 
     // Verificar si hay datos en la tabla original
     if (datosTablaOriginal.empty()) {
-        std::cerr << "Error: No se encontraron datos en la tabla original." << std::endl;
+        std::cerr << "\nError: No se encontraron datos en la tabla original." << std::endl;
         return;
     }
 
@@ -483,7 +483,7 @@ void Movimientos::imprimirPagoUnitario(const std::string& cedula) {
     }
     std::ofstream archivoMovimientos("Movimientos/" + cedula + ".txt", std::ios::app);
                             if (!archivoMovimientos.is_open()) {
-                                std::cerr << "Error al abrir el archivo de movimientos." << std::endl;
+                                std::cerr << "\nError al abrir el archivo de movimientos." << std::endl;
                                 return;
                             }
     // Obtener el dato actual de la tabla original
@@ -512,7 +512,7 @@ void Movimientos::guardarPosicionActual(const std::string& cedula, size_t posici
 
     std::ofstream archivoPosicion("Movimientos/posicion_" + cedula + ".txt");
     if (!archivoPosicion.is_open()) {
-        std::cerr << "Error al abrir el archivo de posición." << std::endl;
+        std::cerr << "\nError al abrir el archivo de posición." << std::endl;
         return;
     }
 
@@ -539,7 +539,7 @@ void Movimientos::imprimirPagototal(const std::string& cedula) {
 
     // Verificar si hay datos en la tabla original
     if (datosTabla.empty()) {
-        std::cerr << "Error: No se encontraron datos en la tabla original." << std::endl;
+        std::cerr << "\nError: No se encontraron datos en la tabla original." << std::endl;
         return;
     }
 
@@ -551,7 +551,7 @@ void Movimientos::imprimirPagototal(const std::string& cedula) {
     int ancho_fecha = 20, ancho_deposito = 10, ancho_retiro = 10, ancho_saldo = 10, ancho_interes = 10;
 
     if (!archivoMovimientos.is_open()) {
-        std::cerr << "Error al abrir el archivo de movimientos." << std::endl;
+        std::cerr << "\nError al abrir el archivo de movimientos." << std::endl;
         return;
     }
 
@@ -574,12 +574,12 @@ void Movimientos::imprimirPagototal(const std::string& cedula) {
 
     // Cierra el archivo
     archivoMovimientos.close();
+    actualizarMontoDeudaEnTablaOriginal(cedula, 0.0);
 
     // Actualizar la posición actual en el archivo
     guardarPosicionActual(cedula, datosTabla.size());
     // Mostrar los movimientos actualizados
     mostrarMovimientosPorCedula(cedula);
-    actualizarMontoDeudaEnTablaOriginal(cedula, 0.0);
 }
 
 void Movimientos::actualizarMontoDeudaEnTablaOriginal(const std::string& cedula, double montoDeudaActualizado) {
@@ -590,7 +590,7 @@ void Movimientos::actualizarMontoDeudaEnTablaOriginal(const std::string& cedula,
     archivoLectura.open(rutaArchivo);
 
     if (!archivoLectura.is_open()) {
-        std::cerr << "Error al abrir el archivo para lectura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para lectura." << std::endl;
         return;
     }
 
@@ -624,7 +624,7 @@ void Movimientos::actualizarMontoDeudaEnTablaOriginal(const std::string& cedula,
     archivoEscritura.open(rutaArchivo);
 
     if (!archivoEscritura.is_open()) {
-        std::cerr << "Error al abrir el archivo para escritura." << std::endl;
+        std::cerr << "\nError al abrir el archivo para escritura." << std::endl;
         return;
     }
 
@@ -633,36 +633,155 @@ void Movimientos::actualizarMontoDeudaEnTablaOriginal(const std::string& cedula,
     archivoEscritura.close();
 }
 
-/*void Movimientos::imprimirDatosTabla(const std::string& cedula) {
-    std::vector<DatosTabla> datosTabla = obtenerDatosTabla(cedula);
+void Movimientos::eliminarUsuario(const std::string& cedula) {
+    // Verificar si el usuario tiene deuda pendiente
+    if (tieneDeudaPendiente(cedula)) {
+        std::cout << "\nEl usuario tiene deuda pendiente y no puede ser eliminado." << std::endl;
+        return;
+    }
 
-    // Imprime encabezados
-    printf("\n");
-    std::cout << std::setw(12) << "FECHA";
-    std::cout << std::setw(15) << "DEPOSITO";
-    std::cout << std::setw(15) << "RETIRO";
-    std::cout << std::setw(15) << "SALDO";
-    std::cout << std::setw(15) << "INTERES\n";
+    // Construir las rutas de los archivos y directorios asociados al usuario
+    std::string rutaDatos = "DATOS/" + cedula + "tabla.txt";
+    std::string rutaMovimientos = "Movimientos/" + cedula + ".txt";
+    std::string rutaPrestamos = "Prestamos/" + cedula + ".txt";
 
-    // Imprime la línea horizontal
-    std::cout << std::setfill('-') << std::setw(95) << "" << std::setfill(' ') << std::endl;
+    // Eliminar los archivos asociados al usuario
+    eliminarArchivo(rutaDatos);
+    eliminarArchivo(rutaMovimientos);
+    eliminarArchivo(rutaPrestamos);
 
-    double saldo = 0; // Inicializar el saldo
-    // Imprime los datos
-    for (const DatosTabla& datos : datosTabla) {
-        double deposito = datos.cuotaFija;
-        double retiro = datos.cuotaFija;
-        double interes = datos.interes;
+    // Eliminar el directorio asociado al usuario
+    std::string rutaDirectorioUsuario = "DATOS/" + cedula;
+    eliminarDirectorio(rutaDirectorioUsuario);
+    eliminarUsuarioDeArchivo(cedula);
+}
 
-        saldo += deposito - retiro;
+bool Movimientos::eliminarArchivo(const std::string& rutaArchivo) {
+    if (remove(rutaArchivo.c_str()) != 0) {
+        std::cerr << "\nError al eliminar el archivo " << rutaArchivo << std::endl;
+        return false;
+    }
+    std::cout << "\nArchivo " << rutaArchivo << " eliminado correctamente." << std::endl;
+    return true;
+}
 
-        std::cout << std::setw(12) << datos.fechaPago;
-        std::cout << std::setw(15) << deposito;
-        std::cout << std::setw(15) << retiro;
-        std::cout << std::setw(15) << saldo;
-        std::cout << std::setw(15) << interes << "\n";
+bool Movimientos::eliminarDirectorio(const std::string& rutaDirectorio) {
+    if (rmdir(rutaDirectorio.c_str()) != 0) {
+        std::cerr << "\nError al eliminar el directorio " << rutaDirectorio << std::endl;
+        return false;
+    }
+    std::cout << "\nDirectorio " << rutaDirectorio << " eliminado correctamente." << std::endl;
+    return true;
+}
+
+bool Movimientos::eliminarUsuarioDeArchivo(const std::string& cedulaAEliminar) {
+    std::string nombreArchivo = "Usuarios.txt";
+
+    // Abrir el archivo de Usuarios.txt para lectura
+    std::ifstream archivoEntrada(nombreArchivo);
+    if (!archivoEntrada.is_open()) {
+        std::cerr << "\nError al abrir el archivo Usuarios.txt para lectura." << std::endl;
+        return false;
+    }
+
+    // Leer todo el contenido del archivo línea por línea y almacenarlo en un vector
+    std::vector<std::string> lineasArchivo;
+    std::string linea;
+    while (std::getline(archivoEntrada, linea)) {
+        // Si la línea no contiene la cédula a eliminar, agrégala al vector
+        if (linea.find(cedulaAEliminar) == std::string::npos) {
+            lineasArchivo.push_back(linea);
+        }
+    }
+    archivoEntrada.close();
+
+    // Abrir el archivo de Usuarios.txt para escritura (truncar el archivo)
+    std::ofstream archivoSalida(nombreArchivo, std::ios::trunc);
+    if (!archivoSalida.is_open()) {
+        std::cerr << "\nError al abrir el archivo Usuarios.txt para escritura." << std::endl;
+        return false;
+    }
+
+    // Escribir todas las líneas excepto la del usuario a eliminar
+    for (const std::string& linea : lineasArchivo) {
+        archivoSalida << linea << std::endl;
+    }
+    archivoSalida.close();
+
+    std::cout << "\nUsuario con cedula " << cedulaAEliminar << " eliminado correctamente del archivo Usuarios.txt." << std::endl;
+    return true;
+}
+
+bool Movimientos::tieneDeudaPendiente(const std::string& cedula) {
+    // Lógica para verificar si el usuario tiene deuda pendiente
+    std::string rutaArchivoMovimientos = "Movimientos/" + cedula + ".txt";
+
+    // Abrir el archivo de Movimientos para lectura
+    std::ifstream archivoMovimientosLectura(rutaArchivoMovimientos);
+
+    if (!archivoMovimientosLectura.is_open()) {
+        std::cerr << "\nError al abrir el archivo de Movimientos para lectura." << std::endl;
+        return false;
+    }
+
+    // Variable para almacenar el monto de deuda
+    double montoDeuda = 0.0;
+
+    // Leer el contenido de Movimientos y obtener el monto de deuda
+    std::string linea;
+    while (std::getline(archivoMovimientosLectura, linea)) {
+        size_t pos = linea.find("Monto de Deuda:");
+        if (pos != std::string::npos) {
+            montoDeuda = std::stod(linea.substr(pos + 15));  // Longitud de "Monto de Deuda: "
+            break;  // Salir del bucle si se encuentra el monto de deuda
+        }
+    }
+
+    archivoMovimientosLectura.close();
+
+    // Verificar si hay una deuda mayor a 0
+    if (montoDeuda > 0.0) {
+        return true; // El usuario tiene deuda pendiente
+    }
+
+    return false; // El usuario no tiene deuda pendiente
+}
+
+bool Movimientos::validarNuevoCredito(const std::string& cedula) {
+    // Ruta del archivo de Movimientos
+    std::string rutaArchivoMovimientos = "Movimientos/" + cedula + ".txt";
+
+    // Abrir el archivo de Movimientos para lectura
+    std::ifstream archivoMovimientosLectura(rutaArchivoMovimientos);
+
+    if (!archivoMovimientosLectura.is_open()) {
+        std::cerr << "\nError al abrir el archivo de Movimientos para lectura." << std::endl;
+        return false;
+    }
+
+    // Variable para almacenar el monto de deuda
+    double montoDeuda = 0.0;
+
+    // Leer el contenido de Movimientos y obtener el monto de deuda
+    std::string linea;
+    while (std::getline(archivoMovimientosLectura, linea)) {
+        size_t pos = linea.find("Monto de Deuda:");
+        if (pos != std::string::npos) {
+            montoDeuda = std::stod(linea.substr(pos + 15));  // Longitud de "Monto de Deuda: "
+            break;  // Salir del bucle si se encuentra el monto de deuda
+        }
+    }
+
+    archivoMovimientosLectura.close();
+
+    // Verificar si hay una deuda mayor a 0
+    if (montoDeuda > 0.0) {
+        std::cout << "\nNo puede realizar un nuevo ingreso de credito. Tiene una deuda pendiente de: " << montoDeuda << std::endl;
+        return false;
+    } else {
+        std::cout << "\nPuede realizar un nuevo ingreso de credito." << std::endl;
+        return true;
     }
 }
 
-}*/
 

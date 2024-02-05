@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V113",
-      "program": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V113/build/Debug/outDebug",
+      "cwd": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114",
+      "program": "c:/GitRepos/-JYM-PROYECTO-ESTRUCTURA/PROYECTO P2/Proyecto V114/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
