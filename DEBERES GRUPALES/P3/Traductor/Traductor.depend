@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1708207031 source:d:\espe\-jym-proyecto-estructura\deberes grupales\p3\traductor\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<string.h>
+	<iostream>
+
