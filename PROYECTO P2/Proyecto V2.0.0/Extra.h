@@ -29,6 +29,8 @@ void imprimirRespaldos(const std::vector<std::string>& respaldos);
 std::vector<std::string> listarArchivosTXT(const std::string& carpeta);
 void imprimirArchivosTXT(const std::vector<std::string>& archivos);
 void createBackupRegistro(const std::string& );
+std::vector<std::string> listarArchivosTXT1(const std::string& carpeta);
+    void restaurarRespaldo1(const std::string& nombreArchivo, const std::string& archivoRespaldo);
 
 
 #endif // EXTRAS_H

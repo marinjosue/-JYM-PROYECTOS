@@ -1,10 +1,10 @@
-/***********************************************************************
+/*************************
  UFA - ESPE
  * Module:  Extra.cpp
  * Author:  Chiliquinga Yeshua, Marin Alquinga,Salcedo Micaela
  * Modified: domingo, 4 de enero de 2024
  * Purpose: Implementation of the class Extra
- ***********************************************************************/
+ *************************/
 
 #include "Extra.h"
 #include <iostream>
@@ -64,7 +64,7 @@ void createBackupRegistro(const std::string& cedula) {
     // Crear la carpeta de respaldo
     createBackupFolder("Prestamos");
 
-   // Copiar el archivo a la carpeta de respaldo con el nombre de la c�dula ingresada
+   // Copiar el archivo a la carpeta de respaldo con el nombre de la c dula ingresada
     std::ifstream srcFile("tabla_amortizacion.txt", std::ios::binary);
     std::ofstream dstFile("Prestamos/" + cedula + ".txt", std::ios::binary);
     dstFile << srcFile.rdbuf();
@@ -105,7 +105,7 @@ void restaurarDesdeBackup(const std::string& archivoOriginal, const std::string&
     // Copiar el contenido del archivo de respaldo al archivo original
     archivoOriginalStream << archivoBackupStream.rdbuf();
 
-    std::cout << "Restauraci�n completada con �xito." << std::endl;
+    std::cout << "Restauraci n completada con  xito." << std::endl;
 
     // Cerrar los archivos
     archivoOriginalStream.close();
@@ -163,6 +163,32 @@ void restaurarRespaldo(const std::string& nombreArchivo, const std::string& arch
 
     std::cout << "El respaldo '" << archivoRespaldo << "' ha sido restaurado correctamente en '" << nombreArchivo << "'." << std::endl;
 }
+
+void restaurarRespaldo1(const std::string& nombreArchivo, const std::string& archivoRespaldo) {
+    std::string carpetaRespaldos = "Movimiento/";
+    std::string rutaArchivoOriginal = nombreArchivo;
+
+    std::string rutaRespaldo = carpetaRespaldos + archivoRespaldo + ".txt";
+
+    std::ifstream respaldo(rutaRespaldo);
+    std::ofstream archivoOriginal(rutaArchivoOriginal);
+    if (!respaldo.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo de respaldo '" << rutaRespaldo << "'" << std::endl;
+        return;
+    }
+
+    if (!archivoOriginal.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo original '" << rutaArchivoOriginal << "'" << std::endl;
+        respaldo.close();
+        return;
+    }
+
+    archivoOriginal << respaldo.rdbuf(); // Copiar contenido del respaldo al archivo original
+    respaldo.close();
+    archivoOriginal.close();
+
+    std::cout << "El respaldo '" << archivoRespaldo << "' ha sido restaurado correctamente en '" << nombreArchivo << "'." << std::endl;
+}
 void imprimirRespaldos(const std::vector<std::string>& respaldos) {
     if (respaldos.empty()) {
         std::cout << "No hay respaldos disponibles." << std::endl;
@@ -199,12 +225,36 @@ std::vector<std::string> listarArchivosTXT(const std::string& carpeta) {
 
 void imprimirArchivosTXT(const std::vector<std::string>& archivos) {
     if (archivos.empty()) {
-        std::cout << "No hay archivos TXT disponibles en la carpeta 'backup'." << std::endl;
+        std::cout << "No hay archivos TXT disponibles en la carpeta " << std::endl;
     } else {
-        std::cout << "Archivos TXT disponibles en la carpeta 'backup':" << std::endl;
+        std::cout << "Archivos TXT disponibles en la carpeta :" << std::endl;
 
         for (const std::string& archivo : archivos) {
             std::cout << archivo << std::endl;
         }
     }
+}
+
+
+std::vector<std::string> listarArchivosTXT1(const std::string& carpeta) {
+    std::vector<std::string> archivosTXT;
+    // Modificamos la expresión regular para aceptar el formato "cedula.txt"
+    std::regex formato("cedula\\.txt");
+
+    DIR* dir;
+    struct dirent* ent;
+
+    if ((dir = opendir(carpeta.c_str())) != nullptr) {
+        while ((ent = readdir(dir)) != nullptr) {
+            std::string filename = ent->d_name;
+            if (std::regex_search(filename, formato)) {
+                archivosTXT.push_back(filename);
+            }
+        }
+        closedir(dir);
+    } else {
+        std::cerr << "No se pudo abrir la carpeta '" << carpeta << "'" << std::endl;
+    }
+
+    return archivosTXT;
 }

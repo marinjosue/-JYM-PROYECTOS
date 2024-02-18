@@ -543,6 +543,7 @@ void Menus::Menu_Credito(ListaDoble<Persona*> listaPersonas) {
                    case 1:
                         system("cls");
                         tabla.ingresar_datos_credito();
+                        system("pause");
                         menu.Menu_Credito(listaPersonas);
                         break;
                     case 2:
@@ -579,14 +580,7 @@ validaciones valida;
           case 1:
            {
                 system("cls");
-                std::cout << "\nArchivos TXT en la carpeta 'backup':" << std::endl;
-                std::vector<std::string> archivos = listarArchivosTXT("backup");
-                imprimirArchivosTXT(archivos);
-                std::cout << "\nIngrese el nombre del archivo a restaurar: " << std::endl;
-                std::string archivoRespaldo;
-                std::cin >> archivoRespaldo;
-                listarRespaldos(archivoRespaldo);
-                restaurarRespaldo(archivoOriginal, archivoRespaldo);
+                Menu_Restaurar(listaPersonas);
                 system("pause");
                 break;
              }
@@ -615,7 +609,64 @@ validaciones valida;
     } while (aux);
 }
 
+void Menus::Menu_Restaurar(ListaDoble<Persona*> listaPersonas) {
 
+validaciones valida;
+    bool aux = true;
+    Imagen img("foto.bmp");
+    std::string archivoOriginal = "tabla_amortizacion.txt";
+    const char *titulo = "\t\tMENU EXTRAS:";
+    const char *opciones[] =
+    {
+        "\t\t[1]USUARIOS",
+        "\t\t[2]AMORTIZACION",
+        "\t\t[3]SALIR"
+    };
+    int numeroOpciones = 3;
+    int selec = 1;
+    do {
+        menuSeleccion(titulo, opciones, numeroOpciones, selec);
+        switch (selec) {
+
+          case 1:
+           {
+                system("cls");
+                std::cout << "\nArchivos TXT en la carpeta 'backup':" << std::endl;
+                std::vector<std::string> archivos = listarArchivosTXT1("Movimientos");
+                imprimirArchivosTXT(archivos);
+                std::cout << "\nIngrese el nombre del archivo a restaurar: " << std::endl;
+                std::string archivoRespaldo;
+                std::cin >> archivoRespaldo;
+                listarRespaldos(archivoRespaldo);
+                restaurarRespaldo1(archivoOriginal, archivoRespaldo);
+                system("pause");
+                break;
+             }
+             case 2:
+           {
+                system("cls");
+                std::cout << "\nArchivos TXT en la carpeta 'backup':" << std::endl;
+                std::vector<std::string> archivos = listarArchivosTXT("backup");
+                imprimirArchivosTXT(archivos);
+                std::cout << "\nIngrese el nombre del archivo a restaurar: " << std::endl;
+                std::string archivoRespaldo;
+                std::cin >> archivoRespaldo;
+                listarRespaldos(archivoRespaldo);
+                restaurarRespaldo(archivoOriginal, archivoRespaldo);
+                system("pause");
+                break;
+             }
+             case 3:
+                 {
+                system("cls");
+                Menu_Extras(listaPersonas);
+                system("pause");
+                break;
+                 }
+            
+        }
+    } while (aux);
+}
 
 
 

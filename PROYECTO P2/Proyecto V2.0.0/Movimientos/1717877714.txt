@@ -1,0 +1,8 @@
+Fecha de Creacion: 05/02/2024
+Cedula/CI: 1717877714
+Cliente: Mayorista Pavin Xoer Roder
+ID de Cliente: 000005
+No.Cuenta Cliente: 0091212121213
+Monto de Deuda: 0
+|FECHA Y HORA        |DEPOSITOS |RETIROS   | SALDO    |
+========================================================

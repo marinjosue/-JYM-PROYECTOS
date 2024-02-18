@@ -471,70 +471,66 @@ Persona Persona::cargarDesdeArchivo(const std::string& nombreArchivo, const std:
 }
 
 
-// Función para eliminar una persona del archivo Personas.txt
 bool Persona::eliminarPersona(const std::string& cedula) {
-        // Verificar si la cédula está presente en Usuarios.txt
-        if (existeEnUsuarios(cedula)) {
-            std::cout << "\nLa cedula esta presente en Usuarios.txt. No se puede eliminar la persona.\n";
-            return false;
+    // Verificar si la cédula está presente en Usuarios.txt
+    if (existeEnUsuarios(cedula)) {
+        std::cout << "\nLa cedula esta presente en Usuarios.txt. No se puede eliminar la persona.\n";
+        return false;
+    }
+
+    // Eliminar la persona del archivo Personas.txt
+    std::ifstream archivoEntrada("Personas.txt");
+    std::vector<std::string> lineasArchivo;
+
+    if (!archivoEntrada.is_open()) {
+        std::cerr << "\nError al abrir el archivo Personas.txt para lectura.\n";
+        return false;
+    }
+
+    std::string linea;
+    while (std::getline(archivoEntrada, linea)) {
+        // Si la línea no contiene la cédula a eliminar, agrégala al vector
+        if (linea.find(cedula) == std::string::npos) {
+            lineasArchivo.push_back(linea);
         }
+    }
+    archivoEntrada.close();
 
-        // Eliminar la persona del archivo Personas.txt
-        std::ifstream archivoEntrada("Personas.txt");
-        std::vector<std::string> lineasArchivo;
+    // Escribir todas las líneas excepto la del usuario a eliminar
+    std::ofstream archivoSalida("Personas.txt", std::ios::trunc);
+    if (!archivoSalida.is_open()) {
+        std::cerr << "\nError al abrir el archivo Personas.txt para escritura.\n";
+        return false;
+    }
 
-        if (!archivoEntrada.is_open()) {
-            std::cerr << "\nError al abrir el archivo Personas.txt para lectura.\n";
-            return false;
-        }
+    for (const std::string& linea : lineasArchivo) {
+        archivoSalida << linea << std::endl;
+    }
+    archivoSalida.close();
 
-        std::string linea;
-        while (std::getline(archivoEntrada, linea)) {
-            // Si la línea no contiene la cédula a eliminar, agrégala al vector
-            if (linea.find(cedula) == std::string::npos) {
-                lineasArchivo.push_back(linea);
-            }
-        }
-        archivoEntrada.close();
-
-        // Escribir todas las líneas excepto la del usuario a eliminar
-        std::ofstream archivoSalida("Personas.txt", std::ios::trunc);
-        if (!archivoSalida.is_open()) {
-            std::cerr << "\nError al abrir el archivo Personas.txt para escritura.\n";
-            return false;
-        }
-
-        for (const std::string& linea : lineasArchivo) {
-            archivoSalida << linea << std::endl;
-        }
-        archivoSalida.close();
-
-        std::cout << "\nPersona con cedula " << cedula << " eliminada correctamente de Personas.txt.\n";
-        return true;
+    std::cout << "\nPersona con cedula " << cedula << " eliminada correctamente de Personas.txt.\n";
+    return true;
 }
 
-// Función para verificar si la cédula está presente en Usuarios.txt
 bool Persona::existeEnUsuarios(const std::string& cedula) {
-        std::ifstream archivoUsuarios("Usuarios.txt");
-        std::string cedulaArchivo;
+    std::ifstream archivoUsuarios("Usuarios.txt");
+    std::string cedulaArchivo;
 
-        if (archivoUsuarios.is_open()) {
-            while (archivoUsuarios >> cedulaArchivo) {
-                // Comparar la cédula actual con la cédula ingresada
-                if (cedula == cedulaArchivo) {
-                    archivoUsuarios.close();
-                    return true;  // La cédula existe en Usuarios.txt
-                }
-
-                // Leer los otros campos (nombre, etc.) y descartarlos
-                archivoUsuarios >> cedulaArchivo;  // nombre
-                archivoUsuarios >> cedulaArchivo;  // apellido
-                archivoUsuarios >> cedulaArchivo;  // id
+    if (archivoUsuarios.is_open()) {
+        while (archivoUsuarios >> cedulaArchivo) {
+            // Comparar la cédula actual con la cédula ingresada
+            if (cedula == cedulaArchivo) {
+                archivoUsuarios.close();
+                return true;  // La cédula existe en Usuarios.txt
             }
-            archivoUsuarios.close();
-        } else {
-            std::cerr << "El archivo Usuarios.txt no existe.\n";
-        }
 
-        return false;  // La cédula no existe en Usuarios.txt
+            // Leer y descartar los otros campos (nombre, apellido, id)
+            archivoUsuarios.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        archivoUsuarios.close();
+    } else {
+        std::cerr << "El archivo Usuarios.txt no existe.\n";
+    }
+
+    return false;  // La cédula no existe en Usuarios.txt
 }

@@ -24,5 +24,6 @@ public:
     void Menu_Movimientos();
     void Menu_PagoAutomatico();
     void Menu_Ordenar(ListaDoble<Persona*> &listaPersonas);
+    void Menu_Restaurar(ListaDoble<Persona*> listaPersonas);
 };
 #endif // MENU_H
