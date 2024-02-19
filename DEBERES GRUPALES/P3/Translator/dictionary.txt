@@ -1,6 +1,1962 @@
-hola:hello,hi
+abajo:down
+abeja:bee
+abierto:open
+abandonar:abandon
+abierto:open
+abogado:lawyer
+abril:april
+abuela:grandmother
+abundante:abundant
+aceptación:acceptance
+accidente:accident
+acompañar:accompany
+acontecimiento:event
+acordar:agree
+actividad:activity
+actor:actor
+actriz:actress
+actual:current
+acuario:aquarium
+adicción:addiction
 adiós:goodbye
+administración:administration
+admiración:admiration
+adolescente:teenager
+adoptar:adopt
+adquirir:acquire
+aéreo:aerial
+afecto:affection
+afición:hobby
+afirmar:affirm
+afrontar:face
+agendar:schedule
+agradecimiento:gratitude
+agricultura:agriculture
+agua:water
+agujero:hole
+ajustar:adjust
+alarma:alarm
+albañil:mason
+alcanzar:reach
+alcohol:alcohol
+aldea:village
+alergia:allergy
+alfombra:carpet
+algodón:cotton
+alianza:alliance
+alimentar:feed
+alimento:food
+alma:soul
+almacén:warehouse
+alrededor:around
+alto:tall
+altura:height
+amanecer:sunrise
+amar:love
+amasar:knead
+ambición:ambition
+amigo:friend
+amistad:friendship
+ayuda:help
+avión:aereoplane
+arbol:tree
+arroz:rice
+azul:blue
+ave:bird
+atras:beckward
+asno:ass
+aprobar:approve
+aqui:here
+arte:art
+bailar:dance
+bajo:low
+banco:bank
+banda:band
+baño:bathroom
+bar:bar
+barco:boat
+barato:cheap
+barba:beard
+besar:kiss
+biblioteca:library
+bicicleta:bicycle
+bien:good
+blanco:white
+boca:mouth
+bola:ball
+bonito:pretty
+bosque:forest
+botella:bottle
+brazo:arm
+breve:brief
+brillante:bright
+broma:joke
+bruja:witch
+bueno:good
+buscar:look for
+autobús:bus
+beber:drink
+belleza:beauty
+billete:ticket
+biología:biology
+bizcocho:cake
+bloque:block
+blusa:blouse
+bocadillo:sandwich
+borrar:erase
+borde:edge
+borrar:delete
+bote:can
+brócoli:broccoli
+búho:owl
+buscar:search
+buzón:mailbox
+banco:bank
+banda:band
+bañador:bathe
+bañar:wash
+barbilla:point of chin
+barriga:belly
+barril:barrel
+barrio:quarter
+barro:caly
+bebida:drink
+bello:handsome
+biblia:bible
+bicicleta:bicycle
+bicolor:of two colours
+billar:billiards
+bicho:insect
+bigote:moustache
+boca:mouth
+boda:wedding
+bolsa:bag
+bote:boat
+boxeo:boxing
+brasa:live coal
+breve:brief
+brillo:brighteness
+busca:search
+bulto:bulk
+caer:fall
+café:coffee
+caja:box
+calamar:squid
+caliente:hot
+calle:street
+cama:bed
+cambiar:change
+camisa:shirt
+caminar:walk
+campo:field
+canción:song
+cansado:tired
+cantar:sing
+cantidad:quantity
+cara:face
+carbón:coal
+cárcel:jail
+carne:meat
+carrera:race
+carro:car
+carta:letter
 casa:house
-perro:dog
+casi:almost
+castillo:castle
+catálogo:catalog
+causar:cause
+celebrar:celebrate
+cielo:sky
+cien:hundred
+cierto:certain
+ciudad:city
+claro:clear
+clase:class
+clima:climate
+coche:car
+cocina:kitchen
+coger:take
+collar:necklace
+color:color
+comer:eat
+comenzar:begin
+comida:food
+compañero:partner
+compañía:company
+comprar:buy
+comprender:understand
+computador:computer
+con:with
+concentrarse:concentrate
+concha:shell
+condición:condition
+conducir:drive
+conejo:rabbit
+conferencia:conference
+confesar:confess
+confianza:trust
+confundir:confuse
+congelar:freeze
+conocer:know
+conseguir:get
+consejo:advice
+contar:count
+continente:continent
+continuar:continue
+contra:against
+contrato:contract
+controlar:control
+conversar:talk
+convertir.convert
+convencer:convince
+copa:cup
+corazón:heart
+cortar:cut
+corto:short
+cosa:thing
+coser:sew
+costilla:rib
+costar:cost
+costumbre:habit
+crear:create
+crecer:grow
+crédito:credit
+creer:believe
+criminal:criminal
+cristal:glass
+cruzar:cross
+cuadro:painting
+cual:which
+cuando:when
+cuanto:how much
+cuarto:room
+cubrir:cover
+cuchara:spoon
+cuello:neck
+cuenta:bill
+cuento:story
+cuerno:horn
+cuerpo:body
+cueva:cave
+cuidado:care
+cuidar:take care of
+culpable:guilty
+cultivar:grow
+cultura:culture
+cumplir:fulfill
+curar:cure
+curiosidad:curiosity
+curso:course
+chaleco:vest
+champú:shampoo
+chance:chance
+charlar:chat
+chasis:chassis
+chef:chef
+cheque:check
+chicle:gum
+chiste:joke
+chocolate:chocolate
+chorro:stream
+chuleta:chop
+chupar:suck
+cháchara:chatter
+choza:hut
+chiquillo:kid
+chiripa:lucky break
+chistoso:funny
+chispa:spark
+choque:crash
+choncho:drunk
+chocante:shocking
+chisme:gossip
+chimenea:fireplace
+chinchar:annoy
+churro:churro
+chucho:dog
+cháchara:nonsense
+chocar:collide
+dador:giver
+bailar:dance
+debajo:under
+dedo:finger
+defender:defend
+dejar:leave
+delante:in front
+delantal:apron
+demasiado:too much
+demostrar:demonstrate
+dentadura:teeth
+departamento:department
+derecho:right
+desanimado:discouraged
+descansar:rest
+desayuno:breakfast
+desastre:disaster
+dibujar:draw
+diferente:different
+difícil:difficult
+dinero:money
+dirigir:direct
+disciplina:discipline
+discutir:argue
+disfrutar:enjoy
+divisar:glimpse
+dormir:sleep
+dolor:pain
+domingo:sunday
+domesticar:tame
+donar:donate
+duda:doubt
+durar:last
+durante:during
+dulce:sweet
+derecha:right
+deseo:desire
+deshacer:undo
+desierto:desert
+destacar:stand out
+detener:stop
+detalle:detail
+devolver:return
+día:day
+dibujar:draw
+dieciséis:sixteen
+diez:ten
+dificultad:difficulty
+dirigir:direct
+disfrutar:enjoy
+disfraz:costume
+divertido:funny
+división:division
+doblar:fold
+dolor:pain
+domesticar:tame
+donar:donate
+duda:doubt
+durar:last
+durante:during
+dulce:sweet
+duodécimo:twelfth
+duro:hard
+diario:diary
+dictar:to dictate
+diente:tooth
+diferente:different
+difícil:difficult
+digerir:to digest
+digital:digital
+diligente:diligent
+edad:age
+edificio:building
+editor:editor
+educación:education
+efecto:effect
+ejército:army
+el:the
+ella:she
+ellos:they
+embargo:embargo
+empezar:begin
+empacar:pack
+empresa:company
+en:in
+encima:above
+encontrar:find
+enemigo:enemy
+energía:energy
+enfrente:in front
+enfermo:sick
+entrada:entrance
+entrenar:train
+enviar:send
+época:epoch
+equipo:team
+escribir:write
+escuchar:listen
+escuela:school
+ese:that
+esperar:wait
+espejo:mirror
+esta:this
+estación:station
+estado:state
+estrella:star
+estela:wake
+estómago:stomach
+estudiar:study
+estilo:style
+etcétera:et cetera
+europeo:european
+evasión:evasion
+examen:exam
+éxito:success
+exacto:exact
+exagerar:exaggerate
+existir:exist
+experiencia:experience
+explicar:explain
+explosión:explosion
+expresar:express
+extender:extend
+exterior:exterior
+extrañar:miss
+extraño	strange
+elaborar:to elaborate
+elefante:elephant
+elegir:to choose
+eliminar:to eliminate
+ella:she
+embargo:embargo
+embellecer:to beautify
+empezar:to begin
+empinar:to raise
+empresa:company
+enajenar:to alienate
+enamorar:to fall in love
+encantar:to enchant
+encontrar:to find
+enemigo:enemy
+energía:energy
+enfadar:to anger
+enfermar:to get sick
+enfrentar:to face
+engañar:to deceive
+engordar:to gain weight
+fábrica:factory
+fácil:easy
+falda:skirt
+falta:lack
+familia:family
+famoso:famous
+fase:phase
+fatiga:fatigue
+favor:favor
+fe:faith
+fecha:date
+feliz:happy
+feo:ugly
+ferrocarril:railroad
+feroz:fierce
+ferretería:hardware store
+fiesta:party
+figura:figure
+filial:subsidiary
+filtro:filter
+fin:end
+final:final
+financiero:financial
+firme:firm
+flor:flower
+flota:fleet
+florero:vase
+florecer:to bloom
+flotar:to float
+flujo:flow
+fluido:fluid
+fobia:phobia
+folleto:brochure
+flotador:float
+flamante:brand new
+flácido:limp
+foco:focus
+fondo:fund
+forma:form
+formal:formal
+fortuna:fortune
+foto:photo
+fotógrafo:photographer
+frase:phrase
+fragancia:fragrance
+frágil:fragile
+francés:french
+frecuencia:frequency
+frente:front
+fresco:fresh
+frito:fried
+frontera:border
+fruta:fruit
+fuego:fire
+fuente:source
+fuerte:strong
+fumar:smoke
+función:function
+fundamental:fundamental
+furia:fury
+futuro:future
 gato:cat
-año:year
+gracias:thanks
+grande:big
+guardar:save
+gusto:taste
+general:general
+gobierno:government
+ganar:win
+gestión:management
+gasolina:gasoline
+grado:grade
+golpear:hit
+galleta:cookie
+grupo:group
+ganancia:gain
+guardarropa:wardrobe
+gigante:giant
+gemelo:twin
+gloria:glory
+gemas:gems
+gusano:worm
+gafas:glasses
+guía:guide
+grieta:crack
+granja:farm
+guante:glove
+gigantesco:gigantic
+guerra:war
+goma:rubber
+gracia:grace
+golpear:strike
+guapo:handsome
+guardia:guard
+gemido:groan
+gallina:hen
+gráfico:graphic
+golpe:blow
+global:global
+glotón:glutton
+gobernar:govern
+girar:turn
+grabar:record
+guardar:keep
+grano:grain
+gesto:gesture
+golondrina:swallow
+guardar:guard
+garantizar:guarantee
+golpe:hit
+grano:pimple
+gira:tour
+guión:script
+gas:gas
+grueso:thick
+genio:genius
+gasto:expense
+grito:scream
+gorra:cap
+grabación:recording
+gracioso:funny
+grave:serious
+gema:gem
+grueso:coarse
+guardabosques:ranger
+guerra:warfare
+gafas:glasses
+garantía:guarantee
+gorila:gorilla
+gol:goal
+guantelete:gauntlet
+grúa:crane
+gerente:manager
+galleta:biscuit
+guardarropa:cloakroom
+gozo:joy
+goteo:drip
+guisante pea
+gracioso:amusing
+glaseado:glaze
+gracia:wit
+grito:shout
+grandeza:greatness
+guardabosques:forest ranger
+gestión:handling
+gélido:icy
+galón:gallon
+gemelos:cufflinks
+granizado:slush
+gravitacional:gravitational
+gota:drop
+glorioso:glorious
+grava:gravel
+globo:globe
+guadaña:scythe
+genética:genetics
+hola:hello
+habilidad:ability
+hacer:do
+hablar:speak
+hogar:home
+huevo:egg
+hombre:man
+historia:history
+hermano:brother
+hijo:son
+hora:hour
+hotel:hotel
+hermoso:beautiful
+hambre:hunger
+hospital:hospital
+hacer:make
+herida:wound
+hábito:habit
+herencia:heritage
+habitación:room
+hijo:child
+hielo:ice
+hermosura:beauty
+historia:tale
+herir:wound
+horizontal:horizontal
+habitante:inhabitant
+hueco:hollow
+humano:human
+hombro:shoulder
+hito:milestone
+hormiga:ant
+horno:oven
+heroína:heroin
+hipótesis:hypothesis
+herencia:inheritance
+habilidad:skill
+húmedo:wet
+humilde:humble
+heroico:heroic
+hallar:find
+hondo:deep
+hierro:iron
+humo:smoke
+huella:footprint
+hostil:hostile
+hospitalidad:hospitality
+hacha:axe
+hostilidad:hostility
+helado:ice cream
+héroe:hero
+habituar:habituate
+harina:flour
+hoja:leaf
+hambre:famine
+hélice:propeller
+hectárea:hectare
+hipócrita:hypocrite
+habilidoso:skilled
+halcón:falcon
+halagar:flatter
+homenaje:tribute
+hematoma:bruise
+hueso:bone
+hojalata:tin
+hilar:spin
+holgazán:lazy
+heterogéneo:heterogeneous
+hilaridad:hilarity
+horizonte:horizon
+hélice:helix
+imagen:image
+insecto:insect
+isla:island
+innovación:innovation
+importante:important
+idea:idea
+internacional:international
+información:information
+inteligente:intelligent
+iglesia:church
+interesante:interesting
+inversión:investment
+igualdad:equality
+índice:index
+ídolo:idol
+independiente:independent
+impacto:impact
+invitación:invitation
+ícono:icon
+incluso:even
+instante:instant
+imagen:picture
+impulso:impulse
+infancia:childhood
+interior:interior
+injusticia:injustice
+integración:integration
+industrial:industrial
+información:data
+integrar:integrate
+intensidad:intensity
+infinito:infinite
+identidad:identity
+inocente:innocent
+ignorar:ignore
+íntimo:intimate
+interpretar:interpret
+impactante:shocking
+incomodidad:discomfort
+inquietud:restlessness
+innovador:innovative
+idioma:language
+ilusión:illusion
+iluminación:illumination
+incendio:fire
+internacional:worldwide
+ideal:ideal
+industrialización:industrialization
+impresionante:impressive
+índice:rate
+instinto:instinct
+ingeniero:engineer
+impresión:impression
+intriga:intrigue
+inusual:unusual
+inestable:unstable
+inherente:inherent
+invasión:invasion
+ilegal:illegal
+inscripción:inscription
+infiel:unfaithful
+inmediato:immediate
+inversor:investor
+imparcial:impartial
+inquietante:unsettling
+invento:invention
+innovación:breakthrough
+inspección:inspection
+inspiración:inspiration
+inflexión:inflection
+jardín:garden
+joya:jewel
+jirafa:giraffe
+juego:game
+juventud:youth
+jazmín:jasmine
+júbilo:joy
+jaula:cage
+justo:just
+jornada:day
+juez:judge
+jactancia:boast
+jornal:wage
+juguete:toy
+juntar:join
+jabón:soap
+joroba:hump
+juez:justice
+juzgar:judge
+jugoso:juicy
+jamón:ham
+jinete:rider
+jirón:shred
+junta:meeting
+juguete:plaything
+jubilación:retirement
+jalea:jelly
+jacuzzi:Jacuzzi
+jubilado:retired
+jubiloso:joyful
+jabalí:boar
+jactarse:boast
+jefe:boss
+jorobar:bother
+juicio:trial
+junio:June
+jota:J
+juntar:assemble
+jodido:screwed
+jornada:workday
+jornalero:laborer
+jinete:horseman
+juzgado:court
+jirón:rag
+jactancioso:boastful
+jengibre:ginger
+joyería:jewelry
+juerga:spree
+juguetería:toy store
+juntura:juncture
+jovial:cheerful
+jaula:cage
+junta:board
+jorobado:hunchback
+joder:bother
+jubilación:pension
+jalea:jelly
+jerga:jargon
+jovencito:youngster
+juicio:judgment
+jorobado:humpback
+juez:magistrate
+juzgamiento:judgment
+jubilarse:retire
+jilguero:goldfinch
+juncal:reed bed
+juzgado:courtroom
+jumento:mule
+jactanciosamente:boastfully
+jactancioso:vain
+jabonoso:soapy
+jumera:nightjar
+jama:food
+jactarse:brag
+jugada:move
+juntura:joint
+jurar:swear
+jornalero:day laborer
+jerez:sherry
+jefe:chief
+jengibre:ginger
+jerarquía:hierarchy
+jeringa:syringe
+judío:Jewish
+judicial:judicial
+jardinería:gardening
+juzgar:assess
+jota:dance
+jocoso:funny
+juicio:opinion
+kiosco:kiosk
+kárate:karate
+kilo:kilo
+kilómetro:kilometer
+koala:koala
+kiwi:kiwi
+kayak:kayak
+kumquat:kumquat
+keniano:Kenyan
+kazajo:Kazakh
+kiosco:booth
+kilt:kilt
+jardín_infantil:kindergarten
+kayak:canoe
+kilovatio:kilowatt
+keniano:Kenyan
+guardería:nursery
+kilogramo:kilogram
+preescolar:preschool
+kibutz:kibbutz
+karma:karma
+kurdo:Kurdish
+ketchup:ketchup
+emperador:kaiser
+falda:skirt
+káiser:Caesar
+kilómetro:kilometre
+karaoke:karaoke
+preescolar:pre-school
+preescolar:pre-K
+koala:bear
+kayak:paddler
+kumquat:cumquat
+preescolar:toddler
+alga_kelp:kelp
+kelpie:kelpie
+kamikaze:kamikaze
+preescolar:pre-kindergarten
+kilovatio:watt
+alga_kelp:seaweed
+kif:kif
+kendo:kendo
+káiser:sovereign
+kip:kip
+kibutz:collective
+káiser:monarch
+kip:currency
+preescolar:pre-school
+ketchup:condiment
+kumquat:cumquat
+kumis:kumis
+preescolar:preschool
+guardería:nursery school
+kip:Laotian money
+káiser:leader
+preescolar:pre schooler
+preescolar:pre kindergarten
+kirsch:kirsch
+kibutz:collective farm
+preescolar:preschooler
+preescolar:preschool
+kaki:khaki
+guardería:nursery
+kiosco:stall
+káiser:tsar
+kayak:paddled
+guardería:nursery school
+lápiz: pencil
+libro: book
+luz: light
+león: lion
+luna: moon
+lámpara: lamp
+largo: long
+lado: side
+limón: lemon
+línea: line
+lobo: wolf
+lista: list
+lengua: tongue
+ladrón: thief
+lana: wool
+lucha: fight
+lágrima: tear
+liso: smooth
+lago: lake
+lindo: cute
+locomotora: locomotive
+llave: key
+llama: flame
+lluvia: rain
+llorar: to cry
+llover: to rain
+llanta: tire
+lleno: full
+llama: llama
+llevar: to carry
+llamada: call
+ladrillo: brick
+limpiar: to clean
+lunar: mole
+lirio: lily
+locura: madness
+láser: laser
+lente: lens
+lechuga: lettuce
+líquido: liquid
+límite: limit
+levantar: to lift
+lograr: to achieve
+leve: slight
+ligero: light (weight)
+lúcido: lucid
+lujo: luxury
+lógico: logical
+lamentar: to regret
+labio: lip
+laurel: laurel
+libertad: freedom
+luxación: dislocation
+lámina: sheet
+leal: loyal
+licencia: license
+locutor: announcer
+lenguaje: language
+lagarto: lizard
+litro: liter
+lavadora: washing machine
+levantarse:to get up
+lección:lesson
+limusina:limousine
+lucir:to show off
+león:lion
+laguna:lagoon
+locomoción:locomotion
+lácteo:dairy
+legumbre:legume
+ladera:hillside
+lucro:profit
+lapso:lapse
+linterna:flashlight
+lucrecia:Lucretia
+langosta:lobster
+lisiado:disabled
+llamativo:flashy
+locomotriz:locomotive
+letrero:sign
+liberar:to release
+lamento:lament
+
+manzana: apple
+mesa: table
+mundo: world
+mujer: woman
+mano: hand
+mañana: tomorrow
+música: music
+mismo: same
+mes: month
+madera: wood
+mamá: mom
+miércoles: Wednesday
+miedo: fear
+máquina: machine
+mesa: table
+muerte: death
+más: more
+menos: less
+mochila: backpack
+muelle: dock
+medio: middle
+matar: to kill
+mente: mind
+mar: sea
+madre: mother
+mochila: backpack
+mucho: much
+mil: thousand
+manera: way
+modo: mode
+mariposa: butterfly
+mediodía: noon
+mercado: market
+metal: metal
+montaña: mountain
+mayor: major
+manejar: to handle
+molestar: to bother
+mezclar: to mix
+maíz: corn
+meses: months
+mesón: inn
+montón: pile
+mundo: world
+muslo: thigh
+manicomio: asylum
+mí: me
+madrugar: to get up early
+miel: honey
+molar: to be cool
+mora: blackberry
+mareo: dizziness
+mirar: to look
+magia: magic
+martes: Tuesday
+moneda: coin
+mudo: mute
+mirilla: peephole
+mimo: mime
+marido: husband
+movimiento: movement
+manta: blanket
+maní: peanut
+maníaco: maniac
+mueble: furniture
+marcar: to mark
+murmullo: murmur
+montón: heap
+mover: to move
+monstruo: monster
+morado: purple
+mueca: grimace
+magistrado: magistrate
+maravilla: wonder
+minuto: minute
+mineral: mineral
+molestia: discomfort
+misma: same
+mejilla: cheek
+morir: to die
+merienda: snack
+mediante: by means of
+madrugar: to get up early
+maceta: flowerpot
+nube: cloud
+nuevo: new
+nadar: to swim
+norte: north
+nariz: nose
+nombre: name
+niño: child
+noche: night
+nada: nothing
+necesitar: to need
+ninguno: none
+natural: natural
+negro: black
+noviembre: November
+número: number
+nacional: national
+nacimiento: birth
+niña: girl
+necesario: necessary
+navidad: Christmas
+negocio: business
+noticia: news
+nervioso: nervous
+notar: to notice
+nube: cloud
+novela: novel
+naturaleza: nature
+navío: ship
+nalgas: buttocks
+ningún: none
+nudo: knot
+nacer: to be born
+nieve: snow
+necesidad: necessity
+negociar: to negotiate
+nave: ship
+normal: normal
+norte: north
+nevar: to snow
+navaja: knife
+nube: cloud
+noble: noble
+ningún: none
+nivel: level
+navegar: to sail
+naranja: orange
+novio: boyfriend
+nube: cloud
+nobleza: nobility
+nieta: granddaughter
+novedad: novelty
+neutral: neutral
+nochevieja: New Year's Eve
+naranjo: orange tree
+necesitado: needy
+notable: remarkable
+noviazgo: courtship
+niñez: childhood
+nutrir: to nourish
+neumático: tire
+nariz: nostril
+náusea: nausea
+nítido: sharp
+náufrago: shipwrecked
+neurona: neuron
+ninfa: nymph
+nudo: node
+nefasto: disastrous
+naufragio: shipwreck
+novillo: bullock
+navegante: navigator
+niñera: babysitter
+nomenclatura: nomenclature
+nuez: nut
+nombrar: to name
+novicio: novice
+nómada: nomad
+nacionalidad: nationality
+naranjada: orangeade
+nervadura: vein
+necrosis: necrosis
+narcisismo: narcissism
+necesitador: needy
+nostalgia: nostalgia
+nudillo: knuckle
+nanotecnología: nanotechnology
+nutrición: nutrition
+nácar: mother-of-pearl
+ñoño: boring
+ñandú: rhea
+ñu: gnu
+ñame: yam
+ñapa: bonus
+ñato: snub-nosed
+ñeque: shrewdness
+ñequear: to trick
+ñero: lowlife
+ñar: to pick one's nose
+ñora: dried pepper
+ñecla: goad
+ñema: yolk
+ñería: misbehavior
+ñuflo: nonsense
+ñoqui: gnocchi
+ñeco: shabby
+ñoqui: deadbeat
+ñoñez: nerdiness
+ñerísimo: very tedious
+ñangara: trickster
+ñapa: extra
+ñoñería: geekiness
+ñema: embryo
+ñangotado: anguished
+ñora: girl
+ñecle: pawl
+ñonfasto: bizarre
+oliva: olive
+ocho: eight
+oveja: sheep
+oír: to hear
+oro: gold
+oso: bear
+océano: ocean
+olla: pot
+oportunidad: opportunity
+orden: order
+oeste: west
+oído: ear
+objeto: object
+opinión: opinion
+oportunidad: opportunity
+oficina: office
+olvidar: to forget
+ordenar: to order
+obra: work
+ocurrir: to occur
+ojalá: hopefully
+obligar: to oblige
+ojo: eye
+original: original
+organizar: to organize
+operación: operation
+ocultar: to hide
+ofrecer: to offer
+objetivo: objective
+opuesto: opposite
+oso: bear
+ocurrencia: idea
+organismo: organism
+olfato: sense of smell
+ojalá: hopefully
+oscuro: dark
+obtener: to obtain
+orilla: shore
+ordenador: computer
+ópera: opera
+oración: sentence
+orgullo: pride
+obedecer: to obey
+ocasión: occasion
+obsesión: obsession
+oculto: hidden
+oriente: east
+originalidad: originality
+organización: organization
+objetar: to object
+oveja: sheep
+obsequio: gift
+olvidarse: to forget
+observar: to observe
+oportunidad: opportunity
+ordenanza: ordinance
+ostra: oyster
+obra: work
+orgánico: organic
+optimismo: optimism
+obispo: bishop
+ofrecimiento: offering
+origen: origin
+orina: urine
+olor: smell
+observación: observation
+obvio: obvious
+opinión: opinion
+ópera: opera
+oscilación: oscillation
+organismo: organism
+orinar: to urinate
+orientar: to orient
+oferta: offer
+obeso: obese
+orgánulo: organelle
+oasis: oasis
+óptico: optical
+oscurecer: to darken
+pan: bread
+perro: dog
+persona: person
+papel: paper
+piso: floor
+pueblo: town
+pareja: couple
+país: country
+poder: power
+piedra: stone
+piel: skin
+palabra: word
+parte: part
+precio: price
+pasado: past
+punto: point
+pasión: passion
+peligro: danger
+pensar: to think
+pequeño: small
+palacio: palace
+plata: silver
+paso: step
+pescado: fish
+producto: product
+padre: father
+parar: to stop
+perder: to lose
+parque: park
+problema: problem
+planta: plant
+profundo: deep
+pronto: soon
+pieza: piece
+pensamiento: thought
+piedra: rock
+principio: beginning
+pesar: to weigh
+paz: peace
+padecimiento: ailment
+pulgar: thumb
+preocupación: worry
+pila: battery
+precioso: precious
+proyecto: project
+piso: apartment
+pensamiento: thinking
+política: politics
+punto: dot
+paso: passage
+policía: police
+pelea: fight
+pala: shovel
+postre: dessert
+público: public
+preparar: to prepare
+pantalla: screen
+plaza: square
+pago: payment
+puesto: position
+preferir: to prefer
+paso: walk
+práctico: practical
+pasajero: passenger
+pie: foot
+predecir: to predict
+pata: leg
+placer: pleasure
+plato: plate
+porque: because
+paz: peace
+pescar: to fish
+patio: yard
+prima: cousin
+palmera: palm tree
+pulmón: lung
+pelo: hair
+presidente: president
+pluma: feather
+paso: pace
+partir: to split
+pérdida: loss
+pobre: poor
+pacto: pact
+paseo: walk
+premio: prize
+peor: worse
+prisa: hurry
+parcela: plot
+queso: cheese
+quemar: to burn
+quedar: to stay
+quitar: to remove
+quién: who
+quince: fifteen
+quitar: to take off
+querer: to want
+quiero: I want
+quebrar: to break
+querido: beloved
+quitar: to take away
+química: chemistry
+querido: dear
+quitar: to eliminate
+quieto: quiet
+quinto: fifth
+quemado: burnt
+quemar: to scorch
+quiebra: bankruptcy
+quiosco: kiosk
+quitar: to extract
+quitar: to subtract
+quitar: to steal
+quimera: chimera
+queja: complaint
+quimera: fantasy
+quórum: quorum
+querella: lawsuit
+quilate: carat
+quiebre: fracture
+químico: chemist
+quilla: keel
+quincena: fortnight
+quemado: scalded
+querencia: inclination
+quizás: maybe
+quicio: hinge
+quijote: quixote
+quincuagésimo: fiftieth
+quejido: groan
+quizá: perhaps
+quiste: cyst
+quitar: to pull out
+química: chemical
+quinto: fifth
+quitar: to take out
+quilate: quality
+quema: burning
+quemar: to incinerate
+químico: chemical
+querubín: cherub
+quemar: to set fire to
+quemar: to set on fire
+quemadura: burn
+quemar: to scorch
+quemadura: scorch
+quitar: to dismiss
+quinta: fifth
+querido: loved
+quiebro: break
+quilate: carat
+quema: combustion
+quemadura: scald
+quiste: blister
+quemar: to blaze
+quehacer: task
+quemar: to singe
+quilla: quill
+querella: litigation
+quemar: to flare
+quemadura: scalding
+quemar: to burn down
+quebrada: ravine
+quemar: to torch
+quiebra: insolvency
+quita: removal
+quemar: to flame
+quiebra: break
+quemar: to scald
+quemadura: burn injury
+quemar: to flare up
+quiebra: bust
+querido: loved one
+quemadura: scorching
+quiste: tumor
+quemar: to char
+quemadura: burn mark
+rana: frog
+rojo: red
+robar: to steal
+ropa: clothes
+rápido: fast
+rey: king
+regalo: gift
+rosa: rose
+río: river
+reír: to laugh
+razón: reason
+restaurante: restaurant
+responder: to answer
+rubio: blond
+reloj: watch
+roca: rock
+rayo: lightning
+raro: strange
+recuerdo: memory
+reyes: kings
+ráfaga: gust
+rápido: rapid
+reunión: meeting
+rápido: quick
+roto: broken
+reír: laugh
+reflejo: reflection
+rayo: ray
+realidad: reality
+ropa: clothing
+rápido: quickly
+recibir: to receive
+roca: boulder
+rápido: swiftly
+responder: respond
+robar: rob
+receta: prescription
+recoger: to pick up
+radio: radio
+rápido: speedy
+roto: torn
+raíz: root
+regresar: to return
+rescatar: to rescue
+religión: religion
+roto: damaged
+relación: relationship
+ruido: noise
+reconocer: to recognize
+rural: rural
+repetir: to repeat
+respetar: to respect
+rebelde: rebel
+retirar: to withdraw
+revista: magazine
+reírse: to laugh
+resto: rest
+rápido: swiftly
+rosado: pink
+restaurar: to restore
+rincón: corner
+rincón: nook
+rural: rustic
+residuo: residue
+refrigerador: refrigerator
+regla: rule
+roble: oak
+rostro: face
+receta: recipe
+rasguño: scratch
+reunión: gathering
+rebajar: to reduce
+ratón: mouse
+romper: to break
+recoger: to gather
+residencia: residence
+razón: right
+resistencia: resistance
+rampa: ramp
+raza: race
+retrato: portrait
+rosquilla: doughnut
+rana: toad
+reciente: recent
+reunión: reunion
+reconstruir: to rebuild
+rodilla: knee
+silla: chair
+sol: sun
+sal: salt
+seis: six
+saber: to know
+salir: to go out
+suerte: luck
+sábado: Saturday
+sistema: system
+semana: week
+señor: sir
+seguir: to follow
+seguro: sure
+sombra: shadow
+sangre: blood
+suelo: ground
+servir: to serve
+sorpresa: surprise
+señal: signal
+seco: dry
+segundo: second
+señalar: to point
+serio: serious
+señora: lady
+sabor: flavor
+sentir: to feel
+sentido: sense
+sonrisa: smile
+sombrero: hat
+serie: series
+sudor: sweat
+salud: health
+secreto: secret
+sonido: sound
+sacar: to take out
+sentarse: to sit
+salvar: to save
+salida: exit
+sensación: sensation
+socorro: help
+superficie: surface
+silencio: silence
+sencillo: simple
+sorpresa: astonishment
+soledad: loneliness
+sonar: to sound
+sustancia: substance
+sujeto: subject
+sintonizar: to tune
+servicio: service
+seguimiento: follow-up
+silbar: to whistle
+semilla: seed
+sintonía: tune
+sonreír: to smile
+sede: headquarters
+soportar: to bear
+suspender: to suspend
+súper: supermarket
+serpiente: snake
+sacerdote: priest
+solución: solution
+solar: solar
+susto: fright
+sudadera: sweatshirt
+taza: cup
+tiempo: time
+televisión: television
+tomar: to take
+trabajo: work
+tarde: late
+tierra: land
+tener: to have
+tarea: task
+tonto: silly
+tren: train
+tortuga: turtle
+tema: theme
+temprano: early
+traducir: to translate
+turismo: tourism
+técnico: technical
+tipo: type
+techo: roof
+tocar: to touch
+tío: uncle
+tono: tone
+total: total
+temporada: season
+teatro: theater
+triste: sad
+televisión: TV
+tranquilo: calm
+trabajo: job
+teléfono: telephone
+tarea: homework
+traje: suit
+tiempo: weather
+tarde: afternoon
+taza: mug
+texto: text
+turista: tourist
+taxi: taxi
+tijeras: scissors
+tarta: cake
+tratar: to treat
+tomar: to drink
+tumba: grave
+tomar: to grab
+taza: teacup
+tranquilo: quiet
+tráfico: traffic
+tradición: tradition
+tesoro: treasure
+tirar: to throw
+tabla: board
+tigre: tiger
+tres: three
+tumba: tomb
+teoría: theory
+talla: size
+tensión: tension
+temor: fear
+tema: topic
+tronco: trunk
+truco: trick
+tapa: lid
+trineo: sled
+traje: attire
+tormenta: storm
+tarjeta: card
+tonto: fool
+torre: tower
+tomar: to take
+tenedor: fork
+tonelada: ton
+tejido: fabric
+trepar: to climb
+tentación: temptation
+técnica: technique
+tiburón: shark
+trabajo: labor
+tía: aunt
+toalla: towel
+tienda: store
+toro: bull
+tono: pitch
+tapiz: tapestry
+talar: to chop down
+tonto: stupid
+tira: strip
+televisor: television set
+tostada: toast
+tribu: tribe
+trozo: piece
+uña: nail
+unir: to unite
+uniforme: uniform
+útil: useful
+urgente: urgent
+universidad: university
+uno: one
+utensilio: utensil
+ultimar: to finalize
+uso: use
+ubicar: to locate
+ubicación: location
+ultramarino: overseas
+ultraje: outrage
+usuario: user
+unidad: unit
+urna: urn
+urbanización: urbanization
+uva: grape
+ultravioleta: ultraviolet
+uso: usage
+ultrasonido: ultrasound
+ulular: to hoot
+umbral: threshold
+ungüento: ointment
+unión: union
+unificación: unification
+urogallo: capercaillie
+urgir: to urge
+usurpar: to usurp
+ufano: proud
+universal: universal
+uniformidad: uniformity
+usurpar: to seize
+ulterior: ulterior
+utopía: utopia
+utensilio: appliance
+ulular: to howl
+ultramarino: maritime
+unísono: unison
+urticaria: hives
+usufructo: usufruct
+uniformizar: to standardize
+urdir: to concoct
+usufructuar: to enjoy the use of
+ubicuidad: ubiquity
+útero: uterus
+urinario: urinary
+ultrajante: insulting
+universo: universe
+utensilio: implement
+utillaje: equipment
+uranio: uranium
+uva: vine
+ultimátum: ultimatum
+urbanidad: politeness
+urbe: city
+urbanizar: to urbanize
+utillaje: outfit
+utopista: utopian
+úlcera: ulcer
+ultraje: violation
+utopismo: utopianism
+udon: udon
+utopizar: to idealize
+usurpación: usurpation
+ultrajado: insulted
+urbe: town
+urbanístico: urban
+úlcera: sore
+úrico: uric
+usufructuario: usufructuary
+ubérrimo: fertile
+utopía: ideal
+ultrajador: insulting
+umbral: doorstep
+uranita: pitchblende
+ultraje: outrage
+usurpador: usurper
+ultrajoso: offensive
+urdir: to weave
+ulteriormente: subsequently
+urbanización: development
+útero: womb
+uniformidad: consistency
+unánime: unanimous
+umbral: brink
+urbanidad: civility
+ucraniano: Ukrainian
+usufructo: usufruct
+vaca: cow
+ventana: window
+verdad: truth
+volver: to return
+viento: wind
+vez: time
+voz: voice
+vida: life
+valor: value
+vestir: to dress
+venir: to come
+vaso: glass
+verdad: true
+viaje: trip
+vender: to sell
+volar: to fly
+verde: green
+voz: vote
+vivir: to live
+viajar: to travel
+visitar: to visit
+veinte: twenty
+vuelo: flight
+vestido: dress
+voz: vocal
+vacío: empty
+vino: wine
+volverse: to become
+volverse: to turn
+votar: to vote
+vacación: vacation
+vendaje: bandage
+voz: vocalization
+vela: candle
+velocidad: speed
+voz: utterance
+vestido: gown
+valla: fence
+vómito: vomit
+vergüenza: embarrassment
+víctima: victim
+vela: sail
+visitante: visitor
+vendedor: vendor
+varón: male
+vacunar: to vaccinate
+vocación: vocation
+violento: violent
+violín: violin
+vacilar: to hesitate
+viuda: widow
+viernes: Friday
+vidrio: glass
+voleibol: volleyball
+verano: summer
+vergel: orchard
+vago: vague
+volcán: volcano
+variedad: variety
+vegetariano: vegetarian
+vitamina: vitamin
+violencia: violence
+ventana: pane
+vacación: holiday
+vago: lazy
+valorar: to value
+visitar: to call on
+valle: valley
+vistoso: showy
+violación: violation
+vocal: vowel
+vigilante: watchman
+velocidad: velocity
+víbora: viper
+violencia: force
+valla: barrier
+vínculo: link
+vínculo: bond
+vacuna: vaccine
+vivero: nursery
+voluntad: will
+vanguardia: vanguard
+vívido: vivid
+ventaja: advantage
+vinagre: vinegar
+villa: town
+vidriera: shop window
+violador: violator
+vertical: vertical
+vecino: neighbor
+waffle: waffle
+whisky: whisky
+walkman: walkman
+waiver: renuncia
+workshop: taller
+watt: vatio
+wéstern: western
+web: red
+waterpolo: water polo
+wifi: wifi
+whatsapp: whatsapp
+windmill: molino de viento
+webmaster: webmaster
+wallpaper: papel tapiz
+website: sitio web
+widget: widget
+wave: ola
+wrestling: lucha libre
+warranty: garantía
+wildlife: vida silvestre
+xilófono: xylophone
+xenofobia: xenophobia
+xerografía: xerography
+xilografía: xylography
+xilófago: xylophagous
+xerocopia: xerocopy
+xantoma: xanthoma
+xilema: xylem
+xenón: xenon
+xenófilo: xenophile
+xeroftalmia: xerophthalmia
+xantofila: xanthophyll
+xerófito: xerophyte
+xeroformo: xeroform
+xerófilo: xerophilous
+xerógeno: xerogenic
+xerófilo: xerophilic
+xanadú: xanadu
+xileno: xylene
+xantina: xanthine
+xeroftalmía: xerophthalmia
+xifoideo: xiphoid
+xifoidea: xiphoid
+xilópalo: xylopal
+xilomanía: xylomania
+xantófilo: xanthophil
+xerómetro: xerometer
+xenodócrimo: xenodochium
+xerográfico: xerographic
+xeromórfico: xeromorphic
+Yate - Yacht
+Yema - Yolk
+Yunta - Yoke
+Yunque - Anvil
+Yodo - Iodine
+Yerba - Herb
+Yatear - Yawn
+Yerbal - Herbal
+Yacija - Bedstead
+Yacer - To lie
+Yaciente - Lying
+Yuxtaposición - Juxtaposition
+Yeyuno - Jejunum
+Yerro - Error
+Yegua - Mare
+Yoduro - Iodide
+Yerto - Stiff
+Yerno - Son-in-law
+Yacimiento - Deposit
+Yantar - To eat
+Yendo - Going
+Yelmo - Helmet
+Zapato - Shoe
+Zorro - Fox
+Zanahoria - Carrot
+Zona - Zone
+Zumbido - Buzz
+Zafiro - Sapphire
+Zambullida - Dive
+Zarza - Bramble
+Zamburiña - Scallop
+Zigzag - Zigzag
+Zoológico - Zoo
+Zafra - Harvest
+Zurrón - Haversack
+Zafacon - Trash can
+Zurdo - Left-handed
+Zapatilla - Slipper
+Zagaleta - Retreat
+Zambra - Gypsy dance
+Zambomba - Musical instrument
+Zurrar - To beat
+Zanja - Ditch
+Zaguán - Entrance hall
+Zamarra - Jacket
+Zoco - Market
+Zamarra - Jacket
+Zumbido - Buzzing
+Zurrón - Haversack
+Zancudo - Mosquito
+Zorrillo - Skunk
+Zampoña - Panpipe
+Zurrar - To beat
+Zurcir - To darn
+Zafarrancho - Disorder
+Zurdo - Left-handed
+Zambullida - Plunge
+Zurcir - To darn
+Zócalo - Baseboard
+Zumbido - Hum
+Zafiro - Sapphire
+Zumbido - Whir
+Zapatilla - Sneaker
+Zarcillo - Earring
+Zumbido - Drone
+Zafra - Harvest
+Zarpar - To set sail
+Zancadilla - Trip
+Zurrón - Knapsack
+Zambomba - Drum
+Zampar - To gobble
+Zumbón - Sarcastic
