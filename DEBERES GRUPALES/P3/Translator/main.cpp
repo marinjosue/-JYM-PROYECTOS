@@ -4,6 +4,8 @@
 #include <string>
 #include <sstream>
 #include <cstdlib>
+#include <locale>
+#include <algorithm> // Para la funci�n transform
 
 using namespace std;
 
@@ -12,7 +14,7 @@ map<string, string> dictionary;
 
 // Function to load the database from a file
 void loadDatabase(const string& filename) {
-    ifstream file(filename);
+    ifstream file(filename, ios::binary);
 
     if (!file.is_open()) {
         cerr << "Error: Couldn't open the file." << endl;
@@ -35,10 +37,15 @@ void loadDatabase(const string& filename) {
     file.close();
 }
 
+
 // Function to translate a word
-string translateWord(string word) {
+string translateWord(const string& word) {
+    // Convert the word to lowercase
+    string lowerCaseWord = word;
+    transform(lowerCaseWord.begin(), lowerCaseWord.end(), lowerCaseWord.begin(), ::tolower);
+
     // Search for the word in the dictionary
-    auto it = dictionary.find(word);
+    auto it = dictionary.find(lowerCaseWord);
     if (it != dictionary.end()) {
         // If the word is found, return its translation
         return it->second;
@@ -55,6 +62,9 @@ void speakWord(const string& word) {
 }
 
 int main() {
+    // Configure the locale for UTF-8
+    setlocale(LC_ALL, "spanish");
+
     // Name of the file containing the dictionary
     string filename = "dictionary.txt";
 
@@ -64,7 +74,7 @@ int main() {
     // Ask the user to enter a word in Spanish
     string spanishWord;
     cout << "Enter a word in Spanish: ";
-    cin >> spanishWord;
+    getline(cin, spanishWord); // Read the entire line, including spaces
 
     // Translate the word entered by the user
     string englishWord = translateWord(spanishWord);

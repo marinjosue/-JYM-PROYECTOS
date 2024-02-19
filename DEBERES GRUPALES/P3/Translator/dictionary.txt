@@ -1,5 +1,6 @@
-hola:hello
+hola:hello,hi
 adiós:goodbye
 casa:house
 perro:dog
 gato:cat
+año:year
