@@ -1888,75 +1888,75 @@ xerómetro: xerometer
 xenodócrimo: xenodochium
 xerográfico: xerographic
 xeromórfico: xeromorphic
-Yate - Yacht
-Yema - Yolk
-Yunta - Yoke
-Yunque - Anvil
-Yodo - Iodine
-Yerba - Herb
-Yatear - Yawn
-Yerbal - Herbal
-Yacija - Bedstead
-Yacer - To lie
-Yaciente - Lying
-Yuxtaposición - Juxtaposition
-Yeyuno - Jejunum
-Yerro - Error
-Yegua - Mare
-Yoduro - Iodide
-Yerto - Stiff
-Yerno - Son-in-law
-Yacimiento - Deposit
-Yantar - To eat
-Yendo - Going
-Yelmo - Helmet
-Zapato - Shoe
-Zorro - Fox
-Zanahoria - Carrot
-Zona - Zone
-Zumbido - Buzz
-Zafiro - Sapphire
-Zambullida - Dive
-Zarza - Bramble
-Zamburiña - Scallop
-Zigzag - Zigzag
-Zoológico - Zoo
-Zafra - Harvest
-Zurrón - Haversack
-Zafacon - Trash can
-Zurdo - Left-handed
-Zapatilla - Slipper
-Zagaleta - Retreat
-Zambra - Gypsy dance
-Zambomba - Musical instrument
-Zurrar - To beat
-Zanja - Ditch
-Zaguán - Entrance hall
-Zamarra - Jacket
-Zoco - Market
-Zamarra - Jacket
-Zumbido - Buzzing
-Zurrón - Haversack
-Zancudo - Mosquito
-Zorrillo - Skunk
-Zampoña - Panpipe
-Zurrar - To beat
-Zurcir - To darn
-Zafarrancho - Disorder
-Zurdo - Left-handed
-Zambullida - Plunge
-Zurcir - To darn
-Zócalo - Baseboard
-Zumbido - Hum
-Zafiro - Sapphire
-Zumbido - Whir
-Zapatilla - Sneaker
-Zarcillo - Earring
-Zumbido - Drone
-Zafra - Harvest
-Zarpar - To set sail
-Zancadilla - Trip
-Zurrón - Knapsack
-Zambomba - Drum
-Zampar - To gobble
-Zumbón - Sarcastic
+yate : yacht
+yema :yolk
+yunta :yoke
+yunque :anvil
+yodo : iodine
+yerba :herb
+yatear : yawn
+yerbal : herbal
+yacija : bedstead
+yacer :to lie
+yaciente : lying
+yuxtaposición : juxtaposition
+yeyuno : jejunum
+yerro :error
+yegua : mare
+yoduro : iodide
+yerto : stiff
+yerno :son-in-law
+yacimiento : deposit
+yantar :to eat
+yendo : going
+yelmo :helmet
+zapato : shoe
+zorro : fox
+zanahoria : carrot
+zona : zone
+zumbido : buzz
+zafiro : sapphire
+zambullida : dive
+zarza : bramble
+zamburiña : scallop
+zigzag :zigzag
+zoológico : zoo
+zafra :harvest
+zurrón :haversack
+zafacon : trash can
+zurdo :left-handed
+zapatilla :slipper
+zagaleta : retreat
+zambra : gypsy dance
+zambomba : musical instrument
+zurrar : to beat
+zanja : ditch
+zaguán : entrance hall
+zamarra : jacket
+zoco : market
+zamarra : jacket
+zumbido : buzzing
+zurrón : haversack
+zancudo : mosquito
+zorrillo : skunk
+zampoña : panpipe
+zurrar : to beat
+zurcir : to darn
+zafarrancho : disorder
+zurdo : left-handed
+zambullida : plunge
+zurcir : to darn
+zócalo : baseboard
+zumbido : hum
+zafiro : sapphire
+zumbido : whir
+zapatilla : sneaker
+zarcillo : earring
+zumbido : drone
+zafra : harvest
+zarpar : to set sail
+zancadilla : trip
+zurrón : knapsack
+zambomba : drum
+zampar : to gobble
+zumbón : sarcastic
