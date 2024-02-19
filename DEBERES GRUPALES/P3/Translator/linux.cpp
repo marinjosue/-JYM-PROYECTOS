@@ -113,23 +113,34 @@ void speakWord(const string& word) {
     system(command.c_str());
 }
 
-void MainMenu() {
-    int select = 1;
-    const char *title = "<<<<<TRANSLATOR>>>>>";
-    const char *options[] =
+void MenuPrincipal() {
+    string expresion, post, prefijo;
+    int op = 0;
+    bool aux = true;
+    string ecuacion;
+    const char *titulo = "\t\t<<<<<TRANSLATOR>>>>>";
+    const char *opciones[] =
     {
-        "Translate Word",
-        "Exit"
+        "\t\t1. Translate Word",
+        "\t\t2. Exit"
     };
-    int numOptions = 2;
+    int numeroOpciones = 2;
+    int selec;
 
     do {
-        menuSelection(title, options, numOptions, select);
-        switch (select) {
+        system("cls");
+        cout << titulo << endl;
+        for (int i = 0; i < numeroOpciones; i++) {
+            cout << opciones[i] << endl;
+        }
+        cout << "Enter your choice: ";
+        cin >> selec;
+
+        switch (selec) {
             case 1:
                 {
                     try {
-                        clearScreen();
+                        system("cls");
                         // Configure the locale for UTF-8
                         setlocale(LC_ALL, "spanish");
 
@@ -142,6 +153,7 @@ void MainMenu() {
                         // Ask the user to enter a word in Spanish
                         string spanishWord;
                         cout << "Enter a word in Spanish: ";
+                        cin.ignore(); // Clear the input buffer
                         getline(cin, spanishWord); // Read the entire line, including spaces
 
                         // Translate the word entered by the user
@@ -152,30 +164,35 @@ void MainMenu() {
 
                         // Speak the translated word
                         speakWord(englishWord);
-                        cout << endl;
-                        cout << "Press Enter to continue...";
-                        cin.ignore(); // Ignore the newline character from previous input
-                        cin.get();    // Wait for user to press Enter
+                        system("pause");
                     } catch (const std::exception& e) {
-                        cerr << "An error occurred: " << e.what() << endl;
-                        cout << "Press Enter to continue...";
-                        cin.ignore(); // Ignore the newline character from previous input
-                        cin.get();    // Wait for user to press Enter
+                        system("pause");
+                        break;
                     }
                     break;
                 }
 
             case 2:
                 {
-                    clearScreen();
-                    cout << "Exiting the program..." << endl;
+                    system("cls");
+                    cout << "Exit to the program..." << endl;
+                    aux = false; // Salir del bucle
+                    break;
+                }
+                
+            default:
+                {
+                    system("cls");
+                    cout << "Invalid option. Please enter a valid option." << endl;
+                    system("pause");
                     break;
                 }
         }
-    } while (select != 2);
+    } while (aux);
 }
 
+
 int main() {
-    MainMenu();
+    MenuPrincipal();
     return 0;
 }
