@@ -3,69 +3,77 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <cstdlib>
 
 using namespace std;
 
-// Definición del diccionario
-map<string, string> diccionario;
+// Definition of the dictionary
+map<string, string> dictionary;
 
-// Función para cargar la base de datos desde un archivo
-void cargarBaseDeDatos(const string& nombreArchivo) {
-    ifstream archivo(nombreArchivo);
+// Function to load the database from a file
+void loadDatabase(const string& filename) {
+    ifstream file(filename);
 
-    if (!archivo.is_open()) {
-        cerr << "Error: No se pudo abrir el archivo." << endl;
+    if (!file.is_open()) {
+        cerr << "Error: Couldn't open the file." << endl;
         return;
     }
 
-    string linea;
-    while (getline(archivo, linea)) {
-        // Utilizamos un stringstream para dividir la línea en palabras
-        stringstream ss(linea);
-        string palabraIngles, palabraEspanol;
-        // Leemos la palabra en inglés
-        getline(ss, palabraIngles, ':'); // Suponiendo que las palabras están separadas por ':'
-        // Leemos la palabra en español
-        getline(ss, palabraEspanol);
-        // Agregamos la palabra al diccionario
-        diccionario[palabraIngles] = palabraEspanol;
+    string line;
+    while (getline(file, line)) {
+        // Using a stringstream to split the line into words
+        stringstream ss(line);
+        string spanishWord, englishWord;
+        // Read the Spanish word
+        getline(ss, spanishWord, ':'); // Assuming words are separated by ':'
+        // Read the English word
+        getline(ss, englishWord);
+        // Add the word to the dictionary
+        dictionary[spanishWord] = englishWord;
     }
 
-    archivo.close();
+    file.close();
 }
 
-// Función para traducir una palabra
-string traducirPalabra(string palabra) {
-    // Buscar la palabra en el diccionario
-    auto it = diccionario.find(palabra);
-    if (it != diccionario.end()) {
-        // Si se encuentra la palabra, devolver su traducción
+// Function to translate a word
+string translateWord(string word) {
+    // Search for the word in the dictionary
+    auto it = dictionary.find(word);
+    if (it != dictionary.end()) {
+        // If the word is found, return its translation
         return it->second;
     } else {
-        // Si la palabra no se encuentra en el diccionario, devolver un mensaje indicando que no se encontró la traducción
-        return "Traduccion no encontrada";
+        // If the word is not found in the dictionary, return a message indicating that the translation was not found
+        return "Translation not found";
     }
+}
+
+// Function to speak a word
+void speakWord(const string& word) {
+    string command = "espeak \"" + word + "\"";
+    system(command.c_str());
 }
 
 int main() {
-    // Nombre del archivo que contiene el diccionario
-    string nombreArchivo = "diccionario.txt";
+    // Name of the file containing the dictionary
+    string filename = "dictionary.txt";
 
-    // Cargar la base de datos al inicio del programa
-    cargarBaseDeDatos(nombreArchivo);
+    // Load the database at the start of the program
+    loadDatabase(filename);
 
-    // Solicitar al usuario que ingrese una palabra en inglés
-    string palabraIngles;
-    cout << "Ingrese una palabra en ingles: ";
-    cin >> palabraIngles;
+    // Ask the user to enter a word in Spanish
+    string spanishWord;
+    cout << "Enter a word in Spanish: ";
+    cin >> spanishWord;
 
-    // Traducir la palabra ingresada por el usuario
-    string palabraEspanol = traducirPalabra(palabraIngles);
+    // Translate the word entered by the user
+    string englishWord = translateWord(spanishWord);
 
-    // Mostrar la traducción por consola
-    cout << "La traduccion al espaniol es: " << palabraEspanol << endl;
+    // Display the translation on the console
+    cout << "The translation to English is: " << englishWord << endl;
 
-    main();
+    // Speak the translated word
+    speakWord(englishWord);
 
     return 0;
 }

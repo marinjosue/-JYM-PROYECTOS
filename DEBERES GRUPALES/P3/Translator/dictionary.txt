@@ -1,0 +1,5 @@
+hola:hello
+adiós:goodbye
+casa:house
+perro:dog
+gato:cat

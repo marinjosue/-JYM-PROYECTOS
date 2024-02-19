@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1708301324 source:c:\gitrepos\-jym-proyecto-estructura\deberes grupales\p3\translator\main.cpp
+	<iostream>
+	<map>
+	<fstream>
+	<string>
+	<sstream>
+	<cstdlib>
+
