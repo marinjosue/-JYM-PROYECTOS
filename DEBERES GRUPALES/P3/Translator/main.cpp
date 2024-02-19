@@ -74,7 +74,7 @@ void menuSeleccion(const char *titulo, const char *opciones[], int numeroOpcione
 
 // Function to load the database from a file
 void loadDatabase(const string& filename) {
-    ifstream file(filename, ios::binary);
+    ifstream file(filename);
 
     if (!file.is_open()) {
         cerr << "Error: Couldn't open the file." << endl;
@@ -90,6 +90,11 @@ void loadDatabase(const string& filename) {
         getline(ss, spanishWord, ':'); // Assuming words are separated by ':'
         // Read the English word
         getline(ss, englishWord);
+        
+        // Remove spaces from the words
+        spanishWord.erase(remove_if(spanishWord.begin(), spanishWord.end(), ::isspace), spanishWord.end());
+        englishWord.erase(remove_if(englishWord.begin(), englishWord.end(), ::isspace), englishWord.end());
+
         // Add the word to the dictionary
         dictionary[spanishWord] = englishWord;
     }
@@ -97,12 +102,12 @@ void loadDatabase(const string& filename) {
     file.close();
 }
 
-
 // Function to translate a word
 string translateWord(const string& word) {
-    // Convert the word to lowercase
+    // Convert the word to lowercase and remove spaces
     string lowerCaseWord = word;
     transform(lowerCaseWord.begin(), lowerCaseWord.end(), lowerCaseWord.begin(), ::tolower);
+    lowerCaseWord.erase(remove_if(lowerCaseWord.begin(), lowerCaseWord.end(), ::isspace), lowerCaseWord.end());
 
     // Search for the word in the dictionary
     auto it = dictionary.find(lowerCaseWord);
@@ -114,6 +119,7 @@ string translateWord(const string& word) {
         return "Translation not found";
     }
 }
+
 
 // Function to speak a word
 void speakWord(const string& word) {
